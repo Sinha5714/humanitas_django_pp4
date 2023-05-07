@@ -47,4 +47,4 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return self.author.username + '|commented on ' + self.humanitaspost.title
+        return self.name + '|commented: ' + self.content
