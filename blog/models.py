@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
-
 class HumanitasPost(models.Model):
     """
     HumanitasPost model used for each blog posted by users
