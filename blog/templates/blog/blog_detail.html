@@ -2,7 +2,36 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% block content %}
 {% load crispy_forms_tags %}
-<h1>Here</h1>
+<!-- Blog Entries Column -->
+<div class="col-12 mt-3 left">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.cover_image.url %}
+                        <img class="card-img-top"
+                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.cover_image.url }}">
+                        {% endif %}
+                        <div class="image-flash">
+                            <p class="author">Blog By: {{ post.creator }}</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'blog_details' post.slug %}" class="post-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                    </a>
+                    <h3 class="card-text text-black">{{ post.body}}</h3>
+                    <hr />
+
+                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
