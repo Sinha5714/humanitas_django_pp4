@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView
 from .models import HumanitasPost
 
 # Create your views here.
@@ -13,3 +13,14 @@ class HumanitasPostView(ListView):
     context_object_name = 'humanitas_post'
     template_name = 'blog/humanitas-blog.html'
     paginate_by = 8
+
+
+class BlogDetailView(DetailView):
+    """
+    Detail view for each blogpost
+    and added comments
+    """
+    model = HumanitasPost
+    context_object_name = 'post'
+    template_name = 'blog/humanitas-blog-details.html'
+    slug_field = 'slug'
