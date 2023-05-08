@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 <h1>OUR STORIES</h1>
 <div class="container-fluid">
     <div class="row">
@@ -26,7 +28,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text text-white">{{ post.body}}</p>
                             </a>
-                            
+
                             <hr />
 
                             <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
