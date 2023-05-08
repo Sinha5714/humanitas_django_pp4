@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import HumanitasPost
-from .forms import CommentForm
+from .forms import CommentForm, BlogForm
 
 # Create your views here.
 
@@ -75,3 +75,14 @@ class BlogDetailView(View):
                 "liked": liked
             },
         )
+
+
+class AddBlog(generic.CreateView):
+
+    model = HumanitasPost
+    form_class = BlogForm
+    template_name = 'blog/add_blog.html'
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        return super().form_valid(form)
