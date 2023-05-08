@@ -30,7 +30,8 @@
                             <li><a class="dropdown-item" href="#">Blogs</a></li>
                             <li><a class="dropdown-item" href="{% url 'add_blog' %}">Add Blogs</a></li>
                         </ul>
-                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item right">
                         <span>
                             {% if user.is_authenticated %}
                             <a class="navbar-brand authorization-link" href="{% url 'account_logout' %}">Logout</a>
