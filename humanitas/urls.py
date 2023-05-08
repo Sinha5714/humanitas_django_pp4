@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('blog.urls'), name='humanitas_blog_urls'),
+    path('', include('home.urls', name='home_url')),
     path('accounts/', include('allauth.urls')),
 ]
