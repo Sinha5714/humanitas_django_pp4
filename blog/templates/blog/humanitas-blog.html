@@ -21,10 +21,10 @@
                                 <img class="card-img-top" src=" {{ post.cover_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.creator }}</p>
+                                    <p class="author">{{ post.creator }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'blog_details_page' post.slug %}" class="post-link">
+                            <a href="{% url 'blog_details' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
                             <h3 class="card-text text-black">{{ post.body}}</h3>
