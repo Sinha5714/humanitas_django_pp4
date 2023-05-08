@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import HumanitasPost
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -22,5 +23,6 @@ class BlogDetailView(DetailView):
     """
     model = HumanitasPost
     context_object_name = 'post'
-    template_name = 'blog/humanitas-blog-details.html'
+    template_name = 'flow_blog/humanitas-blog-details.html'
     slug_field = 'slug'
+    form = CommentForm
