@@ -44,14 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    'crispy_forms',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary_storage',
-    'django.contrib.staticfiles',
-    'cloudinary',
     'django_summernote',
-    'crispy_forms',
     'blog',
 ]
 
@@ -59,6 +59,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
@@ -70,7 +72,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
