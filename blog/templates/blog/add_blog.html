@@ -6,14 +6,12 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
 <h1 class="col-12 text-center"> ADD YOUR STORY</h1>
-<div class="container">
-    <div class="form-group bg- p-3">
-        <form method="POST" enctype="multipart/form-data" autocomplete="off" class="formlabel">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-primary active pl-5 pr-5 p-2 font-weight-bold" type="submit">POST</button>
-        </form>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+        <button type="submit">Post</button>
     </div>
-</div>
+</form>
 
 {% endblock %}

@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import HumanitasPost
-from .forms import CommentForm, BlogForm
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -13,7 +14,6 @@ class HumanitasPostView(generic.ListView):
     """
     model = HumanitasPost
     queryset = HumanitasPost.objects.filter(status=1).order_by("-created_on")
-    context_object_name = 'humanitas_post'
     template_name = 'blog/humanitas-blog.html'
     paginate_by = 6
 
@@ -27,7 +27,6 @@ class BlogDetailView(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = HumanitasPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comment_form = CommentForm
         comments = post.comments.filter(approved=True).order_by("created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -41,7 +40,7 @@ class BlogDetailView(View):
                 "comments": comments,
                 "liked": liked,
                 "commented": False,
-                "comment_form": comment_form
+                "comment_form": CommentForm
             },
         )
 
@@ -87,10 +86,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('blog_details', args=[slug]))
-
-
-class AddBlog(generic.CreateView):
-
-    model = HumanitasPost
-    form_class = BlogForm
-    template_name = 'blog/add_blog.html'
