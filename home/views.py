@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.views.generic import TemplateView
 from django.contrib import messages
 from django.http import HttpResponse
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail
 from .forms import ContactUsForm
 
 # Create your views here.
