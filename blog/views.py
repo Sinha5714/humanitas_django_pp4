@@ -94,3 +94,4 @@ class AddBlog(generic.CreateView):
     model = HumanitasPost
     form_class = BlogForm
     template_name = 'blog/add_blog.html'
+    success_message = 'Your story added succesfully'

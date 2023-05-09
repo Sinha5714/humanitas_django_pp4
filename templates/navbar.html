@@ -29,8 +29,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                     </li>
-
-
                     <li class="nav-item">
                         <span>
                             {% if user.is_authenticated %}
@@ -40,8 +38,6 @@
                             <a class="nav-link authorization-link" href="{% url 'account_signup' %}">Register</a>
                             {% endif %}
                         </span>
-                    </li>
-
                     </li>
                 </ul>
             </div>
