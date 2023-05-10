@@ -97,19 +97,16 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                {% if user.is_authenticated %}
-
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ form.as_p }}
+                <form method="post" class="mt-2 formlabel" style="margin-top: 1.3em;"
+                    data-url="{% url 'blog_details' post.pk %}">
                     {% csrf_token %}
-                    <div>
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <div class="form-group d-flex">
+                        {{form.as_p}}
+                        <div class="d-flex align-items-end">
+                            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        </div>
                     </div>
-
                 </form>
-                {% endif %}
             </div>
         </div>
     </div>

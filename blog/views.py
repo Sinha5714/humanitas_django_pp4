@@ -28,6 +28,24 @@ class BlogDetailView(View):
     slug_field = 'slug'
     form = CommentForm
 
+    def post(self, request, *args, **kwargs):
+        """
+        overriding the post method and
+        saving the user comment
+        """
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            humanitas_post = self.get_object()
+            form.instance.author = request.user
+            form.instance.humanitas_post = humanitas_post
+            form.save()
+            messages.success(request, 'YOU ADDED A NEW COMMENT')
+            return HttpResponseRedirect(
+                reverse('blog_details', kwargs={'pk': humanitas_post.pk}))
+        else:
+            form = CommentForm()
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
 
 class AddBlog(generic.CreateView):
 
