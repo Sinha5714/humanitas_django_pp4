@@ -11,9 +11,9 @@ class CommentForm(forms.ModelForm):
         widget=forms.Textarea(
             attrs={
                 'class': 'md-textarea form-control comment-text',
-                'placeholder': 'your comment....',
-                'rows': '4',
-                'id': 'comment',
+                'placeholder': 'Comment here!',
+                'rows': 4,
+                'cols': 50
             }
         ),
         label='comment:'
@@ -21,7 +21,7 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model: Comment
-        fields = ['content',]
+        fields = ['content']
 
 
 class BlogForm(forms.ModelForm):

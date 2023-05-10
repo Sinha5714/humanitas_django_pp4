@@ -101,7 +101,7 @@
                     data-url="{% url 'blog_details' post.pk %}">
                     {% csrf_token %}
                     <div class="form-group d-flex">
-                        {{form.as_p}}
+                        {{ comment_form.as_p }}
                         <div class="d-flex align-items-end">
                             <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                         </div>

@@ -13,7 +13,6 @@ class HumanitasPost(models.Model):
     title = models.CharField(max_length=200, unique=True)
     creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="humanitas_posts")
-    slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
     cover_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
@@ -25,13 +24,13 @@ class HumanitasPost(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.creator)
 
-    def get_absolute_url(self):
-        return reverse("humanitas_blog_page")
-
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
+        img = Image.open(self.image.path)
+        if img.height > 400 or img.width > 400:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
 
 
 class Comment(models.Model):
@@ -44,9 +43,6 @@ class Comment(models.Model):
     content = models.TextField(max_length=400)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=True)
-
-    def get_absolute_url(self):
-        return reverse('blog_details', kwargs={'pk': self.humanitas_post.pk})
 
     class Meta:
         ordering = ['created_on']
