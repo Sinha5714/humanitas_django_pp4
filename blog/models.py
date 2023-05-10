@@ -1,5 +1,7 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
 
@@ -16,16 +18,20 @@ class HumanitasPost(models.Model):
     cover_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name='post_likes', blank=True)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-updated_on']
 
     def __str__(self):
         return self.title + ' | ' + str(self.creator)
 
-    def number_of_likes(self):
-        return self.likes.count()
+    def get_absolute_url(self):
+        return reverse("humanitas_blog_page")
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
@@ -35,13 +41,15 @@ class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     humanitas_post = models.ForeignKey(
         HumanitasPost, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=60)
-    content = models.TextField(max_length=300)
+    content = models.TextField(max_length=400)
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
+
+    def get_absolute_url(self):
+        return reverse('blog_details', kwargs={'pk': self.humanitas_post.pk})
 
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return self.name + '|commented: ' + self.content
+        return self.author.username + '|commented: ' + self.content
