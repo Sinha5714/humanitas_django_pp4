@@ -52,4 +52,4 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return self.author.username + '|commented: ' + self.content
+        return self.author + '|commented: ' + self.content

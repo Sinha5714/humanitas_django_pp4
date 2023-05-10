@@ -15,7 +15,6 @@ class HumanitasPostView(generic.ListView):
     model = HumanitasPost
     context_object_name = 'humanitas_post'
     template_name = 'blog/humanitas-blog.html'
-    paginate_by = 6
 
 
 class BlogDetailView(View):
