@@ -16,7 +16,7 @@ from django.views.generic import (
 # Create your views here.
 
 
-class HumanitasPostView(LoginRequiredMixin, ListView):
+class HumanitasPostView(ListView):
     """
     A class view to view a list of all posts
     """
@@ -55,3 +55,13 @@ def post_detail(request, pk):
             'comment_form': comment_form
         }
         return render(request, 'blog/blog_detail.html', context)
+
+
+class HumanitasPostCreate(LoginRequiredMixin, CreateView):
+    model = HumanitasPost
+    fields = ['title', 'body', 'cover_image']
+    template_name = 'blog/add_blog.html'
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        return super().form_valid(form)
