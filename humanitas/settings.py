@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sinha5714-humanitas-djan-2cueq8qiak.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-sinha5714-humanitas-djan-giegkq4ixp.us2.codeanyapp.com',
                  'humanitas-django-pp4.herokuapp.com', 'localhost']
 
 
