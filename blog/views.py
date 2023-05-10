@@ -13,7 +13,6 @@ class HumanitasPostView(generic.ListView):
     A class view to view a list of all posts
     """
     model = HumanitasPost
-    queryset = HumanitasPost.objects.filter(status=1).order_by("-created_on")
     context_object_name = 'humanitas_post'
     template_name = 'blog/humanitas-blog.html'
     paginate_by = 6
@@ -26,7 +25,6 @@ class BlogDetailView(View):
     """
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = HumanitasPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("created_on")
         liked = False
@@ -46,8 +44,6 @@ class BlogDetailView(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-
-        queryset = HumanitasPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(
             approved=True).order_by("-created_on")
