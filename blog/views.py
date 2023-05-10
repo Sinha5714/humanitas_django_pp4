@@ -57,6 +57,14 @@ def post_detail(request, pk):
         return render(request, 'blog/blog_detail.html', context)
 
 
+@login_required
+def deletecomment(request, id):
+    comment = get_object_or_404(Comment, id=id)
+    comment.delete()
+    messages.success(request, f'Comment deleted!')
+    return redirect(comment.post.get_absolute_url())
+
+
 class HumanitasPostCreate(LoginRequiredMixin, CreateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
