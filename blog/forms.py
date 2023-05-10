@@ -31,3 +31,9 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = HumanitasPost
         fields = ('title', 'cover_image', 'body',)
+
+        widgets = {
+            'title': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Story Title'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
