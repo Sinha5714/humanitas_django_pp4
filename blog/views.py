@@ -1,21 +1,34 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views import generic, View
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import HumanitasPost, Comment
 from .forms import CommentForm
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 
 # Create your views here.
 
 
-class HumanitasPostView(generic.ListView):
+class HumanitasPostView(LoginRequiredMixin, ListView):
     """
     A class view to view a list of all posts
     """
     model = HumanitasPost
     context_object_name = 'humanitas_post'
     template_name = 'blog/humanitas-blog.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(HumanitasPostView, self).get_context_data(
+            *args, **kwargs)
+        context['title'] = 'My Story'
+        return context
 
 
 @login_required
@@ -35,7 +48,7 @@ def post_detail(request, pk):
         else:
             comment_form = CommentForm()
         context = {
-            'title': 'Post Details',
+            'title': 'Story Details',
             'comments': comments,
             'ied': ied,
             'object': post,

@@ -24,13 +24,11 @@ class HumanitasPost(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.creator)
 
+    def get_absolute_url(self):
+        return reverse('blog_details', kwargs={'pk': self.pk})
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        img = Image.open(self.image.path)
-        if img.height > 400 or img.width > 400:
-            output_size = (300, 300)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
 
 
 class Comment(models.Model):

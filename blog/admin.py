@@ -14,7 +14,3 @@ class HumanitasPostAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
 
     search_fields = ['name', 'created_on']
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
