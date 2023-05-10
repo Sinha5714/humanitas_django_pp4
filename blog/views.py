@@ -22,66 +22,11 @@ class BlogDetailView(View):
     Detail view for each blogpost
     and added comments
     """
-
-    def get(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("created_on")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
-
-        return render(
-            request,
-            "blog/blog_detail.html",
-            {
-                "post": post,
-                "comments": comments,
-                "liked": liked,
-                "commented": False,
-                "comment_form": CommentForm
-            },
-        )
-
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(
-            approved=True).order_by("-created_on")
-        liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
-            liked = True
-
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.save()
-        else:
-            comment_form = CommentForm
-
-        return render(
-            request,
-            "blog/blog_detail.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": True,
-                "comment_form": comment_form,
-                "liked": liked
-            },
-        )
-
-
-class PostLike(View):
-
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(HumanitasPost, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-
-        return HttpResponseRedirect(reverse('blog_details', args=[slug]))
+    model = HumanitasPost
+    context_object_name = 'posts'
+    template_name = 'blog/blog_detail.html'
+    slug_field = 'slug'
+    form = CommentForm
 
 
 class AddBlog(generic.CreateView):
