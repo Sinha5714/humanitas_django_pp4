@@ -24,13 +24,16 @@ class HumanitasPost(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.creator)
 
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
     """
-    Model fo comments from users
+    Model for comments from users
     """
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     humanitas_post = models.ForeignKey(
@@ -44,3 +47,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.author + '|commented: ' + self.content
+
+    def get_absolute_url(self):
+        return reverse('blog_details', kwargs={'pk': self.humanitas_post.pk})
