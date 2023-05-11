@@ -32,31 +32,9 @@ class HumanitasPostView(ListView):
         return context
 
 
-@login_required
-def blog_detail(request, pk):
-    post = HumanitasPost.objects.get(id=pk)
-    ied = pk
-    comments = Comment.objects.filter(humanitas_post=post).order_by('-pk')
-
-    if request.method == 'POST':
-        comment_form = CommentForm(request.POST or None)
-        if comment_form.is_valid():
-            content = request.POST.get('content')
-            comment = Comment.objects.create(
-                humanitas_post=post, author=request.user, content=content)
-            comment.save()
-            return redirect(post.get_absolute_url())
-        else:
-            comment_form = CommentForm()
-
-        context = {
-            'title': 'Story Details',
-            'comments': comments,
-            'ied': ied,
-            'object': post,
-            'comment_form': comment_form
-        }
-        return render(request, 'blog/blog_detail.html', context)
+class BlogDetailView(LoginRequiredMixin, DetailView):
+    model = HumanitasPost
+    template_name = 'blog/blog_details'
 
 
 @login_required

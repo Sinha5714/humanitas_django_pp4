@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <h1 class="text-center">Our Stories</h1>
     {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
     <div class="jumbotron">
         <h1 class="display-4">Our Stories</h1>
@@ -17,7 +16,7 @@
     </div>
 
     <div class="row">
-        {% for post in humanitas_post|slice:":2" %}
+        {% for post in humanitas_post|slice:":4" %}
         <div class="col-sm-6">
             <article class="media content-section" style="align-content: center;">
 
@@ -28,9 +27,10 @@
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-text">By : {{ post.creator }} </p>
                         <p class="card-text">
-                            <a class="btn btn-secondary btn-sm mt-1 mb-1"
-                                href="{{% url 'blog_details' post.pk %}">Checkout <span class="badge badge-light">Now
-                                    !</span></a>
+                        <p class="card-text">{{ post.body|slice:":50"}}</p>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1"
+                            href="{{% url 'blog_details' post.pk as blog_details_url %}">Read
+                            More</a>
                         </p>
                     </div>
                 </div>

@@ -24,9 +24,6 @@ class HumanitasPost(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.creator)
 
-    def get_absolute_url(self):
-        return reverse('blog_details', kwargs={'pk': self.pk})
-
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
