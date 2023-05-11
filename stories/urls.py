@@ -2,7 +2,8 @@
 Module for blog urls 
 """
 from django.urls import path
-from .views import HumanitasPostView, BlogDetailView, HumanitasPostCreate, HumanitasPostUpdate
+from .views import (HumanitasPostView, BlogDetailView,
+                    HumanitasPostCreate, HumanitasPostUpdate, HumanitasPostDelete)
 from . import views
 
 urlpatterns = [
@@ -12,4 +13,5 @@ urlpatterns = [
     path('stories/new',
          HumanitasPostCreate.as_view(), name='add_blog'),
     path('post/<int:pk>/update/', HumanitasPostUpdate.as_view(), name='update_blog'),
+    path('post/<int:pk>/delete/', HumanitasPostDelete.as_view(), name='delete_blog'),
 ]

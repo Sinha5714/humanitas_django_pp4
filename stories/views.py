@@ -84,7 +84,7 @@ class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-class HumanitasPostUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class HumanitasPostUpdate(LoginRequiredMixin, SuccessMessageMixin,  UserPassesTestMixin, UpdateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
     success_url = '/blog'
@@ -93,6 +93,18 @@ class HumanitasPostUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         form.instance.creator = self.request.user
         return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.creator:
+            return True
+        return False
+
+
+class HumanitasPostDelete(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+    model = HumanitasPost
+    success_url = '/blog'
+    success_message = 'Your story has been deleted successfully!'
 
     def test_func(self):
         post = self.get_object()
