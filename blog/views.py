@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import HumanitasPost, Comment
 from .forms import CommentForm
@@ -27,26 +28,27 @@ class HumanitasPostView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super(HumanitasPostView, self).get_context_data(
             *args, **kwargs)
-        context['title'] = 'My Story'
+        context['title'] = 'Our Stories'
         return context
 
 
 @login_required
-def post_detail(request, pk):
+def blog_detail(request, pk):
     post = HumanitasPost.objects.get(id=pk)
     ied = pk
-    comments = Comment.objects.filter(post=post).order_by('-pk')
+    comments = Comment.objects.filter(humanitas_post=post).order_by('-pk')
 
     if request.method == 'POST':
-        comment_form = (request.POST or None)
+        comment_form = CommentForm(request.POST or None)
         if comment_form.is_valid():
             content = request.POST.get('content')
             comment = Comment.objects.create(
-                post=post, user=request.user, content=content)
+                humanitas_post=post, author=request.user, content=content)
             comment.save()
             return redirect(post.get_absolute_url())
         else:
             comment_form = CommentForm()
+
         context = {
             'title': 'Story Details',
             'comments': comments,
@@ -65,10 +67,12 @@ def deletecomment(request, id):
     return redirect(comment.post.get_absolute_url())
 
 
-class HumanitasPostCreate(LoginRequiredMixin, CreateView):
+class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
     template_name = 'blog/add_blog.html'
+    success_url = '/blog'
+    success_message = 'Your story is added successfully!'
 
     def form_valid(self, form):
         form.instance.creator = self.request.user

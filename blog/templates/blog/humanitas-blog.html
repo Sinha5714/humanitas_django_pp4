@@ -1,47 +1,43 @@
-{% extends 'base.html' %}
-{% block content %}
-{% load crispy_forms_tags %}
-{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+<!DOCTYPE html>
+<html lang="en">
 
-<h1 class="text-center">Our Stories</h1>
-<div class="container pt-3">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center">Our Stories</h1>
+    {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+    <div class="jumbotron">
+        <h1 class="display-4">Our Stories</h1>
+        <hr class="my-4">
+    </div>
+
     <div class="row">
+        {% for post in humanitas_post|slice:":2" %}
+        <div class="col-sm-6">
+            <article class="media content-section" style="align-content: center;">
 
-        <!-- Blog Entries Column -->
-        {% for post in humanitas_post %}
-        <div class="col-lg-6 mb-4">
-            <div class="card h-100">
-                {% if "placeholder" in post.cover_image.url %}
-                <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
-                    width="450" height="250">
-                {% else %}
-                <img class="card-img-top" src=" {{ post.cover_image.url }}">
-                {% endif %}
-                <div class="card-body">
-                    <div class="h3 card-title text-center">
-                        <a class="text-warning" href="{% url 'blog_details' %}">
-                            {{ post.title }}</a>
+                <div class="card mb-3 row">
+                    <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Card image cap"
+                        style="height: 100%;width:100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">By : {{ post.creator }} </p>
+                        <p class="card-text">
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1"
+                                href="{{% url 'blog_details' post.pk %}">Checkout <span class="badge badge-light">Now
+                                    !</span></a>
+                        </p>
                     </div>
-                    <p class=" d-flex justify-content-between text-white-50"><strong>{{ post.creator }} | {{
-                            post.created_on }}</strong>
-                    </p>
                 </div>
-                <h3 class="card-text text-black">{{ post.body }}</h3>
-                <hr />
-            </div>
-        </div>
-        <div>
-            <form method="POST">
-                {% csrf_token %}
-                {{ comment_form.as_p }}
-            </form>
+            </article>
         </div>
         {% endfor %}
     </div>
-</div>
+</body>
 
-
-
-</div>
-
-{% endblock content%}
+</html>
