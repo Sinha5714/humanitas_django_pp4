@@ -8,6 +8,7 @@ class HumanitasPostAdmin(SummernoteModelAdmin):
     summernote_fields = ('body')
     list_display = ('title', 'created_on')
     search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
 
 
 @admin.register(Comment)

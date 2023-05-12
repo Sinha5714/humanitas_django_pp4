@@ -9,8 +9,8 @@ class HumanitasPost(models.Model):
     """
     HumanitasPost model used for each blog posted by users
     """
-
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=250, null=True, blank=True)
     creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="humanitas_posts")
     body = models.TextField()
@@ -25,7 +25,7 @@ class HumanitasPost(models.Model):
         return self.title + ' | ' + str(self.creator)
 
     def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.pk})
+        return reverse('humanitas_blog_page')
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
