@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import (render, get_object_or_404,
+                              reverse, redirect)
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import (LoginRequiredMixin,
+                                        UserPassesTestMixin)
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import HumanitasPost, Comment
@@ -84,7 +86,10 @@ class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-class HumanitasPostUpdate(LoginRequiredMixin, SuccessMessageMixin,  UserPassesTestMixin, UpdateView):
+class HumanitasPostUpdate(LoginRequiredMixin,
+                          SuccessMessageMixin,
+                          UserPassesTestMixin,
+                          UpdateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
     success_url = '/blog'
@@ -101,7 +106,10 @@ class HumanitasPostUpdate(LoginRequiredMixin, SuccessMessageMixin,  UserPassesTe
         return False
 
 
-class HumanitasPostDelete(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+class HumanitasPostDelete(LoginRequiredMixin,
+                          SuccessMessageMixin,
+                          UserPassesTestMixin,
+                          DeleteView):
     model = HumanitasPost
     success_url = '/blog'
     success_message = 'Your story has been deleted successfully!'
