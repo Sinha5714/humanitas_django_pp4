@@ -64,7 +64,17 @@ def booking_home(request):
 
 
 class BookingListView(ListView):
+    """
+    Class model for list view for bookings
+    """
     model = Booking
     template_name = "booking/bookings.html"
-    context_object_name = "sessions"
+    context_object_name = "bookings"
     ordering = ["-date"]
+
+
+class BookingDetailView(DetailView):
+    """
+    Class model for detail view for bookings
+    """
+    model = Booking

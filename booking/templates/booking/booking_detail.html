@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-{% for booking in bookings %}
 <article class="media content-section">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2">{{ booking.user }}</a>
+            <a class="mr-2" href="#">{{ booking.user }}</a>
             <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
+            {% if booking.user == user %}
+            <div>
+                <a class='btn btn-secondary btn-small mt-1 mb-1' href="#">Edit</a>
+                <a class='btn btn-danger btn-small mt-1 mb-1' href="#">Cancel</a>
+            </div>
+            {% endif %}
         </div>
-        <h2><a class="article-title" href="{% url 'booking_detail' booking.id %}">{{ booking.helptype }}</a></h2>
+        <h2 class="article-title">{{ booking.helptype }}</h2>
         <p class="article-content">{{ booking.date|date:"l" }}</p>
     </div>
 </article>
-{% endfor %}
+
 {% endblock content %}
