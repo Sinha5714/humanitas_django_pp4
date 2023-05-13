@@ -42,3 +42,4 @@ def contact(request):
                 return redirect(reverse('contact') + '#')
 
     return render(request, 'contact.html', {'form': form})
+
