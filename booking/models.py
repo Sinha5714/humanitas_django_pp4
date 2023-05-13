@@ -21,3 +21,6 @@ class Booking(models.Model):
     timeblock = models.CharField(
         max_length=10, choices=TIMEBLOCK_CHOICES, default="A")
     helptype = models.CharField(max_length=100, default="")
+
+    def __str__(self):
+        return f"{self.user.username}: {self.date} ({self.timeblock})"
