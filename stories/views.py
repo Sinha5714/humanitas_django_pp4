@@ -62,7 +62,7 @@ def deletecomment(request, id):
     comment = get_object_or_404(Comment, id=id)
     comment.delete()
     messages.success(request, f'Comment deleted!')
-    return redirect(comment.post.get_absolute_url())
+    return redirect(comment.humanitas_post.get_absolute_url())
 
 
 class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):

@@ -12,7 +12,7 @@ urlpatterns = [
     path('', HumanitasPostView.as_view(), name='humanitas_blog_page'),
     path('<int:pk>/', views.post_detail,
          name='blog_details'),
-    path('comment/<int:pk>', views.deletecomment, name='blog_comment'),
+    path('comment/<int:id>', views.deletecomment, name='blog_comment'),
     path('stories/new',
          HumanitasPostCreate.as_view(), name='add_blog'),
     path('<int:pk>/update/',
