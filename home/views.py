@@ -22,7 +22,8 @@ def home(request):
 
 def contact(request):
     """
-    view to render contact page
+    view to render contact page and send message
+    if user is logged in
     """
     form = ContactUsForm()
     if request.method == 'POST':
@@ -34,15 +35,15 @@ def contact(request):
             message = form.cleaned_data['message']
             if request.user.is_authenticated:
                 send_mail(
-                    subject='name',
-                    message='message',
-                    from_email=settings.EMAIL_HOST_USER,
+                    subject=name,
+                    message=message,
+                    from_email=email,
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
                 messages.success(request, 'THANK YOU FOR YOUR MESSAGE')
                 return redirect(reverse('contact') + '#')
             else:
-                message.error(request, 'Login to send message!')
+                messages.error(request, 'Login to send message!')
                 form = ContactUsForm()
                 return redirect(reverse('contact') + '#')
         else:
