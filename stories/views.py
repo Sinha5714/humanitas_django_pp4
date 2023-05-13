@@ -1,5 +1,6 @@
 from django.shortcuts import (render, get_object_or_404,
                               reverse, redirect)
+from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.mixins import (LoginRequiredMixin,
@@ -24,24 +25,39 @@ class HumanitasPostView(ListView):
     A class view to view a list of all posts
     """
     model = HumanitasPost
+    queryset = HumanitasPost.objects.filter(status=1).order_by("-created_on")
     context_object_name = 'humanitas_post'
     template_name = 'stories/humanitas-blog.html'
 
-    def get_context_data(self, *args, **kwargs):
-        context = super(HumanitasPostView, self).get_context_data(
-            *args, **kwargs)
-        context['title'] = 'Our Stories'
-        return context
-
-
-class BlogDetailView(LoginRequiredMixin, DetailView):
-    model = HumanitasPost
-    template_name = 'stories/blog_detail.html'
-    context_object_name = 'post'
-    form = CommentForm
-
 
 @login_required
+def post_detail(request, pk):
+    post = HumanitasPost.objects.get(id=pk)
+    ied = pk
+    comments = Comment.objects.filter(humanitas_post=post).order_by("-pk")
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST or None)
+        if comment_form.is_valid():
+            content = request.POST.get('content')
+            comment = Comment.objects.create(
+                humanitas_post=post, author=request.user, content=content)
+            comment.save()
+            return redirect(post.get_absolute_url())
+    else:
+        comment_form = CommentForm
+
+    context = {
+        'title': 'Post Details',
+        'comments': comments,
+        'ied': ied,
+        'object': post,
+        'comment_form': comment_form
+    }
+    return render(request, 'stories/blog_detail.html', context)
+
+
+@ login_required
 def deletecomment(request, id):
     comment = get_object_or_404(Comment, id=id)
     comment.delete()
@@ -53,7 +69,7 @@ class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
     template_name = 'stories/add_blog.html'
-    success_url = '/blog'
+    success_url = '/stories'
     success_message = 'Your story is added successfully!'
 
     def form_valid(self, form):

@@ -4,17 +4,20 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class HumanitasPost(models.Model):
     """
     HumanitasPost model used for each blog posted by users
     """
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=250, null=True, blank=True)
+    slug = models.SlugField(max_length=200, null=True, unique=True, blank=True)
     creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="humanitas_posts")
     body = models.TextField()
     cover_image = CloudinaryField('image', default='placeholder')
+    status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
@@ -28,7 +31,9 @@ class HumanitasPost(models.Model):
         return reverse('humanitas_blog_page')
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
@@ -46,7 +51,8 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return self.author + '|commented: ' + self.content
+        return 'comment on {} by {}'.format(self.humanitas_post.title,
+                                            self.author.username)
 
     def get_absolute_url(self):
-        return reverse('blog_details', kwargs={'pk': self.humanitas_post.pk})
+        return reverse('blog_details', kwargs={'pk': self.humanitas_post.id})

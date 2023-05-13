@@ -13,5 +13,4 @@ class HumanitasPostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-
     search_fields = ['name', 'created_on']
