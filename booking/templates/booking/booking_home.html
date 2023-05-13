@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% for day in days %}
 <article class="media content-section">
     <div class="media-body">

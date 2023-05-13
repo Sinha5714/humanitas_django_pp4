@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+{% for booking in bookings %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2">{{ booking.user }}</a>
+            <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ booking.helptype }}</a></h2>
+        <p class="article-content">{{ booking.date|date:"l" }}</p>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}

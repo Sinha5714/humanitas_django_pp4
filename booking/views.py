@@ -8,6 +8,13 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from .models import Booking
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 
 
 # Create your views here.
@@ -51,6 +58,13 @@ def generate_daylist():
     return daylist
 
 
-def bookinghome(request):
+def booking_home(request):
     context = {"days": generate_daylist()}
     return render(request, "booking/booking_home.html", context)
+
+
+class BookingListView(ListView):
+    model = Booking
+    template_name = "booking/bookings.html"
+    context_object_name = "sessions"
+    ordering = ["-date"]
