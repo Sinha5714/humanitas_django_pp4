@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
+
 {% block content %}
+{% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
 <!-- contact form -->
 <h1>Contact Us</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form | crispy }}
     <div class="form-actions">
         <button type="submit">Send</button>
     </div>
 </form>
-
-
 
 {% endblock content %}
