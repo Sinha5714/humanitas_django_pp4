@@ -14,6 +14,9 @@ from .forms import ContactUsForm
 
 
 def home(request):
+    """
+    view to render home page
+    """
     return render(request, 'index.html')
 
 
@@ -21,6 +24,7 @@ def contact(request):
     """
     view to render contact page
     """
+    form = ContactUsForm()
     if request.method == 'POST':
         form = ContactUsForm(request.POST or None)
         if form.is_valid():
@@ -36,12 +40,11 @@ def contact(request):
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
                 messages.success(request, 'THANK YOU FOR YOUR MESSAGE')
-
                 return redirect(reverse('contact') + '#')
-
             else:
+                message.error(request, 'Login to send message!')
                 form = ContactUsForm()
-                messages.error(request, 'Login to send message!')
                 return redirect(reverse('contact') + '#')
-
+        else:
+            form = ContactUsForm
     return render(request, 'contact.html', {'form': form})
