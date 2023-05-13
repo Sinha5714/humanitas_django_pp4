@@ -83,7 +83,8 @@ class HumanitasPostUpdate(LoginRequiredMixin,
                           UpdateView):
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
-    success_url = '/blog'
+    success_url = '/stories'
+    template_name = 'stories/add_blog.html'
     success_message = 'Your story has been updated successfully!'
 
     def form_valid(self, form):
@@ -102,7 +103,8 @@ class HumanitasPostDelete(LoginRequiredMixin,
                           UserPassesTestMixin,
                           DeleteView):
     model = HumanitasPost
-    success_url = '/blog'
+    success_url = '/stories'
+    template_name = 'stories/blog_delete_modal.html'
     success_message = 'Your story has been deleted successfully!'
 
     def test_func(self):

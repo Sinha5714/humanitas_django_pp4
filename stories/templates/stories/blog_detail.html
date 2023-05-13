@@ -1,8 +1,65 @@
-{% extends 'base.html' %}
-{% block content %}
-{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-{% load crispy_forms_tags %}
-<!-- Blog Entries Column -->
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-{% endblock content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% load crispy_forms_tags %}
+
+<body>
+    <div>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Stories</a>
+    </div>
+
+    <article class="media content-section row">
+        <div class="media-body">
+
+            <div class="article-metadata">
+                <strong>
+                    <p>{{ object.creator }}</p>
+                </strong>
+                {% if object.creator == user %}
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
+                </div>
+                {% endif %}
+            </div>
+            <p class="article-content">
+                <img src="{{object.cover_image.url}}" class="imgpost">
+                <small class="text-muted">{{ object.created_on|date:"F d, Y" }}</small>
+            </p>
+
+    </article>
+
+
+    <div class="main-comment-section">
+        {{comments.count}} Comment{{comments|pluralize}}
+    </div>
+
+    {% for comment in comments %}
+    <blockquote class="blockquote">
+        <p>{{ comment.content}}</p>
+        <footer class="blockquote-footer">
+            By <cite>{{comment.user|capfirst}}
+
+                {% ifequal object.author.id user.id%}
+                <a href="#" style="color: #585858;"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                {% endifequal %}
+                {% ifequal comment.user.id user.id%}
+                {% ifequal comment.user.id object.author.id%}
+                {% else %}
+                <a href="#" style="color: #585858;"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                {% endifequal %}
+                {% endifequal %}
+            </cite>
+        </footer>
+    </blockquote>
+    {% endfor %}
+</body>
+
+</html>
+<!-- Blog Entries Column -->
