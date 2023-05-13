@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+{% for day in days %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">{{ day.date }}</a>
+            <small class="text-muted">{{ day.day }}</small>
+        </div>
+        {% if not day.A_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">10:00-11:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+
+        {% if not day.B_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">11:00-12:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+
+        {% if not day.C_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">12:00-13:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+
+        {% if not day.D_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">13:00-14:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+
+        {% if not day.E_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">14:00-15:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+
+        {% if not day.F_booked %}
+        <a class='btn btn-success btn-lg btn-block' href="#">15:00-16:00</a>
+        {% else %}
+        <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
+        {% endif %}
+    </div>
+</article>
+{% endfor %}
+
+{% endblock content %}

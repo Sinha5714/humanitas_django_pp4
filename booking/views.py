@@ -49,3 +49,8 @@ def generate_daylist():
         if day["day"] != "SUNDAY":
             daylist.append(day)
     return daylist
+
+
+def bookinghome(request):
+    context = {"days": generate_daylist()}
+    return render(request, "booking/booking_home.html", context)
