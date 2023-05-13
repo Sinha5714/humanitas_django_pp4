@@ -48,7 +48,7 @@ def post_detail(request, pk):
         comment_form = CommentForm
 
     context = {
-        'title': 'Post Details',
+        'title': 'Story Details',
         'comments': comments,
         'ied': ied,
         'object': post,

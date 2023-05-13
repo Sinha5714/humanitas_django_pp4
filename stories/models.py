@@ -28,7 +28,7 @@ class HumanitasPost(models.Model):
         return self.title + ' | ' + str(self.creator)
 
     def get_absolute_url(self):
-        return reverse('humanitas_blog_page')
+        return reverse('blog_details', kwargs={'pk': self.pk})
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -53,6 +53,3 @@ class Comment(models.Model):
     def __str__(self):
         return 'comment on {} by {}'.format(self.humanitas_post.title,
                                             self.author.username)
-
-    def get_absolute_url(self):
-        return reverse('blog_details', kwargs={'pk': self.humanitas_post.id})

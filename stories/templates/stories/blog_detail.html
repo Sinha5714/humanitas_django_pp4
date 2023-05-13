@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
 {% block content %}
+{% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
 
 <div>
-    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Stories</a>
+    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our Stories</a>
 </div>
 
 <article class="media content-section row">
@@ -34,17 +34,18 @@
     {{comments.count}} Comment{{comments|pluralize}}
 </div>
 
+
 {% for comment in comments %}
 <blockquote class="blockquote">
     <p>{{ comment.content}}</p>
     <footer class="blockquote-footer">
-        By <cite>{{comment.user|capfirst}}
+        By <cite>{{comment.author|capfirst}}
 
-            {% ifequal object.author.id user.id%}
+            {% ifequal object.author.id user.id %}
             <a href="#" style="color: #585858;"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
             {% endifequal %}
-            {% ifequal comment.user.id user.id%}
-            {% ifequal comment.user.id object.author.id%}
+            {% ifequal comment.user.id user.id %}
+            {% ifequal comment.user.id object.author.id %}
             {% else %}
             <a href="#" style="color: #585858;"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
             {% endifequal %}
@@ -53,5 +54,13 @@
     </footer>
 </blockquote>
 {% endfor %}
-< <!-- Blog Entries Column -->
-    {% endblock content %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        {{comment_form.as_p}}
+        <input type="submit" name="comment" class="btn btn-warning">
+
+    </form>
+</div>
+<!-- Blog Entries Column -->
+{% endblock content %}
