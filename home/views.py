@@ -34,8 +34,8 @@ def contact(request):
             message = form.cleaned_data['message']
             if request.user.is_authenticated:
                 send_mail(
-                    subject=name,
-                    message=message,
+                    subject='name',
+                    message='message',
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
