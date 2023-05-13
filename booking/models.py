@@ -20,4 +20,4 @@ class Booking(models.Model):
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(
         max_length=10, choices=TIMEBLOCK_CHOICES, default="A")
-    helptype = models.CharField(max_length=50, default="")
+    helptype = models.CharField(max_length=100, default="")
