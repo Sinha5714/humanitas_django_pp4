@@ -25,7 +25,7 @@ class HumanitasPostView(ListView):
     A class view to view a list of all posts
     """
     model = HumanitasPost
-    queryset = HumanitasPost.objects.filter(status=1).order_by("-created_on")
+    queryset = HumanitasPost.objects.filter(status=1).order_by("-updated_on")
     context_object_name = 'humanitas_post'
     template_name = 'stories/humanitas-blog.html'
 

@@ -45,13 +45,12 @@
             <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i class="fa fa-trash fa-lg"
                     aria-hidden="true"></i></a>
             {% endifequal %}
-            {% ifequal comment.user.id user.id %}
-            {% ifequal comment.user.id object.author.id %}
-            {% else %}
+            {% ifequal comment.author.id user.id %}
             <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i class="fa fa-trash fa-lg"
                     aria-hidden="true"></i></a>
+
             {% endifequal %}
-            {% endifequal %}
+            
         </cite>
     </footer>
 </blockquote>
