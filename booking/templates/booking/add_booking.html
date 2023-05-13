@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Book a call with US!</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <a class="btn btn-outline-secondary" href="{% url 'booking_home' %}">Cancel</a>
+            <button class="btn btn-outline-info" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

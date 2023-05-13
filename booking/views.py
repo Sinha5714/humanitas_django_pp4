@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect, render
 from django.urls import reverse
-
+from .forms import BookingForm
 from .models import Booking
 from django.views.generic import (
     ListView,
@@ -78,3 +78,16 @@ class BookingDetailView(DetailView):
     Class model for detail view for bookings
     """
     model = Booking
+
+
+class BookingCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    model = Booking
+    fields = ["date", "timeblock", "helptype"]
+    form = BookingForm()
+    template_name = "booking/add_booking.html"
+    success_message = 'Your booking is confirmed!'
+    success_url = '/bookings/bookings'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)

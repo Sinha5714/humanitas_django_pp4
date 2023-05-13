@@ -6,7 +6,8 @@ from .models import Booking
 class BookingForm(forms.ModelForm):
     date = forms.DateField(disabled=True)
     helptype = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "i.e. Human Rights"}), required=False
+        widget=forms.TextInput(attrs={"placeholder": "i.e. Human Rights"}),
+        required=False
     )
 
     class Meta:
