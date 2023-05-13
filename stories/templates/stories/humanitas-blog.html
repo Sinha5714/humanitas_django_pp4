@@ -3,32 +3,31 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% load crispy_forms_tags %}
 
-    <div class="jumbotron">
-        <h1 class="display-4">Our Stories</h1>
-        <hr class="my-4">
-    </div>
+<div class="jumbotron">
+    <h1 class="display-4">Our Stories</h1>
+    <hr class="my-4">
+</div>
 
-    <div class="row">
-        {% for post in humanitas_post|slice:":4" %}
-        <div class="col-sm-6">
-            <article class="media content-section" style="align-content: center;">
+<div class="row">
+    {% for post in humanitas_post|slice:":4" %}
+    <div class="col-sm-6">
+        <article class="media content-section" style="align-content: center;">
 
-                <div class="card mb-3 row">
+            <div class="card mb-3 row">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">By : {{ post.creator }} </p>
                     <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Card image cap"
                         style="height: 100%;width:100%;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">By : {{ post.creator }} </p>
-                        <p class="card-text">
-                        <p class="card-text">{{ post.body|slice:":50"}}</p>
-                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'blog_details' post.pk %}">
-                            Read More</a>
-                        <strong class="text-secondary"><i class="far fa-comments">Comments</i>
-                            </p>
-                    </div>
+                    <p class="card-text">{{ post.body|slice:":50"}}</p>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'blog_details' post.pk %}">
+                        Read More</a>
+                    <strong class="text-secondary"><i class="far fa-comments">Comments</i>
+                        </p>
                 </div>
-            </article>
-        </div>
-        {% endfor %}
+            </div>
+        </article>
     </div>
+    {% endfor %}
+</div>
 {% endblock content %}

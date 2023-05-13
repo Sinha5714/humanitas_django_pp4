@@ -61,7 +61,7 @@ def post_detail(request, pk):
 def deletecomment(request, id):
     comment = get_object_or_404(Comment, id=id)
     comment.delete()
-    messages.success(request, f'Comment deleted!')
+    messages.success(request, f'Comment deleted successfully!')
     return redirect(comment.humanitas_post.get_absolute_url())
 
 
