@@ -89,7 +89,7 @@ class BookingCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form = BookingForm()
     template_name = "booking/add_booking.html"
     success_message = 'Your booking is confirmed!'
-    success_url = '/bookings/bookings'
+    success_url = '/bookings'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -105,11 +105,26 @@ class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form = BookingForm()
     template_name = "booking/add_booking.html"
     success_message = 'Your booking is updated successfully!'
-    success_url = '/bookings/bookings'
+    success_url = '/bookings'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+    def test_func(self):
+        booking = self.get_object()
+        if self.request.user == booking.user:
+            return True
+        return False
+
+
+class BookingDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+    """
+    Class model for cancelling an existing booking
+    """
+    model = Booking
+    success_message = 'Your booking is cancelled!'
+    success_url = '/bookings'
 
     def test_func(self):
         booking = self.get_object()
