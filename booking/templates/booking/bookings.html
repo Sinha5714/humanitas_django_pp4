@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+{% if user.is_superuser %}
 {% for booking in bookings %}
 <article class="media content-section">
     <div class="media-body">
@@ -13,4 +14,22 @@
     </div>
 </article>
 {% endfor %}
+{% endif %}
+{% if user.is_authenticated %}
+{% for booking in bookings %}
+{% ifequal booking.user.id user.id %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2">{{ booking.user }}</a>
+            <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
+        </div>
+        <h2><a class="article-title" href="{% url 'booking_detail' booking.id %}">{{ booking.helptype }}</a></h2>
+        <p class="article-content">{{ booking.date|date:"l" }}</p>
+    </div>
+</article>
+{% endifequal %}
+{% endfor %}
+
+{% endif %}
 {% endblock content %}
