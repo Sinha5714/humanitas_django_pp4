@@ -41,7 +41,7 @@ def contact(request):
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
                 messages.success(request, 'THANK YOU FOR YOUR MESSAGE')
-                return redirect(reverse('contact') + '#')
+                return redirect(reverse('home') + '#')
             else:
                 messages.error(request, 'Login to send message!')
                 form = ContactUsForm()
