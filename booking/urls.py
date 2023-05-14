@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.urls import path
-from .views import BookingListView, BookingDetailView, BookingCreateView
+from .views import BookingListView, BookingDetailView, BookingCreateView, BookingUpdateView
 from . import views
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path("bookings/<int:pk>/", BookingDetailView.as_view(),
          name="booking_detail"),
     path("bookings/add/", BookingCreateView.as_view(), name="booking_add"),
+    path("bookings/<int:pk>/edit", BookingUpdateView.as_view(), name="booking_edit"),
 ]

@@ -81,6 +81,9 @@ class BookingDetailView(DetailView):
 
 
 class BookingCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    Class model for create a new booking
+    """
     model = Booking
     fields = ["date", "timeblock", "helptype"]
     form = BookingForm()
@@ -91,3 +94,25 @@ class BookingCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+    Class model for editing an existing booking
+    """
+    model = Booking
+    fields = ["date", "timeblock", "helptype"]
+    form = BookingForm()
+    template_name = "booking/add_booking.html"
+    success_message = 'Your booking is updated successfully!'
+    success_url = '/bookings/bookings'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        booking = self.get_object()
+        if self.request.user == booking.user:
+            return True
+        return False

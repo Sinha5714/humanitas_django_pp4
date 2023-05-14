@@ -8,7 +8,7 @@
             <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
             {% if booking.user == user %}
             <div>
-                <a class='btn btn-secondary btn-small mt-1 mb-1' href="#">Edit</a>
+                <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'booking_edit' object.id %}">Edit</a>
                 <a class='btn btn-danger btn-small mt-1 mb-1' href="#">Cancel</a>
             </div>
             {% endif %}
