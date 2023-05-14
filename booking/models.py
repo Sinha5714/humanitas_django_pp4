@@ -9,12 +9,13 @@ from django.contrib.auth.models import User
 class Booking(models.Model):
 
     TIMEBLOCK_CHOICES = (
-        ("A", "10:00-11:00"),
-        ("B", "11:00-12:00"),
-        ("C", "12:00-13:00"),
-        ("D", "13:00-14:00"),
-        ("E", "14:00-15:00"),
-        ("F", "15:00-16:00"),
+        ("A", "10:00-10:20"),
+        ("B", "10:30-10:50"),
+        ("C", "11:00-11:20"),
+        ("D", "11:30-11:50"),
+        ("E", "12:00-12:20"),
+        ("F", "15:00-15:20"),
+        ("G", "15:30-15:50"),
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)

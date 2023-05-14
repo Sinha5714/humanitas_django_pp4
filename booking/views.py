@@ -53,6 +53,10 @@ def generate_daylist():
             Booking.objects.filter(date=str(curr_day)).filter(
                 timeblock="F").exists()
         )
+        day["G_booked"] = (
+            Booking.objects.filter(date=str(curr_day)).filter(
+                timeblock="G").exists()
+        )
         if day["day"] != "SUNDAY":
             daylist.append(day)
     return daylist
@@ -73,7 +77,7 @@ class BookingListView(ListView):
     ordering = ["-date"]
 
 
-class BookingDetailView(DetailView):
+class BookingDetailView(LoginRequiredMixin, DetailView):
     """
     Class model for detail view for bookings
     """
@@ -94,6 +98,12 @@ class BookingCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+    def get_initial(self):
+        return {
+            "date": self.kwargs.get("date"),
+            "timeblock": self.kwargs.get("timeblock"),
+        }
 
 
 class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
