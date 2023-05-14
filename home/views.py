@@ -37,7 +37,7 @@ def contact(request):
                 send_mail(
                     subject=name,
                     message=message,
-                    from_email=email,
+                    from_email=settings.EMAIL_HOST_USER,
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
                 messages.success(request, 'THANK YOU FOR YOUR MESSAGE')
