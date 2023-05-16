@@ -3,36 +3,36 @@
 {% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
-
-<div>
-    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our Stories</a>
-</div>
-
-<article class="media content-section row">
-    <div class="media-body">
-
+<div class="container">
+    <div class="row">
         <div class="article-metadata">
             <strong>
                 <p>{{ object.creator }}</p>
             </strong>
+            <div class="col col-md-auto">
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
+                    Stories</a>
+            </div>
             {% if object.creator == user %}
-            <div>
-                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
+            <div class="col col-lg-2">
+                <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
                 <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
             </div>
             {% endif %}
         </div>
-        <p class="article-content">
+        <div class="article-content">
             <img src="{{object.cover_image.url}}" class="imgpost">
-            <small class="text-muted">{{ object.created_on|date:"F d, Y" }}</small>
-        </p>
+        </div>
+        <small class="text-muted">{{ object.created_on|date:"F d, Y" }}</small>
 
-</article>
-
-
-<div class="main-comment-section">
-    {{comments.count}} Comment{{comments|pluralize}}
+        </article>
+        <div class="main-comment-section">
+            {{comments.count}} Comment{{comments|pluralize}}
+        </div>
+    </div>
 </div>
+
+
 
 
 {% for comment in comments %}
@@ -50,7 +50,7 @@
                     aria-hidden="true"></i></a>
 
             {% endifequal %}
-            
+
         </cite>
     </footer>
 </blockquote>

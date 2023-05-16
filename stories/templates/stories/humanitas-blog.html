@@ -12,18 +12,15 @@
     {% for post in humanitas_post|slice:":4" %}
     <div class="col-sm-6">
         <article class="media content-section" style="align-content: center;">
-
-            <div class="card mb-3 row">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Card image cap"
+                    style="height: 100%;width:100%;">
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-text">By : {{ post.creator }} </p>
-                    <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Card image cap"
-                        style="height: 100%;width:100%;">
+                    <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
                     <p class="card-text">{{ post.body|slice:":50"}}</p>
-                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'blog_details' post.pk %}">
-                        Read More</a>
+                    <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
                     <strong class="text-secondary"><i class="far fa-comments">Comments</i>
-                        </p>
                 </div>
             </div>
         </article>
