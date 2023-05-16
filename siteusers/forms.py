@@ -1,11 +1,13 @@
-from django.contrib.auth import forms
+from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
 
 
-class ProfileForm(forms.UserCreationForm):
-    email = forms.EmailField(label="Primary email")
+class ProfileForm(forms.ModelForm):
+    """
+    A class for the profile creation form
+    """
 
-    class Meta(forms.UserCreationForm.Meta):
+    class Meta:
         model = Profile
-        fields = ['profile_image', 'email']
+        fields = ['first_name', 'last_name', 'profile_image', 'email']
