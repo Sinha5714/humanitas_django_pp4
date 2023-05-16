@@ -40,7 +40,8 @@ def contact(request):
                     from_email=settings.EMAIL_HOST_USER,
                     recipient_list=['shubhamsinha5714@gmail.com']
                 )
-                messages.success(request, 'THANK YOU FOR YOUR MESSAGE')
+                messages.success(
+                    request, 'Your message has been sent succesfully!')
                 return redirect(reverse('home') + '#')
             else:
                 messages.error(request, 'Login to send message!')
