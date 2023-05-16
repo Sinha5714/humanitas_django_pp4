@@ -11,8 +11,10 @@ class Profile(models.Model):
     for each registered user
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(blank=True, max_length=50)
+    last_name = models.CharField(blank=True, max_length=50)
     profile_image = CloudinaryField('image', default='placeholder')
-    email = models.EmailField(max_length=100, null=True)
+    email = models.EmailField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return f'{self.user.username} Profile'
