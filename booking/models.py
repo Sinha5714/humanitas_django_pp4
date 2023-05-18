@@ -4,6 +4,7 @@ from django.conf import settings
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
 
 class Booking(models.Model):
@@ -17,6 +18,7 @@ class Booking(models.Model):
         ("F", "15:00-15:20"),
         ("G", "15:30-15:50"),
     )
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(
@@ -26,4 +28,12 @@ class Booking(models.Model):
     def __str__(self):
         return f"{self.user.username}: {self.date} ({self.timeblock})"
 
-    
+    def clean(self):
+        if Booking.objects.filter(date=self.date).exists():
+            raise ValidationError(
+                "Cannot schedule more than one session on a single day!"
+            )
+        if Booking.objects.filter(date=self.date,
+                                  timeblock=self.timeblock).exists():
+            raise ValidationError("That date & time is already booked!")
+
