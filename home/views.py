@@ -53,24 +53,6 @@ def contact(request):
     return render(request, 'contact.html', {'form': form})
 
 
-class UserSetUpProfile(SuccessMessageMixin, UpdateView):
-    """
-    A class view to update
-    user profile
-    """
-    model = Profile
-    form = ProfileForm
-    template_name = 'home/add_profile.html'
-    success_message = 'YOUR PROFLE IS SET UP SUCCESSFULLY'
-
-    def get_object(self, *args, **kwargs):
-        return self.request.user.username
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
-
-
 class UserProfilePageView(LoginRequiredMixin, DetailView):
     """
     A class view to see detail
@@ -78,3 +60,25 @@ class UserProfilePageView(LoginRequiredMixin, DetailView):
     """
     model = Profile
     template_name = 'home/profile_page.html'
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user
+
+
+class UserUpdateProfile(SuccessMessageMixin, UpdateView):
+    """
+    A class view to update
+    user profile
+    """
+    model = Profile
+    form_class = ProfileForm
+    success_url = '/profile_page'
+    template_name = 'home/add_profile.html'
+    success_message = 'Your profile has been updated successfully!'
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+<h1 class="col-12 text-center text-white pt-4"> {{ user.username }}'s Profile</h1>
+<main class="container">
+    <div class="form-group bg-dark p-5 pl-4 pr-4">
+        <form class="formlabel" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row mt-2">
+                <div class="form-group col-md mb-0">
+                    {{ form.first_name|as_crispy_field }}
+                </div>
+                <div class="form-group col-md mb-0">
+                    {{ form.last_name|as_crispy_field }}
+                </div>
+            </div>
+            {{ form.email|as_crispy_field}}
+            <button type="submit" class="btn btn-primary active">Set Profile</button>
+        </form>
+    </div>
+</main>
+
+{% endblock content %}
