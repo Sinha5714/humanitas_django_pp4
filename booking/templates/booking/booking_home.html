@@ -9,43 +9,50 @@
             <small class="text-muted">{{ day.day }}</small>
         </div>
         {% if not day.A_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'A' %}">10:00-10:20</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'A' %}">10:00-10:20</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.B_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'B' %}">10:30-10:50</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'B' %}">10:30-10:50</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.C_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'C' %}">11:00-11:20</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'C' %}">11:00-11:20</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.D_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'D' %}">11:30-11:50</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'D' %}">11:30-11:50</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.E_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'E' %}">12:00-12:20</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'E' %}">12:00-12:20</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.F_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'F' %}">15:00-15:20</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'F' %}">15:00-15:20</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}
 
         {% if not day.G_booked %}
-        <a class='btn btn-success btn-lg btn-block' href="{% url 'booking_add_spec' day.date 'G' %}">15:30-15:50</a>
+        <a class='btn btn-outline-success btn-lg btn-block'
+            href="{% url 'booking_add_spec' day.date 'G' %}">15:30-15:50</a>
         {% else %}
         <a class='btn btn-secondary btn-lg btn-block' disabled>BOOKED</a>
         {% endif %}

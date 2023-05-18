@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 # Internal:
-from .views import home, contact
+from .views import home, contact, UserSetUpProfile, UserProfilePageView
+
 
 
 urlpatterns = [

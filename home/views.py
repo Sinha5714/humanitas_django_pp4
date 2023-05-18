@@ -1,13 +1,14 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.models import User
 from django.conf import settings
-from django.views.generic import TemplateView, UpdateView
+from django.views.generic import TemplateView, UpdateView, DetailView
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 from django.core.mail import send_mail
-from .forms import ContactUsForm
+from .forms import ContactUsForm, ProfileForm
+from .models import Profile
 
 
 # Create your views here.
@@ -50,3 +51,30 @@ def contact(request):
         else:
             form = ContactUsForm
     return render(request, 'contact.html', {'form': form})
+
+
+class UserSetUpProfile(SuccessMessageMixin, UpdateView):
+    """
+    A class view to update
+    user profile
+    """
+    model = Profile
+    form = ProfileForm
+    template_name = 'home/add_profile.html'
+    success_message = 'YOUR PROFLE IS SET UP SUCCESSFULLY'
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user.username
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class UserProfilePageView(LoginRequiredMixin, DetailView):
+    """
+    A class view to see detail
+    of user profile
+    """
+    model = Profile
+    template_name = 'home/profile_page.html'
