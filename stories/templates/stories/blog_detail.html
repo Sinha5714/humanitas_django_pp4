@@ -12,6 +12,10 @@
             <div class="col col-md-auto">
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
                     Stories</a>
+                {% if object.creator == user %}
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'my_stories'%}">Back to my
+                    Stories</a>
+                {% endif %}
             </div>
             {% if object.creator == user %}
             <div class="col col-lg-2">

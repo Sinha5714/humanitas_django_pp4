@@ -30,6 +30,16 @@ class HumanitasPostView(ListView):
     template_name = 'stories/humanitas-blog.html'
 
 
+class HumanitasUserPostView(ListView):
+    """
+    A class view to view a list of all posts
+    """
+    model = HumanitasPost
+    queryset = HumanitasPost.objects.filter(status=1).order_by("-updated_on")
+    context_object_name = 'humanitas_post'
+    template_name = 'stories/my_stories.html'
+
+
 @login_required
 def post_detail(request, pk):
     post = HumanitasPost.objects.get(id=pk)
