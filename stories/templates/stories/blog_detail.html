@@ -35,16 +35,11 @@
         </div>
     </div>
 </div>
-
-
-
-
 {% for comment in comments %}
 <blockquote class="blockquote">
     <p>{{ comment.content}}</p>
     <footer class="blockquote-footer">
         By <cite>{{comment.author|capfirst}}
-
             {% ifequal object.creator.id user.id %}
             <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i class="fa fa-trash fa-lg"
                     aria-hidden="true"></i></a>

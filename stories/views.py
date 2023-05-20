@@ -43,7 +43,6 @@ class HumanitasUserPostView(ListView):
 @login_required
 def post_detail(request, pk):
     post = HumanitasPost.objects.get(id=pk)
-    ied = pk
     comments = Comment.objects.filter(humanitas_post=post).order_by("-pk")
 
     if request.method == 'POST':
@@ -60,7 +59,6 @@ def post_detail(request, pk):
     context = {
         'title': 'Story Details',
         'comments': comments,
-        'ied': ied,
         'object': post,
         'comment_form': comment_form
     }

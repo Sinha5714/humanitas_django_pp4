@@ -6,12 +6,6 @@
         <div class="article-metadata">
             <a class="mr-2" href="#">{{ booking.user }}</a>
             <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
-            {% if user.is_superuser %}
-            <div>
-                <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'booking_edit' object.id %}">Edit</a>
-                <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'booking_cancel' object.id %}">Cancel</a>
-            </div>
-            {% endif %}
             {% if booking.user == user %}
             <div>
                 <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'booking_edit' object.id %}">Edit</a>
