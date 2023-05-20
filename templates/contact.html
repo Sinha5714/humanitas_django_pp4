@@ -11,7 +11,7 @@
 <div class="text-center">
     <div class="container p-3">
         <form method="POST">
-            {% csrf_token %}{{ form | crispy }}
+            {% csrf_token %}{{ contact_form | crispy }}
 
             <button class="btn btn-sm btn-dark" type="submit">Send</button>
         </form>

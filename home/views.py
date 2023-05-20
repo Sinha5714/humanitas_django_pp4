@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import ProfileForm
+from .forms import ContactUsForm, ProfileForm
 from .models import Profile, Contact
 
 
@@ -19,6 +19,46 @@ def home(request):
     view to render home page
     """
     return render(request, 'index.html')
+
+
+class ContactMessage(View):
+    """
+    This view displays the contact form and if the user
+    is registered and inserts the user email into the
+    email field
+    """
+    template_name = 'contact.html'
+    success_message = 'Message has been sent successfully.'
+
+    def get(self, request, *args, **kwargs):
+        """
+        Retrieves users email and inputs into email input
+        """
+        if request.user.is_authenticated:
+            email = request.user.email
+            contact_form = ContactUsForm(initial={'email': email})
+        else:
+            contact_form = ContactUsForm()
+        return render(request, 'contact.html',
+                      {'contact_form': contact_form})
+
+    def post(self, request):
+        """
+        Checks that the provided info is valid format
+        and then posts to database
+        """
+        contact_form = ContactUsForm(data=request.POST)
+
+        if contact_form.is_valid():
+            contact = contact_form.save(commit=False)
+            contact.user = request.user
+            contact.save()
+            messages.success(
+                request, "Message has been sent successfully!")
+            return render(request, 'index.html')
+
+        return render(request, 'contact.html',
+                      {'contact_form': contact_form})
 
 
 class UserProfilePageView(LoginRequiredMixin, DetailView):
