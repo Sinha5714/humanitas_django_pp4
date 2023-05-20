@@ -19,3 +19,29 @@ class Profile(models.Model):
 
     def get_absolute_url(self):
         return reverse('profile_page', kwargs={'pk': self.pk})
+
+
+class Contact(models.Model):
+    """
+    a class for the Contact model
+    """
+    message_id = models.AutoField(primary_key=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             null=True
+                             )
+    name = models.CharField(
+        max_length=50,
+        null=True
+    )
+    email = models.EmailField(
+        max_length=100,
+        default=""
+    )
+    message = models.TextField()
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return self.name
