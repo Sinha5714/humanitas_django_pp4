@@ -19,14 +19,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                {% if messages %}
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
+                    {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 {% endfor %}
-                {% endif %}
             </div>
         </div>
     </div>
@@ -49,6 +47,14 @@
     <!-- Font awesome added here-->
     <script src="https://kit.fontawesome.com/90f07a2b1c.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 3000);
+    </script>
+
 </body>
 
 </html>

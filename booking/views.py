@@ -17,9 +17,6 @@ from django.views.generic import (
 )
 
 
-# Create your views here.
-
-
 def generate_daylist():
     daylist = []
     today = datetime.date.today()
