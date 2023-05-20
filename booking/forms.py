@@ -20,13 +20,6 @@ class BookingForm(forms.ModelForm):
         super(BookingForm, self).__init__(*args, **kwargs)
 
     def clean(self):
-        if Booking.objects.filter(user=self.user, date=self.date).exists():
-            raise forms.ValidationError(
-                "Cannot schedule more than one session on a single day!"
-            )
-        if Booking.objects.filter(date=self.date, timeblock=self.timeblock).exists():
+        if Booking.objects.filter(date=self.date,
+                                  timeblock=self.timeblock).exists():
             raise forms.ValidationError("That date & time is already booked!")
-
-    def save(self, *args, **kwargs):
-        self.full.clean()
-        super().save(*args, **kwargs)

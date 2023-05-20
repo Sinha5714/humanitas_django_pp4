@@ -6,19 +6,18 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
+TIMEBLOCK_CHOICES = (
+    ("A", "10:00-10:20"),
+    ("B", "10:30-10:50"),
+    ("C", "11:00-11:20"),
+    ("D", "11:30-11:50"),
+    ("E", "12:00-12:20"),
+    ("F", "15:00-15:20"),
+    ("G", "15:30-15:50"),
+)
+
 
 class Booking(models.Model):
-
-    TIMEBLOCK_CHOICES = (
-        ("A", "10:00-10:20"),
-        ("B", "10:30-10:50"),
-        ("C", "11:00-11:20"),
-        ("D", "11:30-11:50"),
-        ("E", "12:00-12:20"),
-        ("F", "15:00-15:20"),
-        ("G", "15:30-15:50"),
-    )
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(
@@ -29,11 +28,6 @@ class Booking(models.Model):
         return f"{self.user.username}: {self.date} ({self.timeblock})"
 
     def clean(self):
-        if Booking.objects.filter(date=self.date).exists():
-            raise ValidationError(
-                "Cannot schedule more than one session on a single day!"
-            )
         if Booking.objects.filter(date=self.date,
                                   timeblock=self.timeblock).exists():
             raise ValidationError("That date & time is already booked!")
-

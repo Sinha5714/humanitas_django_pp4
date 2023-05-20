@@ -57,7 +57,7 @@ def generate_daylist():
             Booking.objects.filter(date=str(curr_day)).filter(
                 timeblock="G").exists()
         )
-        if day["day"] != "SUNDAY":
+        if day["day"] != "":
             daylist.append(day)
     return daylist
 
