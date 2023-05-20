@@ -51,11 +51,17 @@ class ContactMessage(View):
 
         if contact_form.is_valid():
             contact = contact_form.save(commit=False)
-            contact.user = request.user
-            contact.save()
-            messages.success(
-                request, "Message has been sent successfully!")
-            return render(request, 'index.html')
+            if request.user.is_authenticated:
+                contact.user = request.user
+                contact.save()
+                messages.success(
+                    request, "Message has been sent successfully!")
+                return render(request, 'index.html')
+            else:
+                messages.error(request, 'NEED TO BE LOGGED IN TO SEND MESSAGE')
+                contact_form = ContactUsForm()
+                return render(request, 'contact.html',
+                              {'contact_form': contact_form})
 
         return render(request, 'contact.html',
                       {'contact_form': contact_form})
