@@ -98,8 +98,8 @@ class UserUpdateProfile(SuccessMessageMixin, UpdateView):
         return super().form_valid(form)
 
 
-class DeleteUser(SuccessMessageMixin,
-                 LoginRequiredMixin, DeleteView):
+class DeleteUser(LoginRequiredMixin, SuccessMessageMixin,
+                  DeleteView):
     """
     A class view that handles a
     deletion of profile object if
