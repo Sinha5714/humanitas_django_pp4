@@ -1,57 +1,38 @@
 {% block footer %}
-<footer id="footer" class="footer">
+<footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+        <div class="row">
+            <section class="col-lg-4 mb-4">
+                <h3>Address</h3>
+                <p>
+                    Jacobsohn Strasse <br>
+                    Berlin, Germany<br><br>
+                </p>
+            </section>
+            <!-- Section: Social media -->
+            <section class="col mb-4">
+                <h3>Social Media</h3>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" target="_blank"
+                    role="button"><i class="fab fa-twitter"></i> Twitter</a>
 
-    <div class="footer-content position-relative">
-        <div class="container">
-            <div class="row">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank"
+                    role="button"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-info">
-                        <h3>Humanitas</h3>
-                        <p>
-                            Jacobsohn Strasse <br>
-                            Berlin, Germany<br><br>
-                        </p>
-                        <div class="social-links d-flex mt-3">
-                            <a href="https://twitter.com/" target="_blank"
-                                class="d-flex align-items-center justify-content-center"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank"
-                                class="d-flex align-items-center justify-content-center"><i
-                                    class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/" target="_blank"
-                                class="d-flex align-items-center justify-content-center"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="d-flex align-items-center justify-content-center"><i
-                                    class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div><!-- End footer info column-->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank"
+                    role="button"><i class="fab fa-instagram"></i> Instagram</a>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our Vision</a></li>
-                        <li><a href="{% url 'humanitas_blog_page' %}">Our Stories</a></li>
-                        <li><a href="{% url 'booking_home' %}">Book a Call</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-
-            </div>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" target="_blank"
+                    role="button"><i class="fab fa-facebook"></i> Facebook</a>
+            </section>
         </div>
+
     </div>
 
-    <div class="footer-legal text-center position-relative">
-        <div class="container">
-            <div class="copyright">
-                © Copyright <strong><span>Humanitas</span></strong>. Only for educational purpose
-            </div>
-        </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="{% url 'home' %}">Humanitas | Educational Purpose Only</a>
     </div>
-
 </footer>
+
 {% endblock footer %}

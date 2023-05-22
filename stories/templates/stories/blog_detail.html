@@ -24,13 +24,16 @@
             </div>
             {% endif %}
         </div>
-        <div class="article-content">
-            <img src="{{object.cover_image.url}}" class="imgpost">
+        <div class="article-content h-100">
+            <img src="{{object.cover_image.url}}" class="img-fluid">
         </div>
         <small class="text-muted">{{ object.created_on|date:"F d, Y" }}</small>
+        <div class="d-flex align-items-center"> <span class="ps-2">{{ object.body }}
+            </span>
+        </div>
 
         </article>
-        <div class="main-comment-section">
+        <div>
             {{comments.count}} Comment{{comments|pluralize}}
         </div>
     </div>
