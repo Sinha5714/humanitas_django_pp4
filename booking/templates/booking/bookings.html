@@ -5,7 +5,7 @@
 {% for booking in bookings %}
 {% ifequal booking.user.id user.id %}
 <article class="media content-section">
-    <div class="media-body">
+    <div class="media-body text-center row">
         <div class="article-metadata">
             <a class="mr-2">{{ booking.user }}</a>
             <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
