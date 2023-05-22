@@ -7,15 +7,25 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
 <!-- contact form -->
-<h1>Contact Us</h1>
-<div class="text-center">
-    <div class="container p-3">
-        <form method="POST">
-            {% csrf_token %}{{ contact_form | crispy }}
+<div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <div class="row justify-content-center">
 
-            <button class="btn btn-sm btn-dark" type="submit">Send</button>
-        </form>
+        <div class="col-sm-4 mb-4 ">
+            <img src="{% static 'images/logo2.jpg' %}" class="img-fluid">
+        </div>
+        <div class="col-sm-8">
+            <form method="POST">
+                {% csrf_token %}{{ contact_form | crispy }}
+
+                <button class="btn btn-sm btn-dark" type="submit">Send</button>
+            </form>
+
+        </div>
+
     </div>
+
 </div>
+
 
 {% endblock content %}
