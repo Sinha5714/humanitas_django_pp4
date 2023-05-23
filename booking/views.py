@@ -16,42 +16,44 @@ from django.views.generic import (
     DeleteView
 )
 
+# Function to generate daylist
+
 
 def generate_daylist():
     daylist = []
     today = datetime.date.today()
     for i in range(7):
         day = {}
-        curr_day = today + datetime.timedelta(days=i)
-        weekday = curr_day.strftime("%A").upper()
-        day["date"] = str(curr_day)
+        next_day = today + datetime.timedelta(days=i+1)
+        weekday = next_day.strftime("%A").upper()
+        day["date"] = str(next_day)
         day["day"] = weekday
         day["A_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="A").exists()
         )
         day["B_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="B").exists()
         )
         day["C_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="C").exists()
         )
         day["D_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="D").exists()
         )
         day["E_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="E").exists()
         )
         day["F_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="F").exists()
         )
         day["G_booked"] = (
-            Booking.objects.filter(date=str(curr_day)).filter(
+            Booking.objects.filter(date=str(next_day)).filter(
                 timeblock="G").exists()
         )
         if day["day"] != "":
@@ -62,6 +64,7 @@ def generate_daylist():
 def booking_home(request):
     context = {"days": generate_daylist()}
     return render(request, "booking/booking_home.html", context)
+
 
 class BookingListView(ListView):
     """
