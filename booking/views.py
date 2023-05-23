@@ -63,7 +63,6 @@ def booking_home(request):
     context = {"days": generate_daylist()}
     return render(request, "booking/booking_home.html", context)
 
-
 class BookingListView(ListView):
     """
     Class model for list view for bookings
