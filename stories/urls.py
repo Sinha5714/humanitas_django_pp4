@@ -1,5 +1,5 @@
 """
-Module for blog urls 
+Module for blog urls
 """
 from django.urls import path
 from .views import (HumanitasPostView,
