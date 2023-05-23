@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="content-section">
+<div class="container-fluid">
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">

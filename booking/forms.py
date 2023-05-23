@@ -19,9 +19,4 @@ class BookingForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(BookingForm, self).__init__(*args, **kwargs)
-
-    def clean(self):
-        if Booking.objects.filter(date=self.date,
-                                  timeblock=self.timeblock).exists():
-            raise forms.ValidationError("That date & time is already booked!")
-
+    
