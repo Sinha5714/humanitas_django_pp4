@@ -22,17 +22,18 @@ from django.views.generic import (
 
 class HumanitasPostView(ListView):
     """
-    A class view to view a list of all posts
+    A class view to view a list of all stories
     """
     model = HumanitasPost
     queryset = HumanitasPost.objects.filter(status=1).order_by("-updated_on")
     context_object_name = 'humanitas_post'
-    template_name = 'stories/humanitas-blog.html'
+    template_name = 'stories/humanitas-stories.html'
 
 
 class HumanitasUserPostView(ListView):
     """
-    A class view to view a list of all posts
+    A class view to view a list of all stories 
+    created by logged in User
     """
     model = HumanitasPost
     queryset = HumanitasPost.objects.filter(status=1).order_by("-updated_on")
@@ -62,7 +63,7 @@ def post_detail(request, pk):
         'object': post,
         'comment_form': comment_form
     }
-    return render(request, 'stories/blog_detail.html', context)
+    return render(request, 'stories/stories_detail.html', context)
 
 
 @ login_required
@@ -74,9 +75,12 @@ def deletecomment(request, id):
 
 
 class HumanitasPostCreate(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    A class view to create a new story by user
+    """
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
-    template_name = 'stories/add_blog.html'
+    template_name = 'stories/add_story.html'
     success_url = '/stories'
     success_message = 'Your story is added successfully!'
 
@@ -89,10 +93,13 @@ class HumanitasPostUpdate(LoginRequiredMixin,
                           SuccessMessageMixin,
                           UserPassesTestMixin,
                           UpdateView):
+    """
+    A class view to update the existing story by user
+    """
     model = HumanitasPost
     fields = ['title', 'body', 'cover_image']
     success_url = '/stories'
-    template_name = 'stories/add_blog.html'
+    template_name = 'stories/add_story.html'
     success_message = 'Your story has been updated successfully!'
 
     def form_valid(self, form):
@@ -110,9 +117,12 @@ class HumanitasPostDelete(LoginRequiredMixin,
                           SuccessMessageMixin,
                           UserPassesTestMixin,
                           DeleteView):
+    """
+    A class view to delete the story by user
+    """
     model = HumanitasPost
     success_url = '/stories'
-    template_name = 'stories/blog_delete_modal.html'
+    template_name = 'stories/story_delete_modal.html'
     success_message = 'Your story has been deleted successfully!'
 
     def test_func(self):
