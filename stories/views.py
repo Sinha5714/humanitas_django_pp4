@@ -53,6 +53,7 @@ def post_detail(request, pk):
             comment = Comment.objects.create(
                 humanitas_post=post, author=request.user, content=content)
             comment.save()
+            messages.success(request, 'Comment added successfully!')
             return redirect(post.get_absolute_url())
     else:
         comment_form = CommentForm
@@ -70,7 +71,7 @@ def post_detail(request, pk):
 def deletecomment(request, id):
     comment = get_object_or_404(Comment, id=id)
     comment.delete()
-    messages.success(request, f'Comment deleted successfully!')
+    messages.success(request, 'Comment deleted successfully!')
     return redirect(comment.humanitas_post.get_absolute_url())
 
 
@@ -124,6 +125,11 @@ class HumanitasPostDelete(LoginRequiredMixin,
     success_url = '/stories'
     template_name = 'stories/story_delete_modal.html'
     success_message = 'Your story has been deleted successfully!'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(HumanitasPostDelete, self).delete(request,
+         *args, **kwargs)
 
     def test_func(self):
         post = self.get_object()
