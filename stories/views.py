@@ -129,7 +129,7 @@ class HumanitasPostDelete(LoginRequiredMixin,
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super(HumanitasPostDelete, self).delete(request,
-         *args, **kwargs)
+                                                       *args, **kwargs)
 
     def test_func(self):
         post = self.get_object()
