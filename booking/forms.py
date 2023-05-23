@@ -24,3 +24,4 @@ class BookingForm(forms.ModelForm):
         if Booking.objects.filter(date=self.date,
                                   timeblock=self.timeblock).exists():
             raise forms.ValidationError("That date & time is already booked!")
+
