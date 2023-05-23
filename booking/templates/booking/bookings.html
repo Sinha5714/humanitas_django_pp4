@@ -5,17 +5,15 @@
 {% for booking in bookings %}
 {% ifequal booking.user.id user.id %}
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-4 bg-dark text-center text-white">
-            <a class="mr-2">{{ booking.user }}</a>
-            <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
+    <div class="row h-100 justify-content-center">
+        <div class="col bg-dark">
+            <small class="px-4 text-white">Booking For : {{ booking.user }}</small>
+            <small class="text-white">on : {{ booking.date|date:"F d, Y" }}, </small>
+            <small class="text-white">{{ booking.date|date:"l" }}</small>
+            <a class="px-4 text-white" href="{% url 'booking_detail' booking.id %}">Helptype: {{ booking.helptype }}</a>
         </div>
-        <div class="col-sm-8">
-            <a class="article-title" href="{% url 'booking_detail' booking.id %}">{{ booking.helptype }}</a>
-            <p class="article-content">{{ booking.date|date:"l" }}</p>
-        </div>
-
     </div>
+    <br>
 </div>
 
 {% endifequal %}

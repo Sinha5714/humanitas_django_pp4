@@ -125,16 +125,16 @@ class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return False
 
 
-class BookingDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+def cancel_booking(request, pk):
     """
-    Class model for cancelling an existing booking
+    Deletes the booking identified by it's primary key by the user
     """
-    model = Booking
-    success_message = 'Your booking is cancelled!'
-    success_url = '/bookings'
+    booking = Booking.objects.get(pk=pk)
 
-    def test_func(self):
-        booking = self.get_object()
-        if self.request.user == booking.user:
-            return True
-        return False
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, "Booking is cancelled")
+        return redirect('bookings')
+
+    return render(
+        request, 'booking/booking_confirm_delete.html', {'booking': booking})

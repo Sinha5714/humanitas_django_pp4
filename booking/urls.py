@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.urls import path, register_converter
 from .views import (BookingListView, BookingDetailView,
-                    BookingCreateView, BookingUpdateView, BookingDeleteView)
+                    BookingCreateView, BookingUpdateView)
 from . import views
 
 
@@ -31,5 +31,5 @@ urlpatterns = [
     path("bookings/<int:pk>/edit", BookingUpdateView.as_view(),
          name="booking_edit"),
     path("bookings/<int:pk>/cancel",
-         BookingDeleteView.as_view(), name="booking_cancel"),
+         views.cancel_booking, name="booking_cancel"),
 ]
