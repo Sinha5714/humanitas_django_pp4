@@ -2,13 +2,13 @@
 {% block content %}
 {% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-
-<div class="container">
-    <div class="row">
-        <div class="article-metadata">
-            <strong>
-                <p>{{ object.creator }}</p>
-            </strong>
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="post-title">{{ object.title }}</h1>
+                <p class="post-subtitle">{{ object.creator }} | {{ object.created_on }}</p>
+            </div>
             <div class="col col-md-auto">
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
                     Stories</a>
@@ -18,52 +18,85 @@
                 {% endif %}
             </div>
             {% if object.creator == user %}
-            <div class="col col-lg-2">
+            <div class="col col-md-4">
                 <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
                 <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
             </div>
-            {% endif %}
-        </div>
-        <div class="article-content h-100">
-            <img src="{{object.cover_image.url}}" class="img-fluid">
-        </div>
-        <small class="text-muted">{{ object.created_on|date:"F d, Y" }}</small>
-        <div class="d-flex align-items-center"> <span class="ps-2">{{ object.body }}
-            </span>
-        </div>
 
-        </article>
-        <div>
-            {{comments.count}} Comment{{comments|pluralize}}
+            {% endif %}
+
+            <div class="d-none d-md-block col-8 masthead-image">
+                {% if "placeholder" in object.cover_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                {% else %}
+                <img src=" {{ object.cover_image.url }}" width="100%">
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
-{% for comment in comments %}
-<blockquote class="blockquote">
-    <p>{{ comment.content}}</p>
-    <footer class="blockquote-footer">
-        By <cite>{{comment.author|capfirst}}
-            {% ifequal object.creator.id user.id %}
-            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i class="fa fa-trash fa-lg"
-                    aria-hidden="true"></i></a>
-            {% endifequal %}
-            {% ifequal comment.author.id user.id %}
-            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i class="fa fa-trash fa-lg"
-                    aria-hidden="true"></i></a>
 
-            {% endifequal %}
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <p class="card-text ">
+                    {{ object.body | safe }}
+                </p>
+                <div class="row">
 
-        </cite>
-    </footer>
-</blockquote>
-{% endfor %}
-<div>
-    <form method="POST">
-        {% csrf_token %}
-        {{comment_form.as_p}}
-        <input type="submit" name="comment" class="btn btn-warning">
 
-    </form>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ total_comments }}</strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <blockquote class="blockquote">
+                    <p>{{ comment.content}}</p>
+                    <footer class="blockquote-footer">
+                        By <cite>{{comment.author|capfirst}}
+                            {% ifequal object.creator.id user.id %}
+                            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
+                                    class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                            {% endifequal %}
+                            {% ifequal comment.author.id user.id %}
+                            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
+                                    class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+                            {% endifequal %}
+
+                        </cite>
+                    </footer>
+                </blockquote>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <input type="submit" name="comment" class="btn btn-warning">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Blog Entries Column -->
 {% endblock content %}
