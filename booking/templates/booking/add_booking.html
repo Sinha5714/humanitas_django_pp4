@@ -2,12 +2,15 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+<div class="bg-dark ">
+    <h1 class="text-center text-white">Book a call with US!</h1>
+    <hr class="my-4">
+</div>
 <div class="container-fluid">
     <div class="row ">
         <div class="mx-auto col-10 col-md-8 col-lg-6">
             <form method="POST">
                 {% csrf_token %}
-                <h2 class="text-center mb-4">Book a call with US!</h2>
                 {{ form|crispy }}
                 <div>
                     <a class="btn btn-outline-secondary" href="{% url 'booking_home' %}">Cancel</a>

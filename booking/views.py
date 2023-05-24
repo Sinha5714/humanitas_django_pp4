@@ -16,9 +16,8 @@ from django.views.generic import (
     DeleteView
 )
 
+
 # Function to generate daylist
-
-
 def generate_daylist():
     daylist = []
     today = datetime.date.today()
@@ -62,6 +61,9 @@ def generate_daylist():
 
 
 def booking_home(request):
+    """
+    Function to render booking_home.html
+    """
     context = {"days": generate_daylist()}
     return render(request, "booking/booking_home.html", context)
 
@@ -129,7 +131,7 @@ class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 def cancel_booking(request, pk):
     """
-    Deletes the booking identified by it's primary key by the user
+     Function to delete the existing booking 
     """
     booking = Booking.objects.get(pk=pk)
 

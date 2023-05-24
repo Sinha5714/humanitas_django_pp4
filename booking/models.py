@@ -18,6 +18,9 @@ TIMEBLOCK_CHOICES = (
 
 
 class Booking(models.Model):
+    """
+    Class model for booking a call
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)
     timeblock = models.CharField(

@@ -1,33 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<h1 class="text-center">My Bookings</h1>
+<div class="bg-dark">
+    <h1 class="text-center text-white">My Bookings</h1>
+</div>
 {% if user.is_authenticated %}
 {% for booking in bookings %}
 {% ifequal booking.user.id user.id %}
 <div class="container-fluid">
-    <table class="table table-striped-columns">
-        <thead>
-            <tr>
-                <th scope="col-sm-2">Booking For: </th>
-                <th scope="col-sm-2">Date</th>
-                <th scope="col-sm-2">Day</th>
-                <th scope="col-sm-4">Helptype</th>
-                <th scope="col-sm-2">Action</th>
+    <div class="row">
+        <table class="table table-striped-columns">
+            <thead>
+                <tr>
+                    <th scope="col">Booking For: </th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Day</th>
+                    <th scope="col">Helptype</th>
+                    <th scope="col">Action</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ booking.user }}</td>
-                <td>{{ booking.date|date:"F d, Y" }}</td>
-                <td>{{ booking.date|date:"l" }}</td>
-                <td>{{ booking.helptype }}</td>
-                <td><a href="{% url 'booking_detail' booking.id %}">Edit</a></td>
-            </tr>
-        </tbody>
-    </table>
-
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ booking.user }}</td>
+                    <td>{{ booking.date|date:"F d, Y" }}</td>
+                    <td>{{ booking.date|date:"l" }}</td>
+                    <td>{{ booking.helptype }}</td>
+                    <td><a href="{% url 'booking_detail' booking.id %}">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 {% endifequal %}

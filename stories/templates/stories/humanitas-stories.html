@@ -2,32 +2,32 @@
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% load crispy_forms_tags %}
-<section id="recent-blog-posts" class="recent-blog-posts">
-    <div class="jumbotron">
-        <h1 class="display-4">Our Stories</h1>
+<section>
+    <div class="bg-dark ">
+        <h1 class="h2 text-center text-white m-2 mb-4">Our Stories</h1>
         <hr class="my-4">
     </div>
-    <div class="row gy-5">
-        {% for post in humanitas_post|slice:":6" %}
-        <div class="col justify-content-center">
-            <article class="media content-section" style="align-content: center;">
+    <div class="container pt-3">
+        <div class="row">
+            {% for post in humanitas_post|slice:4 %}
+            <div class="col-lg-6 mb-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Card image cap"
+                    <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Image by user"
                         style="height: 100%;width:100%;">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
                         <p class="card-text">{{ post.body|slice:":80"}}</p>
-                        <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
-                        <strong class="text-secondary"><i class="fas fa-comments">Comments</i>
+                        <div class="d-flex justify-content-between align-items-centre">
+                            <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
+                            <strong class="text-secondary"><i class="fas fa-comments">Comments</i>
+                        </div>
                     </div>
                 </div>
-            </article>
+            </div>
+            {% endfor %}
         </div>
     </div>
-    <!-- End post item -->
-    {% endfor %}
-
-    </div>
 </section>
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
 {% endblock content %}

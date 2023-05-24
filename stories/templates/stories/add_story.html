@@ -2,19 +2,22 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="jumbotron">
-    <h1 class="display-4">Write Your Story Here!!</h1>
+<div class="bg-dark ">
+    <h1 class="text-center text-white">Write Your Story Here!!</h1>
     <hr class="my-4">
 </div>
-<div class="content-section">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Post</button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div>
+                    <button class="btn btn-outline-info" type="submit">Post</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
+
 </div>
 {% endblock content %}
