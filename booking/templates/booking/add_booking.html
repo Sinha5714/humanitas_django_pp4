@@ -3,16 +3,18 @@
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 <div class="container-fluid">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Book a call with US!</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <a class="btn btn-outline-secondary" href="{% url 'booking_home' %}">Cancel</a>
-            <button class="btn btn-outline-info" type="submit">Submit</button>
+    <div class="row ">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form method="POST">
+                {% csrf_token %}
+                <h2 class="text-center mb-4">Book a call with US!</h2>
+                {{ form|crispy }}
+                <div>
+                    <a class="btn btn-outline-secondary" href="{% url 'booking_home' %}">Cancel</a>
+                    <button class="btn btn-outline-info" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 {% endblock content %}

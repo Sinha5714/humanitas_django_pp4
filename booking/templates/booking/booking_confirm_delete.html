@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="content-section text-center">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Cancel Booking</legend>
-            <h2>Are you sure you want to cancel this booking?</h2>
-        </fieldset>
-        <div class="form-group">
-            <a class="btn btn-outline-secondary" href="{% url 'booking_detail' booking.id %}">Go Back</a>
-            <button class="btn btn-outline-danger" type="submit">Yes, Cancel</button>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form method="POST">
+                {% csrf_token %}
+                <h2 class="text-center mb-4">Cancel Booking</h2>
+                <h3 class="text-center mb-4">Are you sure you want to cancel this booking?</h3>
+                <div class="text-center mb-4">
+                    <a class="btn btn-outline-secondary" href="{% url 'booking_detail' booking.id %}">Go Back</a>
+                    <button class="btn btn-outline-danger" type="submit">Yes, Cancel</button>
+                </div>
+
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 {% endblock content %}
