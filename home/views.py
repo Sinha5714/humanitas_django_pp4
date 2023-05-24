@@ -99,7 +99,7 @@ class UserUpdateProfile(SuccessMessageMixin, UpdateView):
 
 
 class DeleteUser(LoginRequiredMixin, SuccessMessageMixin,
-                  DeleteView):
+                 DeleteView):
     """
     A class view that handles a
     deletion of profile object if
