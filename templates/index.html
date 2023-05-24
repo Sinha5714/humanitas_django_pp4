@@ -3,7 +3,7 @@
 {% load static %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 <!-- Hero section -->
-<div class="container-fluid mt-0 bg-dark">
+<section id="hero">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -14,41 +14,61 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
+            <div class="text-white col" id="hero-content">
+                <h1 class="text-center">Humanitas</h1>
+                <h3 class="text-center">Act To Connect</h3>
+            </div>
             <div class="carousel-item active">
                 <img src="static/images/cacc3ba3-3ecc-4dcd-a230-88ee0ad4cb98.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="text-center">Humanitas</h2>
-                    <p class="text-center">Act To Connect</p>
-                </div>
+
             </div>
             <div class="carousel-item">
                 <img src="static/images/cd386f3c-bd92-492d-82ac-d1df0026f329.jpg" class="d-block w-100" alt="...">
+
             </div>
             <div class="carousel-item">
                 <img src="static/images/73f5d459-7399-4400-9130-b4162e7bc061.jpg" class="d-block w-100" alt="...">
+
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-</div>
 
-<!--  -->
-<div class="container-fluid">
-    <div class="row">
-
+</section>
+<!-- History -->
+<section class="text-center" id="history">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <h2 class="tmb-4">
+                How it started!
+            </h2>
+            <div class="col-lg-6">
+                <p>My husband and I met in 2018.
+                    At that time, he was an serving in Army.
+                    He had signed a contract for life. Termination excluded. Moreover, the army refuses to recognize the
+                    legalization of
+                    homosexuality in his country. He was not allowed to be gay.
+                    To have a future together, we had to find a way for his discharge.
+                    We contacted over 100 human rights lawyers, organizations and associations worldwide within eight
+                    months.
+                    Some we met in person, including world-renowned lawyers. Most of the requests went unanswered,
+                    the rest could not or would not help us.</p>
+            </div>
+            <div class="col-lg-6">
+                <p>Finally, after many refusals and disappointments, desperation led us to a military lawyer. This could
+                    also become
+                    dangerous. But we were lucky and met an LGBT friendly lawyer who knew how to deal with indian law.
+                    2.5 years later, my husband was released after a long ordeal.
+                    We were successful only because we brought the following: Patience<br>
+                    Willpower<br>
+                    Togetherness<br>
+                    Knowledge<br> Strength<br> Self-confidence <br>Money</p>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
 <!-- About Us -->
-<section class="about about-section text-center" id="about">
+<section class="text-center" id="about">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <h2 class=" mb-4">
@@ -58,6 +78,13 @@
                 <h3 class=" mb-4">
                     Our Vision
                 </h3>
+                <p>Humanitas acts as a global filter function for people in need to existing help. We only connect
+                    when
+                    necessary and to
+                    the right address of help. Trained staff can recognize whether a request requires referral to an
+                    aid
+                    organization or if
+                    help can already be provided in advance with a professional consultation.</p>
             </div>
             <div class="col-lg-6">
                 <h3 class=" mb-4">

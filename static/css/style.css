@@ -2,6 +2,24 @@ h1 {
     font-family: fantasy;
 }
 
-.hero {
-    max-height: 150px;
+#header {
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 6;
+}
+
+#hero {
+    padding: 0;
+}
+
+#hero-content {
+    font-size: 130%;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 4px;
+    background-color: rgba(0, 0, 0, .4);
+    bottom: 30%;
+    position: absolute;
+    z-index: 1;
+
 }
