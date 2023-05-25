@@ -1,7 +1,6 @@
-$(document).ready(function () {
-    setTimeout(function () {
-        let messages = document.getElementById("msg");
-        let alert = new bootstrap.Alert(messages);
-        alert.close();
-    }, 3000);
+const myModal = document.getElementById('myModal');
+const myInput = document.getElementById('myInput');
+
+myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus();
 });

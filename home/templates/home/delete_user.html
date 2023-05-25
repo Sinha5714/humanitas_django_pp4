@@ -3,18 +3,20 @@
 {% load static %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-
-<div class="content-section">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Delete Account</legend>
-            <h2>Are you sure you want to delete the account?</h2>
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
-            <a class="btn btn-outline-secondary" href="{% url 'profile_page' %}">Cancel</a>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form method="POST">
+                {% csrf_token %}
+                <h2 class="text-center mb-4">Delete Account</h2>
+                <h3 class="text-center mb-4">Are you sure you want to delete the account?</h3>
+                <div class="text-center mb-4">
+                    <a class="btn btn-outline-secondary" href="{% url 'profile_page' %}">Cancel</a>
+                    <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
 {% endblock content %}

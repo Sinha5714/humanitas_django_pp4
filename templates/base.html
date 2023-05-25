@@ -45,6 +45,14 @@
             alert.close();
         }, 3000);
     </script>
+    <script>
+        const myModal = document.getElementById('myModal');
+        const myInput = document.getElementById('myInput');
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus();
+        });
+    </script>
 
     <!-- Boostrap 5 JS and Poppers-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"

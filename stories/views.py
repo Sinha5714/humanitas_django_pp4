@@ -123,7 +123,7 @@ class HumanitasPostDelete(LoginRequiredMixin,
     """
     model = HumanitasPost
     success_url = '/stories'
-    template_name = 'stories/story_delete_modal.html'
+    template_name = 'stories/story_delete_confirm.html'
     success_message = 'Your story has been deleted successfully!'
 
     def delete(self, request, *args, **kwargs):
