@@ -61,8 +61,19 @@ h3 {
     height: 600px;
 }
 
+/* Vision and Mission Section */
+#vision,
+#mission {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 /* About-Section */
 
+#about {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .about-image {
     width: 100%;
