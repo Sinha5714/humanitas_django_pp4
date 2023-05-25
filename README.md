@@ -113,5 +113,31 @@ Primary goals of the project (web app):
 | ------------- | ------------- | ------------- | ---------- |
 |user       | user     | ForeignKey|  User, on_delete=models.CASCADE null=True|
 |  date   | date  | DateField  | default=timezone.now |
-|  timeblock   | timeblock  | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES |
+|  timeblock   | timeblock  | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES, default="A" |
 |  helptype    | helptype     | CharField   | max_length=100, default=""    |
+
+#### BlogPost model
+
+
+| Name          | Database Key  | Field Type    | Validation |
+| ------------- | ------------- | ------------- | ---------- |
+| title        | title      | CharField| max_length=200, unique=True  |
+| creator        | creator       |ForeignKey   | User, on_delete=models.CASCADE  |
+|  slug   | slug   | SlugField   | max_length=200, null=True, unique=True, blank=True |
+| body       | body     |TextField |      |
+| status      | status     |IntegerField |   choices=STATUS, default=1   |
+|  cover_image     | cover_image      | CloudinaryField  | 'image', default='placeholder'   |
+|  created_on     | created_on      | DateTimeField   | auto_now_add=True    |
+|  updated_on     | updated_on      | DateTimeField   | auto_now_add=True    |
+
+
+#### Comment model
+
+
+| Name          | Database Key  | Field Type    | Validation |
+| ------------- | ------------- | ------------- | ---------- |
+| author         |  author          | ForeignKey | User, on_delete=models.CASCADE   |
+| created_on        | created_on      | DateTimeField    | auto_now_add=True   |
+| humanitas_post | humanitas_post   | ForeignKey   | HumanitasPost, on_delete=models.CASCADE, related_name='comments'     |
+| content    | content    | TextField    | max_length=400   |
+| approved      | approved     |BooleanField |  default=True     |
