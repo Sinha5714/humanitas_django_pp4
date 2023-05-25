@@ -4,19 +4,19 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 <div class="masthead bg-dark">
     <div class="container-fluid">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+        <div class="row">
+            <div class="col-md-8 masthead-text">
                 <h1 class="post-title text-white">{{ object.title }}</h1>
                 <p class="post-subtitle text-white">{{ object.creator }} | {{ object.created_on }}</p>
                 {% if object.creator == user %}
-                <div class="col col-md-4">
+                <div class="col col-md-4 ">
                     <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
                     <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
                 </div>
 
                 {% endif %}
             </div>
-            <div class="col-md-4 col-md-auto">
+            <div class="col-md-4">
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
                     Stories</a>
                 {% if object.creator == user %}

@@ -82,9 +82,9 @@ h3 {
 
 /* Stories */
 .cover-image {
-    height: 45vh;
+    height: 50vh;
     overflow: hidden;
-    width: 70%;
+    width: 100%;
 }
 
 #copyright {

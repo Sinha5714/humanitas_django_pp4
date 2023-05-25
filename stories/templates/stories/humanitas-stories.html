@@ -3,43 +3,40 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% load crispy_forms_tags %}
 <section>
-    <div class="bg-dark ">
-        <h1 class="text-center mb-4 text-white">Our Stories</h1>
-    </div>
     <div class="container-fluid ">
-        <div class="row align-items-center d-flex justify-content-between">
-            {% for post in humanitas_post %}
-            <div class="col-lg-6 mb-4">
-                <div class="card" style="width: 20rem;">
-                    {% if 'placeholder' in post.cover_image.url %}
-
-                    <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
-                        alt="humanitas-logo " class="card-img-top" width="450" height="250">
-                    {% else %}
-
-                    {% load cloudinary %}
-                    {% cloudinary post.cover_image %}
-
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
-                        <p class="card-text">{{ post.body|slice:":80"}}</p>
-                        <div class="d-flex justify-content-between align-items-centre">
-                            <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
-                            <strong class="text-secondary"><i class="fas fa-comments">Comments</i>
+        <div class="row">
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for post in humanitas_post %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card mb-3" style="width: 20rem;">
+                            {% if 'placeholder' in post.cover_image.url %}
+                            <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
+                                alt="humanitas-logo " class="card-img-top" width="100%" height="100%">
+                            {% else %}
+                            {% load cloudinary %}
+                            {% cloudinary post.cover_image %}
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ post.title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
+                                <p class="card-text">{{ post.body|slice:":80"}}</p>
+                                <div class="d-flex justify-content-between align-items-centre">
+                                    <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
+                                    <strong class="text-secondary"><i class="fas fa-comments">Comments</i>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                {% if forloop.counter|divisibleby:2 %}
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
-
         </div>
+
         {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
@@ -48,13 +45,12 @@
                 {% endif %}
                 {% if page_obj.has_next %}
                 <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
                 {% endif %}
             </ul>
         </nav>
         {% endif %}
     </div>
-
 </section>
+
 {% block footer %}{% include 'footer.html' %}{% endblock footer %}
 {% endblock content %}

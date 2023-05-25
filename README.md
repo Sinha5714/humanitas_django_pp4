@@ -14,6 +14,11 @@
    2. [User Requirements and Expectations](#user-requirements-and-expectations)
    3. [User Stories](#user-stories)
    4. [Site Owner Stories](#site-owner-stories)
+3. [Design](#design)
+
+   1. [Database](#database)
+   2. [Data Models](#data-models)
+   3. [Project Structure](#project-structure)
 
 # About
 
@@ -87,74 +92,77 @@ Primary goals of the project (web app):
 25. As a Site Owner I would like that user can not book an appointment which is already booked
 
 ## Models
+
+### Data Models
+
 #### Profile model
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-|  user       | user     | OneToOneField|  User, on_delete=models.CASCADE|
-|  profile_image       |  profile_image     |CloudinaryField | 'image', default='placeholder'  |
-| first_name| first_name  | CharField | max_length=50 blank=True   |
-| last_name| last_name  | CharField | max_length=50 blank=True   |
-|  email   | email  | EmailField  | max_length=100 null=True blank=True |
+| Name          | Database Key  | Field Type      | Validation                          |
+| ------------- | ------------- | --------------- | ----------------------------------- |
+| user          | user          | OneToOneField   | User, on_delete=models.CASCADE      |
+| profile_image | profile_image | CloudinaryField | 'image', default='placeholder'      |
+| first_name    | first_name    | CharField       | max_length=50 blank=True            |
+| last_name     | last_name     | CharField       | max_length=50 blank=True            |
+| email         | email         | EmailField      | max_length=100 null=True blank=True |
 
 #### Contact model
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-| message_id       | message_id     | AutoFirld |  PrimaryKey=True |
-|user       | user     | ForeignKey|  User, on_delete=models.CASCADE null=True|
-|  name   | name  | CharField  | max-length=50 null=True  |
-|  email   | email  | EmailField  | max_length=100 default="" |
-|  created_on     | created_on      | DateTimeField   | auto_now_add=True    |
-|  message   | message  | TextField  |   |
+| Name       | Database Key | Field Type    | Validation                               |
+| ---------- | ------------ | ------------- | ---------------------------------------- |
+| message_id | message_id   | AutoFirld     | PrimaryKey=True                          |
+| user       | user         | ForeignKey    | User, on_delete=models.CASCADE null=True |
+| name       | name         | CharField     | max-length=50 null=True                  |
+| email      | email        | EmailField    | max_length=100 default=""                |
+| created_on | created_on   | DateTimeField | auto_now_add=True                        |
+| message    | message      | TextField     |                                          |
 
 #### Booking model
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-|user       | user     | ForeignKey|  User, on_delete=models.CASCADE null=True|
-|  date   | date  | DateField  | default=timezone.now |
-|  timeblock   | timeblock  | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES, default="A" |
-|  helptype    | helptype     | CharField   | max_length=100, default=""    |
+| Name      | Database Key | Field Type | Validation                                            |
+| --------- | ------------ | ---------- | ----------------------------------------------------- |
+| user      | user         | ForeignKey | User, on_delete=models.CASCADE null=True              |
+| date      | date         | DateField  | default=timezone.now                                  |
+| timeblock | timeblock    | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES, default="A" |
+| helptype  | helptype     | CharField  | max_length=100, default=""                            |
 
 #### BlogPost model
 
-
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-| title        | title      | CharField| max_length=200, unique=True  |
-| creator        | creator       |ForeignKey   | User, on_delete=models.CASCADE  |
-|  slug   | slug   | SlugField   | max_length=200, null=True, unique=True, blank=True |
-| body       | body     |TextField |      |
-| status      | status     |IntegerField |   choices=STATUS, default=1   |
-|  cover_image     | cover_image      | CloudinaryField  | 'image', default='placeholder'   |
-|  created_on     | created_on      | DateTimeField   | auto_now_add=True    |
-|  updated_on     | updated_on      | DateTimeField   | auto_now_add=True    |
-
+| Name        | Database Key | Field Type      | Validation                                         |
+| ----------- | ------------ | --------------- | -------------------------------------------------- |
+| title       | title        | CharField       | max_length=200, unique=True                        |
+| creator     | creator      | ForeignKey      | User, on_delete=models.CASCADE                     |
+| slug        | slug         | SlugField       | max_length=200, null=True, unique=True, blank=True |
+| body        | body         | TextField       |                                                    |
+| status      | status       | IntegerField    | choices=STATUS, default=1                          |
+| cover_image | cover_image  | CloudinaryField | 'image', default='placeholder'                     |
+| created_on  | created_on   | DateTimeField   | auto_now_add=True                                  |
+| updated_on  | updated_on   | DateTimeField   | auto_now_add=True                                  |
 
 #### Comment model
 
+| Name           | Database Key   | Field Type    | Validation                                                       |
+| -------------- | -------------- | ------------- | ---------------------------------------------------------------- |
+| author         | author         | ForeignKey    | User, on_delete=models.CASCADE                                   |
+| created_on     | created_on     | DateTimeField | auto_now_add=True                                                |
+| humanitas_post | humanitas_post | ForeignKey    | HumanitasPost, on_delete=models.CASCADE, related_name='comments' |
+| content        | content        | TextField     | max_length=400                                                   |
+| approved       | approved       | BooleanField  | default=True                                                     |
 
-| Name          | Database Key  | Field Type    | Validation |
-| ------------- | ------------- | ------------- | ---------- |
-| author         |  author          | ForeignKey | User, on_delete=models.CASCADE   |
-| created_on        | created_on      | DateTimeField    | auto_now_add=True   |
-| humanitas_post | humanitas_post   | ForeignKey   | HumanitasPost, on_delete=models.CASCADE, related_name='comments'     |
-| content    | content    | TextField    | max_length=400   |
-| approved      | approved     |BooleanField |  default=True     |
-
+## Project Structure
 
 ### Code structure
-Project code structure is organized and divided into various application folders and constructed using Django Framework 
+
+Project code structure is organized and divided into various application folders and constructed using Django Framework
 
 #### Project Apps:
+
 - Home app - constructed to deliver basic information for the User about the app via Home page with simple an intuitive navigation(links in nav-bar and footer to navigate throughout the app).
 
-    It also provides the following functionalities:
-    1.  basic contact form for user to contact the team and a footer
-    2.  user authentication and profile management functionality, full CRUD functionality, so user can create an account, update profile, upload supporting images for a profile
+  It also provides the following functionalities:
+
+  1.  basic contact form for user to contact the team and a footer
+  2.  user authentication and profile management functionality, full CRUD functionality, so user can create an account, update profile, upload supporting images for a profile
 
 - stories app - constructed to deliver CRUD functions of a humanitas stories app, where  the structure includes the necessary files for running the application, including the views, models, and templates required to create, read, update, and delete blog posts and comments.
-
 
 - booking app - delivers functionality for users to book a call with the team and site owner . The app includes views and templates for displaying the bookings of user and also to create, update and delete existing bookings.
