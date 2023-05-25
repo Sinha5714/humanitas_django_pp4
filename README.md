@@ -57,4 +57,23 @@ Primary goals of the project (web app):
 
 ### User stories
 
+0. As a user I want to navigation to be intuitive and user-friendly so that I'm able to easily navigate through the app content.
+
+1. As a Site user I want to know info on what the app is about so that I can use its functionality for mutual benefit
+2. As a site user I can be able to login and logout from the website so that I can have a safe environment to work with
+3. As a Site User I can view the post page so that I can view the posts
+4. As a Site User I can click a post so that I can read the full post
+5. As a Site User I can comment on the post so that I can be involved in conversation
+6. As a Site User I can delete comments so that I can delete unwanted comments in my story and also my comments in other's stories
+7. As a Site User I can add a story so that I can share my thoughts with different people
+8. As a Site User I can edit my story so that I can change the content when I want
+9. As a Site User I can be able delete my story so that I can delete my blog when needed
+10. As a Site User I can be able to add my profile to the website so that I can interact comfortably
+11. As a Site User I can be able to edit and update my profile so that I can change details whenever I want
+12. As a Site User I can be able to delete my profile so that I can be sure my data is save when I don't want to use website anymore
+13. As a Site User I can book an appointment so that I can communicate with the site owner
+14. As a Site User I can edit my appointment so that I can get flexibility in booking
+15. As a Site User I can delete my appointment so that I can have decide if I want to cancel the appointment
+16. As a Site User I can view my bookings so that I can easily check for my bookings
+
 ### Site Owner Stories
