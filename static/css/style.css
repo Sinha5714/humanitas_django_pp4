@@ -35,6 +35,10 @@ h3 {
     transform: scale(1.15)
 }
 
+.logo {
+    overflow: hidden;
+}
+
 /* Hero-Section */
 #hero-content {
     font-size: 130%;
@@ -47,6 +51,19 @@ h3 {
     position: absolute;
     z-index: 1;
 
+}
+
+.carousel .carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 600px;
+}
+
+.about-image {
+    width: 100%;
+    overflow: hidden;
 }
 
 #copyright {

@@ -86,6 +86,7 @@ Primary goals of the project (web app):
 24. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 25. As a Site Owner I would like that user can not book an appointment which is already booked
 
+## Models
 #### Profile model
 
 | Name          | Database Key  | Field Type    | Validation |
