@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -10,6 +11,7 @@ class Profile(models.Model):
     for each registered user
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_image = CloudinaryField('image', default='placeholder')
     first_name = models.CharField(blank=True, max_length=50)
     last_name = models.CharField(blank=True, max_length=50)
     email = models.EmailField(max_length=100, blank=True, null=True)
