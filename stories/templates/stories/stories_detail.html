@@ -2,12 +2,12 @@
 {% block content %}
 {% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="masthead">
+<div class="masthead bg-dark">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ object.title }}</h1>
-                <p class="post-subtitle">{{ object.creator }} | {{ object.created_on }}</p>
+                <h1 class="post-title text-white">{{ object.title }}</h1>
+                <p class="post-subtitle text-white">{{ object.creator }} | {{ object.created_on }}</p>
             </div>
             <div class="col col-md-auto">
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
@@ -27,7 +27,8 @@
 
             <div class="d-none d-md-block col-8 masthead-image">
                 {% if "placeholder" in object.cover_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo_u9h38r.jpg"
+                    alt="Default image" width="100%">
                 {% else %}
                 <img src=" {{ object.cover_image.url }}" width="100%">
                 {% endif %}

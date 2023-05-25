@@ -4,16 +4,23 @@
 {% load crispy_forms_tags %}
 <section>
     <div class="bg-dark ">
-        <h1 class="h2 text-center text-white m-2 mb-4">Our Stories</h1>
-        <hr class="my-4">
+        <h1 class="text-center mb-4 text-white">Our Stories</h1>
     </div>
     <div class="container pt-3">
         <div class="row">
             {% for post in humanitas_post|slice:4 %}
             <div class="col-lg-6 mb-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ post.cover_image.url}}" alt="Image by user"
-                        style="height: 100%;width:100%;">
+                <div class="card" style="width: 20rem;">
+                    {% if 'placeholder' in post.cover_image.url %}
+
+                    <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
+                        alt="humanitas-logo " class="card-img-top" width="450" height="250">
+                    {% else %}
+
+                    {% load cloudinary %}
+                    {% cloudinary post.cover_image %}
+
+                    {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
