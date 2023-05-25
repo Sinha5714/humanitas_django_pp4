@@ -9,9 +9,9 @@
 
 <div class="row">
 
-    {% for post in humanitas_post|slice:":4" %}
+    {% for post in humanitas_post %}
     {% if post.creator == user %}
-    <div class="col-sm-6 mb-4">
+    <div class="col mb-4">
         <article class="media content-section" style="align-content: center;">
             <div class="card" style="width: 18rem;">
                 {% if 'placeholder' in post.cover_image.url %}
