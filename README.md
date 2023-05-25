@@ -141,3 +141,18 @@ Primary goals of the project (web app):
 | humanitas_post | humanitas_post   | ForeignKey   | HumanitasPost, on_delete=models.CASCADE, related_name='comments'     |
 | content    | content    | TextField    | max_length=400   |
 | approved      | approved     |BooleanField |  default=True     |
+
+
+### Code structure
+Project code structure is organized and divided into various application folders and constructed using Django Framework 
+
+#### Project Apps:
+- Home app - constructed to deliver basic information for the User about the app via Home page with simple an intuitive navigation(links in nav-bar and footer to navigate throughout the app).
+    It also provides the following functionality:
+        1.  basic contact form for user to conntact the team and a footer
+        2.  user authentication and profile management functionality, full CRUD functionality, so user can create an account, update profile, upload supporting images for a profile
+
+- stories app - constructed to deliver CRUD functions of a humanitas stories app, where  the structure includes the necessary files for running the application, including the views, models, and templates required to create, read, update, and delete blog posts and comments.
+
+
+- booking app - delivers functionality for users to book a call with the team and site owner . The app includes views and templates for displaying the bookings of user and also to create, update and delete existing bookings.
