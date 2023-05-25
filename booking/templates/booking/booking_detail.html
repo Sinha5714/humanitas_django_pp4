@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<article class="media content-section">
-    <div class="media-body text-center">
-        <div class="article-metadata">
-            <a class="mr-2" href="#">{{ booking.user }}</a>
-            <small class="text-muted">{{ booking.date|date:"F d, Y" }}</small>
-            {% if booking.user == user %}
-            <div>
-                <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'booking_edit' object.id %}">Edit</a>
-                <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'booking_cancel' object.id %}">Cancel</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card bg-light" style="width: 20rem;">
+                <div class="card-body">
+                    <h2 class="card-title">{{ booking.user }}</h2>
+                    <h3 class="card-subtitle mb-2 text-muted">{{ booking.date|date:"F d, Y" }}</h3>
+                    <h4 class="card-subtitle mb-2 text-muted">{{ booking.helptype }}</h4>
+                    <p class="card-text">{{ booking.date|date:"l" }}</p>
+                    <a class='btn btn-secondary btn-small mt-1 mb-1' href="{% url 'booking_edit' object.id %}">Edit</a>
+                    <a class='btn btn-danger btn-small mt-1 mb-1' href="{% url 'booking_cancel' object.id %}">Delete</a>
+                </div>
             </div>
-            {% endif %}
         </div>
-        <h2 class="article-title">{{ booking.helptype }}</h2>
-        <p class="article-content">{{ booking.date|date:"l" }}</p>
     </div>
-</article>
+</div>
+
 
 {% endblock content %}
