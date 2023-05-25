@@ -76,8 +76,15 @@ h3 {
 }
 
 .about-image {
-    width: 100%;
+    width: 100px;
     overflow: hidden;
+}
+
+/* Stories */
+.cover-image {
+    height: 45vh;
+    overflow: hidden;
+    width: 70%;
 }
 
 #copyright {

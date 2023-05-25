@@ -3,13 +3,20 @@
 {% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 <div class="masthead bg-dark">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title text-white">{{ object.title }}</h1>
                 <p class="post-subtitle text-white">{{ object.creator }} | {{ object.created_on }}</p>
+                {% if object.creator == user %}
+                <div class="col col-md-4">
+                    <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
+                </div>
+
+                {% endif %}
             </div>
-            <div class="col col-md-auto">
+            <div class="col-md-4 col-md-auto">
                 <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
                     Stories</a>
                 {% if object.creator == user %}
@@ -17,29 +24,25 @@
                     Stories</a>
                 {% endif %}
             </div>
-            {% if object.creator == user %}
-            <div class="col col-md-4">
-                <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
-                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
-            </div>
-
-            {% endif %}
-
-            <div class="d-none d-md-block col-8 masthead-image">
+        </div>
+        <div class="row g-0">
+            <div class="col-md-12 ">
                 {% if "placeholder" in object.cover_image.url %}
-                <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo_u9h38r.jpg"
-                    alt="Default image" width="100%">
+                <img class="cover-image"
+                    src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo_u9h38r.jpg"
+                    alt="Default image">
                 {% else %}
-                <img src=" {{ object.cover_image.url }}" width="100%">
+                <img class="cover-image" src=" {{ object.cover_image.url }}" alt="User Image">
                 {% endif %}
             </div>
         </div>
     </div>
 </div>
+</div>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3">
             <div class="card-body">
                 <p class="card-text ">
                     {{ object.body | safe }}
