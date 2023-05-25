@@ -78,9 +78,10 @@ Primary goals of the project (web app):
 
 ### Site Owner Stories
 
-19. As a Site owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
+19. As a Site Owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
 20. As a Site Owner I would like that authenticated users have full access to web app and its functionality
 21. As a Site Owner I would like that each data entry is validated before stored in database
 22. As a Site Owner I would like that users an leave a message via contact form
 23. As a Site Owner I would like that users have more than one way of comunicating with team or myself
 24. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
+25. As a Site Owner I would like that user can not book an appointment which is already booked
