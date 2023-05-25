@@ -85,3 +85,24 @@ Primary goals of the project (web app):
 23. As a Site Owner I would like that users have more than one way of comunicating with team or myself
 24. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 25. As a Site Owner I would like that user can not book an appointment which is already booked
+
+#### Profile model
+
+| Name          | Database Key  | Field Type    | Validation |
+| ------------- | ------------- | ------------- | ---------- |
+|  user       | user     | OneToOneField|  User, on_delete=models.CASCADE|
+|  profile_image       |  profile_image     |CloudinaryField | 'image', default='placeholder'  |
+| first_name| first_name  | CharField | max_length=50 blank=True   |
+| last_name| last_name  | CharField | max_length=50 blank=True   |
+|  email   | email  | EmailField  | max_length=100 null=True blank=True |
+
+#### Contact model
+
+| Name          | Database Key  | Field Type    | Validation |
+| ------------- | ------------- | ------------- | ---------- |
+| message_id       | message_id     | AutoFirld |  PrimaryKey=True |
+|user       | user     | ForeignKey|  User, on_delete=models.CASCADE null=True|
+|  name   | name  | CharField  | max-length=50 null=True  |
+|  email   | email  | EmailField  | max_length=100 default="" |
+|  created_on     | created_on      | DateTimeField   | auto_now_add=True    |
+|  message   | message  | TextField  |   |
