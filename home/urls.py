@@ -7,6 +7,7 @@ from .views import (home, ContactMessage, UserUpdateProfile,
 
 urlpatterns = [
     path('', home, name='home'),
+    path('about/', views.about, name='about'),
     path('contact/', ContactMessage.as_view(), name='contact'),
     path('profile_page/', UserProfilePageView.as_view(), name='profile_page'),
     path('update_profile/', UserUpdateProfile.as_view(),

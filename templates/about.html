@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+{% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
+<!-- About Us-->
+<section id="about">
+    <div class="container-fluid px-4 px-lg-5 bg-light">
+        <div class="row gx-4 gx-lg-5">
+
+            <div class="col-lg-8">
+                <h2 class="mb-4 text-center">
+                    About Us!
+                </h2>
+                <p>Here about us content</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- History -->
+<section id="history">
+    <div class="container-fluid px-4 px-lg-5 bg-light">
+        <div class="row gx-4 gx-lg-5">
+
+            <div class="col-lg-8">
+                <h2 class="mb-4 text-center">
+                    Our Story!
+                </h2>
+                <p>We are a couple. Two men from two countries that couldn't be more different.
+                    India and Germany.
+                    In 2018, fate brought us together. Before that, each lived an individually happy life. One was a
+                    an officer in miliary and
+                    a department manager on a cruise ship fleet. We met by chance in Kochi, South India and fell in
+                    love the second we
+                    saw each other. Unsuspecting that the years that followed would turn our lives upside down and
+                    present us with
+                    challenges far beyond what was imaginable to allow us to live a life of togetherness. For in the
+                    beginning, it looked as
+                    if both of us would be denied a life together.
+
+                    Our path brought us many hurdles, which we all managed to overcome sooner or later, because we had
+                    certain prerequisites
+                    such as courage, assertiveness, money, persistence, support and each other.
+
+                    At some point we asked ourselves the question, how do people master or even solve a life-threatening
+                    situation, who for
+                    various reasons do not have the necessary prerequisites?! An extensive research in the family,
+                    friends, - & acquaintance
+                    circle brought only one answer: They give up.<br>
+
+                    This sobering realization was the birth of "Humanitas".</p>
+            </div>
+            <div class="col-lg-4">
+                <img class="about-image"
+                    src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/about_efl8hz.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
+{% endblock content %}

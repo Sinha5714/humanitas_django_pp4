@@ -20,6 +20,11 @@ def home(request):
     """
     return render(request, 'index.html')
 
+def about(request):
+    """
+    View to render about page
+    """
+    return render(request, 'about.html')
 
 class ContactMessage(View):
     """
