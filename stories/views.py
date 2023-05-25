@@ -28,6 +28,7 @@ class HumanitasPostView(ListView):
     queryset = HumanitasPost.objects.filter(status=1).order_by("-updated_on")
     context_object_name = 'humanitas_post'
     template_name = 'stories/humanitas-stories.html'
+    paginate_by = 6
 
 
 class HumanitasUserPostView(ListView):
