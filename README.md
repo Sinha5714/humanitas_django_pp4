@@ -106,3 +106,12 @@ Primary goals of the project (web app):
 |  email   | email  | EmailField  | max_length=100 default="" |
 |  created_on     | created_on      | DateTimeField   | auto_now_add=True    |
 |  message   | message  | TextField  |   |
+
+#### Booking model
+
+| Name          | Database Key  | Field Type    | Validation |
+| ------------- | ------------- | ------------- | ---------- |
+|user       | user     | ForeignKey|  User, on_delete=models.CASCADE null=True|
+|  date   | date  | DateField  | default=timezone.now |
+|  timeblock   | timeblock  | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES |
+|  helptype    | helptype     | CharField   | max_length=100, default=""    |
