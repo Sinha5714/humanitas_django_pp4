@@ -213,7 +213,7 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Delete User</summary>
-<img src="home/templates/home/delete_user.html" >
+<img src="documentation/html-validations/delete-user.png" >
 </details>
 
 <details><summary>Humanitas Stories</summary>
@@ -249,5 +249,5 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Delete Booking</summary>
-<img src="documentation/html-validations/delete-booking.png" >
+<img src="documentation/html-validations/cancel-booking.png" >
 </details>
