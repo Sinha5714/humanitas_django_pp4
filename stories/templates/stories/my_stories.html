@@ -13,15 +13,15 @@
     {% if post.creator == user %}
     <div class="col mb-4">
         <article class="media content-section" style="align-content: center;">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem; height: 30rem;">
                 {% if 'placeholder' in post.cover_image.url %}
 
                 <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
-                    alt="humanitas-logo " class="card-img-top" width="450" height="250">
+                    alt="humanitas-logo " class="card-img-top">
                 {% else %}
 
                 {% load cloudinary %}
-                {% cloudinary post.cover_image %}
+                {% cloudinary post.cover_image class="card-img-top" alt="story-image-by-user" %}
 
                 {% endif %}
                 <div class="card-body">
