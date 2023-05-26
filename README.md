@@ -20,6 +20,8 @@
    2. [Data Models](#data-models)
    3. [Project Structure](#project-structure)
 
+4. [Validation](#validation)
+
 # About
 
 - Humanitas is a helping organisation which connects people who needs help to people who can provide help.
