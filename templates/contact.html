@@ -7,21 +7,26 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 
 <!-- Contact form -->
-<section>
+<section id="contact">
     <div class="bg-dark">
         <h1 class="text-center text-white">CONTACT US</h1>
     </div>
-
     <div class="container-fluid my-4">
-        <div class="row justify-content-center">
-            <div class="col">
+        <div class="row">
+
+            <div class="col-sm-6 bg-dark text-white">
                 <form method="POST">
                     {% csrf_token %}{{ contact_form | crispy }}
-
-                    <button class="btn btn-sm btn-dark" type="submit">Send</button>
+                    <br>
+                    <button class="btn btn-outline-light" type="submit">Send</button>
                 </form>
-
             </div>
+            <div class="col-sm-6">
+                <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685091103/contact_jweg1i.jpg"
+                    alt="contact-image" style="width:100%">
+            </div>
+
+
         </div>
     </div>
 </section>

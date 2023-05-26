@@ -81,7 +81,7 @@ h3 {
 }
 
 #vision {
-    background-image: url(/static/images/vision.webp);
+    background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685084323/vision_rpxkgk.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 600px;
@@ -103,12 +103,10 @@ h3 {
 
 /* Stories */
 .stories {
-    background-image: url(/static/images/logo.jpg);
+    background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685090844/stories_fi6qao.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
-
-
 }
 
 .card-img-top {
@@ -122,6 +120,8 @@ h3 {
     width: 100%;
 }
 
+
+/* footer */
 #copyright {
     background-color: rgba(0, 0, 0, 0.2);
 }

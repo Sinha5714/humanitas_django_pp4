@@ -17,7 +17,6 @@ from django.views.generic import (
     DeleteView
 )
 
-# Create your views here.
 
 
 class HumanitasPostView(ListView):
