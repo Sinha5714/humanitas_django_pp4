@@ -19,18 +19,30 @@ h3 {
 }
 
 /* Nav-Bar */
-#header {
-    background-color: rgba(0, 0, 0, 0.4);
-}
+
 
 #nav-bar {
-    z-index: 1000;
+    z-index: 1;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    z-index: 1000;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#nav-bar .navbar-nav .nav-link {
+    font-weight: 400;
+    font-family: monospace;
+    font-size: x-large;
 }
 
 #nav-bar .navbar-nav .nav-link:hover {
-    color: #a9dafa;
+    color: green;
     font-weight: 700;
     transform: scale(1.15)
 }
@@ -61,11 +73,20 @@ h3 {
     height: 600px;
 }
 
-/* Vision and Mission Section */
-#vision,
+/* Mission and Vision Section */
 #mission {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    min-height: 400px;
+    background-size: 100% 100%;
+    background-color: rgba(237, 237, 31, 0.4);
+}
+
+#vision {
+    background-image: url(/static/images/vision.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
 /* About-Section */
