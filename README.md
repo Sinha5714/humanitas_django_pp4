@@ -277,35 +277,35 @@ Project code structure is organized and divided into various application folders
 ##### Stories App
 
 <details><summary>Stories Models</summary>
-<img src="documentation/pep8-validations/home-models.png" >
+<img src="documentation/pep8-validations/stories-models.png" >
 </details>
 
 <details><summary>Stories Forms</summary>
-<img src="documentation/pep8-validations/home-forms.png" >
+<img src="documentation/pep8-validations/stories-forms.png" >
 </details>
 
 <details><summary>Stories Urls</summary>
-<img src="documentation/pep8-validations/home-urls.png" >
+<img src="documentation/pep8-validations/stories-urls.png" >
 </details>
 
 <details><summary>Stories Views</summary>
-<img src="documentation/pep8-validations/home-views.png" >
+<img src="documentation/pep8-validations/stories-views.png" >
 </details>
 
 ##### Bookings App
 
 <details><summary>Bookings Models</summary>
-<img src="documentation/pep8-validations/home-models.png" >
+<img src="documentation/pep8-validations/booking-models.png" >
 </details>
 
 <details><summary>Bookings Forms</summary>
-<img src="documentation/pep8-validations/home-forms.png" >
+<img src="documentation/pep8-validations/booking-forms.png" >
 </details>
 
 <details><summary>Bookings Urls</summary>
-<img src="documentation/pep8-validations/home-urls.png" >
+<img src="documentation/pep8-validations/booking-urls.png" >
 </details>
 
 <details><summary>Bookings Views</summary>
-<img src="documentation/pep8-validations/home-views.png" >
+<img src="documentation/pep8-validations/booking-views.png" >
 </details>
