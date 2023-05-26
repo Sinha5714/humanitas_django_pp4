@@ -25,7 +25,12 @@
                     <td>{{ booking.date|date:"F d, Y" }}</td>
                     <td>{{ booking.date|date:"l" }}</td>
                     <td>{{ booking.helptype }}</td>
-                    <td><a href="{% url 'booking_detail' booking.id %}">Edit</a></td>
+                    <td><a href="{% url 'booking_edit' booking.id %}" style="color: #585858;"><i class=" fa
+                            fa-pen-to-square"></i>Edit</a>
+                            <br>
+                        <a href="{% url 'booking_cancel' booking.id %}" style="color: #585858;"><i class=" fa fa-trash
+                            fa-lg" aria-hidden="true"></i>Delete</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
