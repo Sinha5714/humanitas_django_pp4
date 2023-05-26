@@ -176,7 +176,7 @@ Project code structure is organized and divided into various application folders
 - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used to validate the css in the project
   - web app passed validator with no errors.
     <details><summary>Style.css</summary>
-    <img src="docs/validation/html-css/valid-css.png" width="800">
+    <img src="documentation/html-validations/css-validation.png">
     </details>
 
 ### Html
