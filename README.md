@@ -166,3 +166,88 @@ Project code structure is organized and divided into various application folders
 - stories app - constructed to deliver CRUD functions of a humanitas stories app, where  the structure includes the necessary files for running the application, including the views, models, and templates required to create, read, update, and delete blog posts and comments.
 
 - booking app - delivers functionality for users to book a call with the team and site owner . The app includes views and templates for displaying the bookings of user and also to create, update and delete existing bookings.
+
+## Validation
+
+---
+
+### CSS
+
+- [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used to validate the css in the project
+  - web app passed validator with no errors.
+    <details><summary>Style.css</summary>
+    <img src="docs/validation/html-css/valid-css.png" width="800">
+    </details>
+
+### Html
+
+- [WC3 Validator](https://validator.w3.org/) was used to validate the html in the project
+
+- Note : all info on validator pages are related with using cloudinary template tags for rendering user uploaded images and there for trailing slash cant be removed
+
+<details><summary>Home</summary>
+<img src="documentation/html-validations/index.png"  >
+</details>
+<details><summary>About</summary>
+<img src="documentation/html-validations/about.png" >
+</details>
+
+<details><summary>Register</summary>
+<img src="documentation/html-validations/signup.png" >
+</details>
+
+<details><summary>Login</summary>
+<img src="documentation/html-validations/login.png" >
+</details>
+
+<details><summary>Logout</summary>
+<img src="documentation/html-validations/logout.png" >
+</details>
+
+<details><summary>Profile</summary>
+<img src="" >
+</details>
+
+<details><summary>Edit profile</summary>
+<img src="">
+</details>
+
+<details><summary>Delete profile</summary>
+<img src="documentation/html-validations/delete-user.png" >
+</details>
+
+<details><summary>Humanitas Stories</summary>
+<img src="documentation/html-validations/our-stories.png" >
+</details>
+
+<details><summary>My Stories</summary>
+<img src="documentation/html-validations/my-stories.png" >
+</details>
+
+<details><summary>Story Detail</summary>
+<img src="documentation/html-validations/story-detail.png" >
+</details>
+
+<details><summary>Edit Story</summary>
+<img src="documentation/html-validations/add-story.png">
+</details>
+
+<details><summary>Delete Story</summary>
+<img src="documentation/html-validations/story-delete.png" >
+</details>
+
+<details><summary>Booking Home Page </summary>
+<img src="documentation/html-validations/booking-home.png" >
+</details>
+
+<details><summary>My Bookings</summary>
+<img src="documentation/html-validations/my-bookings.png" >
+</details>
+
+<details><summary>Update Booking</summary>
+<img src="documentation/html-validations/add-booking.png" >
+</details>
+
+<details><summary>Delete Booking</summary>
+<img src="documentation/html-validations/delete-booking.png" >
+</details>
