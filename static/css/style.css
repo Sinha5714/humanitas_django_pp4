@@ -81,6 +81,15 @@ h3 {
 }
 
 /* Stories */
+.stories {
+    background-image: url(/static/images/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+
+}
+
 .card-img-top {
     height: 100%;
     overflow: hidden;
