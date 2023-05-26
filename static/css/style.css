@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Montserrat&family=Playfair:wght@500&display=swap');
+
 * {
     margin: 0;
     border: none;
@@ -5,26 +7,26 @@
 }
 
 body {
-    font-family: Montserrat, sans-serif;
-    font-weight: 300;
+    font-family: Fauna One, sans-serif;
+    font-size: large;
+
 }
 
 
 h1,
 h2,
 h3 {
-    font-family: Raleway, sans-serif;
+    font-family: Playfair, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
 /* Nav-Bar */
 
-
 #nav-bar {
     z-index: 1;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(205, 4, 249, 0.7);
 }
 
 #logo {
@@ -36,19 +38,15 @@ h3 {
 }
 
 #nav-bar .navbar-nav .nav-link {
-    font-weight: 400;
-    font-family: monospace;
-    font-size: x-large;
+    font-weight: 500;
+    font-size: large;
+    color: black;
 }
 
 #nav-bar .navbar-nav .nav-link:hover {
-    color: green;
+    color: rgb(15, 234, 48);
     font-weight: 700;
     transform: scale(1.15)
-}
-
-.logo {
-    overflow: hidden;
 }
 
 /* Hero-Section */
@@ -58,33 +56,25 @@ h3 {
     text-transform: uppercase;
     width: 100%;
     letter-spacing: 4px;
-    background-color: rgba(0, 0, 0, .4);
-    bottom: 30%;
+    background-color: rgba(54, 250, 47, 0.4);
+    bottom: 40%;
     position: absolute;
     z-index: 1;
 
 }
 
-.carousel .carousel-item {
-    height: 600px;
-}
-
-.carousel-item img {
-    height: 600px;
-}
-
 /* Mission and Vision Section */
 #mission {
-    min-height: 400px;
+    min-height: 600px;
     background-size: 100% 100%;
-    background-color: rgba(237, 237, 31, 0.4);
+    background-color: rgba(31, 227, 237, 0.4);
 }
 
 #vision {
     background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685084323/vision_rpxkgk.webp);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 600px;
+    background-size: cover;
+    min-height: 600px;
     overflow: hidden;
     margin-bottom: 0;
 }
@@ -92,12 +82,12 @@ h3 {
 /* About-Section */
 
 #about {
-    margin-top: 30px;
+    background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685112279/about-image_ehggot.jpg);
     margin-bottom: 30px;
 }
 
 .about-image {
-    width: 100px;
+    width: 100%;
     overflow: hidden;
 }
 
