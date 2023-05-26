@@ -2,41 +2,39 @@
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% load crispy_forms_tags %}
-
-<div class="bg-dark ">
-    <h1 class="text-center text-white mb-4">My Stories</h1>
-</div>
-
-<div class="row">
-
-    {% for post in humanitas_post %}
-    {% if post.creator == user %}
-    <div class="col mb-4">
-        <article class="media content-section" style="align-content: center;">
-            <div class="card" style="width: 20rem; height: 30rem;">
-                {% if 'placeholder' in post.cover_image.url %}
-
-                <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
-                    alt="humanitas-logo " class="card-img-top">
-                {% else %}
-
-                {% load cloudinary %}
-                {% cloudinary post.cover_image class="card-img-top" alt="story-image-by-user" %}
-
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
-                    <p class="card-text">{{ post.body|slice:":50"}}</p>
-                    <a href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
-                    <strong class="text-secondary"><i class="far fa-comments">Comments</i>
+<section>
+    <div class="bg-dark ">
+        <h1 class="text-center text-white mb-4">My Stories</h1>
+    </div>
+    <div class="container-fluid pt-3">
+        <div class="row">
+            {% for post in humanitas_post %}
+            {% if post.creator == user %}
+            <div class="col-sm-6 mb-4 d-flex align-items-center justify-content-center">
+                <div class="card" style="width: 25rem; height: 30rem;">
+                    {% if 'placeholder' in post.cover_image.url %}
+                    <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
+                        alt="humanitas-logo " class="card-img-top">
+                    {% else %}
+                    {% load cloudinary %}
+                    {% cloudinary post.cover_image class="card-img-top" alt="story-image-by-user" %}
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">By : {{ post.creator }}</h6>
+                        <p class="card-text">{{ post.body|slice:":80"}}</p>
+                        <div class="d-flex align-items-center justify-content-between"> <a
+                                href="{% url 'blog_details' post.pk %}" class="card-link">Read More</a>
+                            <p class="text-secondary"><i class="fas fa-comments">Comments</i></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </article>
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
-    {% endif %}
-    {% endfor %}
+</section>
 
-</div>
 {% block footer %}{% include 'footer.html' %}{% endblock footer %}
 {% endblock content %}
