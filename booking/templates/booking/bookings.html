@@ -14,7 +14,7 @@
                 <tr>
                     <th scope="col">Booking For: </th>
                     <th scope="col">Date</th>
-                    <th scope="col">Day</th>
+                    <th scope="col">Time</th>
                     <th scope="col">Helptype</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -22,12 +22,12 @@
             <tbody>
                 <tr>
                     <td>{{ booking.user }}</td>
-                    <td>{{ booking.date|date:"F d, Y" }}</td>
-                    <td>{{ booking.date|date:"l" }}</td>
+                    <td>{{ booking.date|date:"F d, Y" }}| {{ booking.date|date:"l" }}</td>
+                    <td>{{ booking.timeblock }}</td>
                     <td>{{ booking.helptype }}</td>
                     <td><a href="{% url 'booking_edit' booking.id %}" style="color: #585858;"><i class=" fa
                             fa-pen-to-square"></i>Edit</a>
-                            <br>
+                        <br>
                         <a href="{% url 'booking_cancel' booking.id %}" style="color: #585858;"><i class=" fa fa-trash
                             fa-lg" aria-hidden="true"></i>Delete</a>
                     </td>

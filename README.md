@@ -118,12 +118,12 @@ Primary goals of the project (web app):
 
 #### Booking model
 
-| Name      | Database Key | Field Type | Validation                                            |
-| --------- | ------------ | ---------- | ----------------------------------------------------- |
-| user      | user         | ForeignKey | User, on_delete=models.CASCADE null=True              |
-| date      | date         | DateField  | default=timezone.now                                  |
-| timeblock | timeblock    | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES, default="A" |
-| helptype  | helptype     | CharField  | max_length=100, default=""                            |
+| Name      | Database Key | Field Type | Validation                                                |
+| --------- | ------------ | ---------- | --------------------------------------------------------- |
+| user      | user         | ForeignKey | User, on_delete=models.CASCADE null=True                  |
+| date      | date         | DateField  | default=timezone.now                                      |
+| timeblock | timeblock    | CharField  | max_length=10, choices=TIMEBLOCK_CHOICES, default="10:00" |
+| helptype  | helptype     | CharField  | max_length=100, default=""                                |
 
 #### BlogPost model
 

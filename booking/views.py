@@ -29,31 +29,31 @@ def generate_daylist():
         day["day"] = weekday
         day["A_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="A").exists()
+                timeblock="10:00").exists()
         )
         day["B_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="B").exists()
+                timeblock="10:30").exists()
         )
         day["C_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="C").exists()
+                timeblock="11:00").exists()
         )
         day["D_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="D").exists()
+                timeblock="11:30").exists()
         )
         day["E_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="E").exists()
+                timeblock="12:00").exists()
         )
         day["F_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="F").exists()
+                timeblock="15:00").exists()
         )
         day["G_booked"] = (
             Booking.objects.filter(date=str(next_day)).filter(
-                timeblock="G").exists()
+                timeblock="15:30").exists()
         )
         if day["day"] != "":
             daylist.append(day)
