@@ -18,7 +18,7 @@ class Profile(models.Model):
     email = models.EmailField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.first_name} Profile'
 
     def get_absolute_url(self):
         return reverse('profile_page', kwargs={'pk': self.pk})
