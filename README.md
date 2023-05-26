@@ -173,11 +173,11 @@ Project code structure is organized and divided into various application folders
 
 ### CSS
 
-- [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used to validate the css in the project
-  - web app passed validator with no errors.
-    <details><summary>Style.css</summary>
-    <img src="documentation/html-validations/css-validation.png">
-    </details>
+- [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)was used to validate the css in the project. Validator with no errors.
+
+<details><summary>Style.css</summary>
+<img src="documentation/html-validations/css-validation.png">
+</details>
 
 ### Html
 
@@ -250,4 +250,62 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>Delete Booking</summary>
 <img src="documentation/html-validations/cancel-booking.png" >
+</details>
+
+### Python
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files. No errors were found
+
+##### Home App
+
+<details><summary>Home Models</summary>
+<img src="documentation/pep8-validations/home-models.png" >
+</details>
+
+<details><summary>Home Forms</summary>
+<img src="documentation/pep8-validations/home-forms.png" >
+</details>
+
+<details><summary>Home Urls</summary>
+<img src="documentation/pep8-validations/home-urls.png" >
+</details>
+
+<details><summary>Home Views</summary>
+<img src="documentation/pep8-validations/home-views.png" >
+</details>
+
+##### Stories App
+
+<details><summary>Stories Models</summary>
+<img src="documentation/pep8-validations/home-models.png" >
+</details>
+
+<details><summary>Stories Forms</summary>
+<img src="documentation/pep8-validations/home-forms.png" >
+</details>
+
+<details><summary>Stories Urls</summary>
+<img src="documentation/pep8-validations/home-urls.png" >
+</details>
+
+<details><summary>Stories Views</summary>
+<img src="documentation/pep8-validations/home-views.png" >
+</details>
+
+##### Bookings App
+
+<details><summary>Bookings Models</summary>
+<img src="documentation/pep8-validations/home-models.png" >
+</details>
+
+<details><summary>Bookings Forms</summary>
+<img src="documentation/pep8-validations/home-forms.png" >
+</details>
+
+<details><summary>Bookings Urls</summary>
+<img src="documentation/pep8-validations/home-urls.png" >
+</details>
+
+<details><summary>Bookings Views</summary>
+<img src="documentation/pep8-validations/home-views.png" >
 </details>
