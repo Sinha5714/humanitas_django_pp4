@@ -205,15 +205,15 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Profile</summary>
-<img src="" >
+<img src="documentation/html-validations/profile-page.png" >
 </details>
 
 <details><summary>Edit profile</summary>
-<img src="">
+<img src="documentation/html-validations/edit-profile.png">
 </details>
 
-<details><summary>Delete profile</summary>
-<img src="documentation/html-validations/delete-user.png" >
+<details><summary>Delete User</summary>
+<img src="home/templates/home/delete_user.html" >
 </details>
 
 <details><summary>Humanitas Stories</summary>
@@ -233,7 +233,7 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Delete Story</summary>
-<img src="documentation/html-validations/story-delete.png" >
+<img src="documentation/html-validations/delete-story.png" >
 </details>
 
 <details><summary>Booking Home Page </summary>

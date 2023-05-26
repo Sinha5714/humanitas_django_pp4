@@ -24,7 +24,7 @@
                                 alt="default avatar image of any user">
                             {% else %}
                             {% load cloudinary %}
-                            {% cloudinary user.profile.profile_image format="WebP" width=120 height=125 %}
+                            {% cloudinary user.profile.profile_image alt="profile-image" width=120 height=125 %}
                             {% endif %}
                             <div class="mt-3">
                                 <h2 class="h4 text-capitalize font-weight-bold">{{ user.username }}</h2>
