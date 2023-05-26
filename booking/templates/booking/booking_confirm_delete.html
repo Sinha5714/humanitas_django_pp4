@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<section class="delete">
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="mx-auto col-10 col-md-8 text-white col-lg-6">
-                <form method="POST">
-                    {% csrf_token %}
-                    <h2 class="text-center mb-4">Cancel Booking</h2>
-                    <h3 class="text-center mb-4">Are you sure you want to cancel this booking?</h3>
-                    <div class="text-center mb-4">
-                        <a class="btn btn-outline-light" href="{% url 'booking_detail' booking.id %}">Go Back</a>
-                        <button class="btn btn-outline-danger" type="submit">Yes, Cancel</button>
+<section class="account-body">
+    <div class="container p-3">
+        <div class="row py-3 mt-5">
+            <div class="col-12 col-sm-10 col-md-6 col-lg-4 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p class=" h5 card-title text-center text-decoration-underline">Cancel Booking</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <p class="text-center mb-4">Are you sure you want to cancel this booking?</p>
+                            <a class="btn btn-dark" href="{% url 'booking_detail' booking.id %}">Go Back</a>
+                            <button class="btn btn-outline-danger" type="submit">Yes, Cancel</button>
+                        </form>
                     </div>
-
-                </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 {% endblock content %}

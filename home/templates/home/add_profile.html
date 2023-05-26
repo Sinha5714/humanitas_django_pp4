@@ -3,7 +3,8 @@
 {% load static %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<h1 class="col-12 text-center  pt-4"> {{ user.username }}'s Profile</h1>
+<h4 class="col-12 text-center  pt-4"> {{ user.username }}'s Profile</h4>
+<hr>
 <main class="container">
     <div class="form-group  p-5 pl-4 pr-4">
         <form class="formlabel" method="POST" enctype="multipart/form-data">

@@ -108,7 +108,7 @@ h2 {
     width: 60%;
 }
 
-/* Account */
+/* Account & Delete Pages */
 
 .account-body {
     background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685101509/login_yy6htm.jpg);
@@ -119,16 +119,6 @@ h2 {
     width: 100vw;
 }
 
-/* Delete Pages */
-
-.delete {
-    background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685105535/delete1_cn1nfs.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-}
 
 /* Bookings */
 
