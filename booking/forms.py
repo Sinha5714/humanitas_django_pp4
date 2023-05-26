@@ -1,11 +1,12 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Booking
-import datetime
-from django.utils import timezone
 
 
 class BookingForm(forms.ModelForm):
+    """
+    Class for booking form for user to book appointment
+    """
     date = forms.DateField(disabled=True)
     timeblock = forms.CharField(disabled=True)
     helptype = forms.CharField(

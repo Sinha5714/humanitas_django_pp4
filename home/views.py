@@ -11,7 +11,6 @@ from .forms import ContactUsForm, ProfileForm
 from .models import Profile, Contact
 
 
-# Create your views here.
 
 
 def home(request):

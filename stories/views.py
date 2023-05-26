@@ -11,12 +11,10 @@ from .models import HumanitasPost, Comment
 from .forms import CommentForm
 from django.views.generic import (
     ListView,
-    DetailView,
     CreateView,
     UpdateView,
     DeleteView
 )
-
 
 
 class HumanitasPostView(ListView):
@@ -32,7 +30,7 @@ class HumanitasPostView(ListView):
 
 class HumanitasUserPostView(ListView):
     """
-    A class view to view a list of all stories 
+    A class view to view a list of all stories
     created by logged in User
     """
     model = HumanitasPost

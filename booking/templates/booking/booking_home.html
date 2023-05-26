@@ -1,68 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-{% for day in days %}
-<div class="container-fluid">
-    <article class="media content-section">
-        <div class="media-body">
-            <div class="article-metadata">
-                <a class="mr-2" href="#">{{ day.date }}</a>
-                <small class="text-muted">{{ day.day }}</small>
-                <hr>
-            </div>
-            {% if not day.A_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '10:00' %}">10:00-10:20</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+<section id="booking">
+    <h1 class="text-center">Book A Call With US</h1>
+    <hr>
+    <div class="container-fluid ">
+        <div class="row">
+            <table class="table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Date</th>
+                        <th class="text-center">Timeblock</th>
+                    </tr>
+                </thead>
+                {% for day in days %}
+                <tbody>
+                    <tr>
+                        <td>{{ day.day }}</td>
+                        <td>{{ day.date }}</td>
+                        <td class="text-center">{% if not day.A_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '10:00' %}">10:00-10:20</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.B_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '10:30' %}">10:30-10:50</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+                            {% if not day.B_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '10:30' %}">10:30-10:50</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.C_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '11:00' %}">11:00-11:20</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+                            {% if not day.C_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '11:00' %}">11:00-11:20</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.D_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '11:30' %}">11:30-11:50</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+                            {% if not day.D_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '11:30' %}">11:30-11:50</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.E_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '12:00' %}">12:00-12:20</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+                            {% if not day.E_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '12:00' %}">12:00-12:20</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.F_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '15:00' %}">15:00-15:20</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
+                            {% if not day.F_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '15:00' %}">15:00-15:20</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
 
-            {% if not day.G_booked %}
-            <a class='btn btn-outline-success btn-small btn-block'
-                href="{% url 'booking_add_spec' day.date '15:30' %}">15:30-15:50</a>
-            {% else %}
-            <a class='btn btn-secondary btn-small btn-block' disabled>BOOKED</a>
-            {% endif %}
-            <hr>
+                            {% if not day.G_booked %}
+                            <a class='btn btn-outline-primary btn-small btn-block'
+                                href="{% url 'booking_add_spec' day.date '15:30' %}">15:30-15:50</a>
+                            {% else %}
+                            <button class='btn btn-secondary btn-small btn-block' disabled>BOOKED</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
         </div>
-    </article>
-</div>
-
-{% endfor %}
-
+    </div>
+</section>
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
 {% endblock content %}

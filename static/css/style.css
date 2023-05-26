@@ -89,6 +89,7 @@ h2 {
 }
 
 /* Stories */
+
 .stories {
     background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685090844/stories_fi6qao.jpg);
     background-repeat: no-repeat;
@@ -118,7 +119,8 @@ h2 {
     width: 100vw;
 }
 
-/* Delete Page */
+/* Delete Pages */
+
 .delete {
     background-image: url(https://res.cloudinary.com/dh6umdpzt/image/upload/v1685105535/delete1_cn1nfs.webp);
     background-repeat: no-repeat;
@@ -126,6 +128,12 @@ h2 {
     background-attachment: fixed;
     height: 100vh;
     width: 100vw;
+}
+
+/* Bookings */
+
+#booking {
+    min-height: 600px;
 }
 
 /* footer */

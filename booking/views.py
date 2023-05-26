@@ -131,7 +131,7 @@ class BookingUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 def cancel_booking(request, pk):
     """
-     Function to delete the existing booking 
+     Function to delete the existing booking
     """
     booking = Booking.objects.get(pk=pk)
 

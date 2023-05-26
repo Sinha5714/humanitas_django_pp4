@@ -3,6 +3,9 @@ from django import forms
 
 
 class ContactUsForm(forms.ModelForm):
+    """
+    A class for the contact form
+    """
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

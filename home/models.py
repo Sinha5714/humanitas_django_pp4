@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
 
 
 class Profile(models.Model):
@@ -26,7 +25,7 @@ class Profile(models.Model):
 
 class Contact(models.Model):
     """
-    a class for the Contact model
+    A class for the Contact model
     """
     message_id = models.AutoField(primary_key=True)
     created_on = models.DateTimeField(auto_now_add=True)
