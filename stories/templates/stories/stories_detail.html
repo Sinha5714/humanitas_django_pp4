@@ -2,103 +2,108 @@
 {% block content %}
 {% load crispy_forms_tags %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="masthead bg-dark">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 masthead-text">
-                <h1 class="post-title text-white">{{ object.title }}</h1>
-                <p class="post-subtitle text-white">{{ object.creator }} | {{ object.created_on }}</p>
-                {% if object.creator == user %}
-                <div class="col col-md-4 ">
-                    <a class=" btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'update_blog' object.id %}">Update</a>
-                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
+<main class="flex-shrink-0 main-bg stories">
+    <div class="masthead">
+        <div class="container-fluid">
+            <div class="row bg-dark mb-4 text-white">
+                <div class="col-sm-6 mt-1 text-center">
+                    <h1>{{ object.title }}</h1>
                 </div>
-
-                {% endif %}
-            </div>
-            <div class="col-md-4">
-                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
-                    Stories</a>
-                {% if object.creator == user %}
-                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'my_stories'%}">Back to my
-                    Stories</a>
-                {% endif %}
+                <div class="col-sm-6 mt-2 text-center">
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'humanitas_blog_page'%}">Back to Our
+                        Stories</a>
+                    {% if object.creator == user %}
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'my_stories'%}">Back to my
+                        Stories</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
-        <div class="row g-0">
-            <div class="col-md-12 ">
-                {% if "placeholder" in object.cover_image.url %}
-                <img class="cover-image"
-                    src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo_u9h38r.jpg"
-                    alt="Default image">
-                {% else %}
-                <img class="cover-image" src=" {{ object.cover_image.url }}" alt="User Image">
-                {% endif %}
+        <div class="container">
+            <div class="row bg-dark text-white g-0">
+                <div class="col-md-6 masthead-text">
+                    <h1 class="post-title ">{{ object.title }}</h1>
+                    <p class="post-subtitle">
+                        {{ object.creator }} | {{ object.created_on }}
+                    </p>
+                    {% if object.creator == user %}
+                    <div class="col col-md-4">
+                        <a class=" btn btn-secondary btn-sm mt-1 mb-1"
+                            href="{% url 'update_blog' object.id %}">Update</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'delete_blog' object.id %}">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="d-none d-md-block col-md-6 masthead-image">
+                    {% if "placeholder" in object.cover_image.url %}
+                    <img class="cover-image"
+                        src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo_u9h38r.jpg"
+                        alt="Default image">
+                    {% else %}
+                    <img class="cover-image" src=" {{ object.cover_image.url }}" alt="User Image">
+                    {% endif %}
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col card mb-4  mt-3">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ object.body | safe }}
-                </p>
-                <div class="row">
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}</strong>
-                        {% endwith %}
+        <div class="container">
+            <div class="row g-0">
+                <div class="col card mb-4  mt-3">
+                    <div class="card-body">
+                        <p class="card-text ">
+                            {{ object.body | safe }}
+                        </p>
+                        <div class="row">
+                            <div class="col-1">
+                                {% with comments.count as total_comments %}
+                                <strong class="text-secondary"><i class="far fa-comments"></i>
+                                    {{ total_comments }}</strong>
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8 card mb-4  mt-3 ">
+                    <h3>Comments:</h3>
+                    <div class="card-body">
+                        {% for comment in comments %}
+                        <blockquote class="blockquote">
+                            <p>{{ comment.content}}</p>
+                            <footer class="blockquote-footer">
+                                By <cite>{{comment.author|capfirst}}
+                                    {% ifequal object.creator.id user.id %}
+                                    <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
+                                            class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                                    {% endifequal %}
+                                    {% ifequal comment.author.id user.id %}
+                                    <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
+                                            class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+                                    {% endifequal %}
+
+                                </cite>
+                            </footer>
+                        </blockquote>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4 card mb-4  mt-3 ">
+                    <div class="card-body">
+                        <h3>Leave a comment:</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <input type="submit" name="comment" class="btn btn-warning">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <blockquote class="blockquote">
-                    <p>{{ comment.content}}</p>
-                    <footer class="blockquote-footer">
-                        By <cite>{{comment.author|capfirst}}
-                            {% ifequal object.creator.id user.id %}
-                            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
-                                    class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-                            {% endifequal %}
-                            {% ifequal comment.author.id user.id %}
-                            <a href="{% url 'blog_comment' comment.id %}" style="color: #585858;"><i
-                                    class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+</main>
 
-                            {% endifequal %}
-
-                        </cite>
-                    </footer>
-                </blockquote>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <input type="submit" name="comment" class="btn btn-warning">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock content %}

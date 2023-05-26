@@ -115,9 +115,9 @@ h3 {
 }
 
 .cover-image {
-    height: 50vh;
+    height: 40vh;
     overflow: hidden;
-    width: 100%;
+    width: 60%;
 }
 
 /* Account */
