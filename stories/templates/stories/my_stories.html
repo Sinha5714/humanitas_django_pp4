@@ -3,9 +3,11 @@
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
 {% load crispy_forms_tags %}
 <section class="stories">
-    <div class="bg-dark ">
-        <h1 class="text-center text-white mb-4">My Stories</h1>
+    <div class="bg-light">
+        <h1 class="text-center mb-4">My Stories</h1>
     </div>
+
+    <hr>
     <div class="container-fluid pt-3">
         <div class="row">
             {% for post in humanitas_post %}

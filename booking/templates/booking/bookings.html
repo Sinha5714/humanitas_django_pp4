@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 {% block nav-bar %}{% include 'navbar.html' %}{% endblock nav-bar %}
-<div class="bg-dark">
-    <h1 class="text-center  mb-4 text-white">My Bookings</h1>
+<div class="bg-light">
+    <h1 class="text-center  mb-4 ">My Bookings</h1>
 </div>
+<hr>
 {% if user.is_authenticated %}
 {% for booking in bookings %}
 {% ifequal booking.user.id user.id %}

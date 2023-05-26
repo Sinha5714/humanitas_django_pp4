@@ -12,12 +12,9 @@ body {
 
 }
 
-
 h1,
-h2,
-h3 {
+h2 {
     font-family: Playfair, sans-serif;
-    text-transform: uppercase;
     letter-spacing: 4px;
 }
 
@@ -26,7 +23,7 @@ h3 {
 #nav-bar {
     z-index: 1;
     top: 0;
-    background-color: rgb(205, 4, 249, 0.7);
+    background-color: rgba(0, 0, 0, 0.125);
 }
 
 #logo {
