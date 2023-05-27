@@ -357,7 +357,7 @@ Project code structure is organized and divided into various application folders
 
 - Our Mission section consists of a paragraph about what the mission of this team is
 
-<details><summary>See Featured section </summary>
+<details><summary>See Mission section </summary>
 
 ![Our Mission](documentation/humanitas-pages/mission-section.png)
 
@@ -365,7 +365,7 @@ Project code structure is organized and divided into various application folders
 
 - Our Vision section consists of a paragraph about what the vision of the company
 
-<details><summary>See Featured section </summary>
+<details><summary>See Vision section </summary>
 
 ![Our Vision]()
 
