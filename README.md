@@ -27,7 +27,7 @@
    2. [Sections](#sections)
    3. [Code Structure](#code-structure)
 
-5. [Models](#models)
+5. [Database](#database)
 
    1. [Data Models](#data-models)
 
@@ -212,7 +212,17 @@ Project code structure is organized and divided into various application folders
 
 ##### Back to [top](#table-of-contents)
 
-## Models
+## Database
+
+---
+
+<details><summary>(ERD)Physical database model</summary>
+<img src="documentation/wireframes/erd-diagram.png">
+</details>
+
+- This sample ERD diagram was made using [Lucid Charts](https://www.lucidchart.com)
+- For this Django app I ve used PostgreSQL relational database management system.
+- model showed on the diagram visually represents the structure of a PostgreSQL database, including tables, columns, relationships, and constraints, that is stored in the database itself.
 
 ### Data Models
 
