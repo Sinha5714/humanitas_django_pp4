@@ -314,11 +314,13 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Nav-bar</summary>
-    ![Navbar before login](documentation/humanitas-pages/navbar.png)
-    ![Navbar after login](documentation/humanitas-pages/navbar-after-login.png)
-    ![Navbar](documentation/humanitas-pages/nav-bar-small.png)
-    </details>
+<details><summary>See Nav-bar</summary>
+
+![Navbar before login](documentation/humanitas-pages/navbar.png)
+![Navbar after login](documentation/humanitas-pages/navbar-after-login.png)
+![Navbar](documentation/humanitas-pages/nav-bar-small.png)
+
+</details>
 
 #### Footer
 
@@ -326,9 +328,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Footer</summary>
-    ![Footer](documentation/humanitas-pages/footer.png)
-    </details>
+<details><summary>See Footer</summary>
+
+![Footer](documentation/humanitas-pages/footer.png)
+
+</details>
 
 #### Homepage
 
@@ -337,27 +341,35 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Homepage</summary>
-    ![Home page]()
-    </details>
+<details><summary>See Homepage</summary>
+
+![Home page]()
+
+</details>
 
 - Hero-Section consists of hero-content and a carousel containing images
 
-    <details><summary>See Hero section</summary>
-    ![Hero section]()
-    </details>
+<details><summary>See Hero section</summary>
+
+![Hero section]()
+
+</details>
 
 - Our Mission section consists of a paragraph about what the mission of this team is
 
-    <details><summary>See Featured section </summary>
-    ![Our Mission](documentation/humanitas-pages/mission-section.png)
-    </details>
+<details><summary>See Featured section </summary>
+
+![Our Mission](documentation/humanitas-pages/mission-section.png)
+
+</details>
 
 - Our Vision section consists of a paragraph about what the vision of the company
 
-    <details><summary>See Featured section </summary>
-    ![Our Vision]()
-    </details>
+<details><summary>See Featured section </summary>
+
+![Our Vision]()
+
+</details>
 
 #### About Page
 
@@ -366,9 +378,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See About Page </summary>
-    ![About Page ]()
-    </details>
+<details><summary>See About Page </summary>
+
+![About Page ]()
+
+</details>
 
 #### Contact Page
 
@@ -377,9 +391,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Contact Page</summary>
-    ![Contact Page](documentation/humanitas-pages/contact-us-page.png)
-    </details>
+<details><summary>See Contact Page</summary>
+
+![Contact Page](documentation/humanitas-pages/contact-us-page.png)
+
+</details>
 
 ---
 
@@ -390,9 +406,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-   <details><summary>See Register Page</summary>
-   ![Register Page]()
-   </details>
+<details><summary>See Register Page</summary>
+
+![Register Page]()
+
+</details>
 
 #### Login page
 
@@ -401,9 +419,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-   <details><summary>See Login Page</summary>
-   ![Login Page]()
-   </details>
+<details><summary>See Login Page</summary>
+
+![Login Page]()
+
+</details>
 
 #### Logout page
 
@@ -413,9 +433,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Logout Page</summary>
-    ![Logout page]()
-    </details>
+<details><summary>See Logout Page</summary>
+
+![Logout page]()
+
+</details>
 
 #### Profile page
 
@@ -426,9 +448,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Profile Page</summary>
-    ![Profile Page](documentation/humanitas-pages/profile-pge.png)
-    </details>
+<details><summary>See Profile Page</summary>
+
+![Profile Page](documentation/humanitas-pages/profile-pge.png)
+
+</details>
 
 #### Update Profile page
 
@@ -437,20 +461,25 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Update Profile Page</summary>
-    ![Update Profile Page](documentation/humanitas-pages/profile-edit.png)
-    </details>
+<details><summary>See Update Profile Page</summary>
+
+![Update Profile Page](documentation/humanitas-pages/profile-edit.png)
+
+</details>
 
 #### Delete Profile page
 
 - User is presented with two options
 - User can Delete his profile(he cant register with a same username again)
 - User can go back to profile page
-   - User Story covered with this feature:
 
-    <details><summary>See Delete Profile Page</summary>
-    ![Delete Profile Page]()
-    </details>
+  - User Story covered with this feature:
+
+<details><summary>See Delete Profile Page</summary>
+
+![Delete Profile Page]()
+
+</details>
 
 #### Stories Page
 
@@ -465,9 +494,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Stories page</summary>
-    ![Stories Page]()
-    </details>
+<details><summary>See Stories page</summary>
+
+![Stories Page]()
+
+</details>
 
 #### Story Detail Page
 
@@ -479,9 +510,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Story detail Page</summary>
-    ![Story detail Page](documentation/humanitas-pages/story-detail-page.png)
-    </details>
+<details><summary>See Story detail Page</summary>
+
+![Story detail Page](documentation/humanitas-pages/story-detail-page.png)
+
+</details>
 
 - If the user is the creator of a blog two icons are displayed, one for updating and the other one
   for deleting a blog
@@ -490,9 +523,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Comment section</summary>
-    ![Comment section]()
-    </details>
+<details><summary>See Comment section</summary>
+
+![Comment section]()
+
+</details>
 
 #### Update story page
 
@@ -502,9 +537,11 @@ Project code structure is organized and divided into various application folders
 
   - User story covered with this feature:
 
-    <details><summary>See Delete story page</summary>
-    ![Update Story]()
-    </details>
+<details><summary>See Delete story page</summary>
+
+![Update Story]()
+
+</details>
 
 #### Delete story Page
 
@@ -514,9 +551,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Delete story page</summary>
-    ![Delete Story]()
-    </details>
+<details><summary>See Delete story page</summary>
+
+![Delete Story]()
+
+</details>
 
 #### Add Story Page
 
@@ -526,9 +565,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Add Story page</summary>
-    ![Add story page]()
-    </details>
+<details><summary>See Add Story page</summary>
+
+![Add story page]()
+
+</details>
 
 #### Booking Home Page
 
@@ -538,9 +579,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Booking Home</summary>
-    ![Booking Home Page](documentation/humanitas-pages/booking-home-page.png)
-    </details>
+<details><summary>See Booking Home</summary>
+
+![Booking Home Page](documentation/humanitas-pages/booking-home-page.png)
+
+</details>
 
 #### Add Booking Page
 
@@ -551,9 +594,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Add Booking page</summary>
-    ![Add Booking page](documentation/humanitas-pages/add-edit-booking.png)
-    </details>
+<details><summary>See Add Booking page</summary>
+
+![Add Booking page](documentation/humanitas-pages/add-edit-booking.png)
+
+</details>
 
 #### My Bookings Page
 
@@ -563,9 +608,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Add Booking page</summary>
-    ![Add Booking page](documentation/humanitas-pages/my-bookings.png)
-    </details>
+<details><summary>See Add Booking page</summary>
+
+![Add Booking page](documentation/humanitas-pages/my-bookings.png)
+
+</details>
 
 #### Edit Booking Page
 
@@ -575,9 +622,11 @@ Project code structure is organized and divided into various application folders
 
   - User story covered with this feature:
 
-    <details><summary>See Edit Booking page</summary>
-    ![Edit Booking page](documentation/humanitas-pages/add-edit-booking.png)
-    </details>
+<details><summary>See Edit Booking page</summary>
+
+![Edit Booking page](documentation/humanitas-pages/add-edit-booking.png)
+
+</details>
 
 #### Cancel Booking Page
 
@@ -587,9 +636,11 @@ Project code structure is organized and divided into various application folders
 
   - User Story covered with this feature:
 
-    <details><summary>See Cancel booking page</summary>
-    ![Cancel Booking]()
-    </details>
+<details><summary>See Cancel booking page</summary>
+
+![Cancel Booking]()
+
+</details>
 
 ---
 
