@@ -56,7 +56,10 @@ h2 {
     bottom: 40%;
     position: absolute;
     z-index: 1;
+}
 
+.hero-image {
+    height: fit-content;
 }
 
 /* Mission and Vision Section */
@@ -84,6 +87,7 @@ h2 {
 
 .about-image {
     width: 100%;
+    height: fit-content;
     overflow: hidden;
 }
 
