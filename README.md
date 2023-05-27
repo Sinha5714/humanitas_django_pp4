@@ -31,7 +31,10 @@
 
    1. [Data Models](#data-models)
 
-6. [Validation](#validation)
+6. [Features](#features)
+   1. [Implemented Features](#implemented-features)
+   2. [Features To Be Implemented](#features-to-be-implemented)
+7. [Validation](#validation)
    1. [CSS](#css)
    2. [HTML](#html)
    3. [Python](#python)
@@ -295,6 +298,308 @@ Project code structure is organized and divided into various application folders
 | approved       | approved       | BooleanField  | default=True                                                     |
 
 ## Features
+
+---
+
+### Implemented Features
+
+#### Nav-bar
+
+- Navbar consists of Logo image and is displayed in all pages for easy navigation of website
+- Nav-bar consists of a links to a stories page, contact page, booking page, about page, login and register pages
+- Authenticated user can see additional functions as follows:
+  - Profile Page with dropdown menu of 'Profile', 'My stories' and 'My bookings'
+  - Link to Logout page
+- Feature is fully responsive and on smaller screen sizes it coverts into a 'Hamburger menu'
+
+  - User Story covered with this feature:
+
+    <details><summary>See Nav-bar</summary>
+    ![Navbar before login](documentation/humanitas-pages/navbar.png)
+    ![Navbar after login](documentation/humanitas-pages/navbar-after-login.png)
+    ![Navbar](documentation/humanitas-pages/nav-bar-small.png)
+    </details>
+
+#### Footer
+
+- Footer consists of address and location of the company, social media links and useful links for navigation of pages of the website
+
+  - User Story covered with this feature:
+
+    <details><summary>See Footer</summary>
+    ![Footer](documentation/humanitas-pages/footer.png)
+    </details>
+
+#### Homepage
+
+- This is the first contact with user when user opens the website
+- It consists of navbar, 'hero-section', 'our mission' , 'our vision' section and a footer
+
+  - User Story covered with this feature:
+
+    <details><summary>See Homepage</summary>
+    ![Home page]()
+    </details>
+
+- Hero-Section consists of hero-content and a carousel containing images
+
+    <details><summary>See Hero section</summary>
+    ![Hero section]()
+    </details>
+
+- Our Mission section consists of a paragraph about what the mission of this team is
+
+    <details><summary>See Featured section </summary>
+    ![Our Mission](documentation/humanitas-pages/mission-section.png)
+    </details>
+
+- Our Vision section consists of a paragraph about what the vision of the company
+
+    <details><summary>See Featured section </summary>
+    ![Our Vision]()
+    </details>
+
+#### About Page
+
+- About page consist of two section: What we do! and Our Story
+- The story is of site owner and also an image is added to this section
+
+  - User Story covered with this feature:
+
+    <details><summary>See About Page </summary>
+    ![About Page ]()
+    </details>
+
+#### Contact Page
+
+- Contact Page can be open by clicking on contact link on navbar
+- This page consists of a form where authorised users can send message to the team
+
+  - User Story covered with this feature:
+
+    <details><summary>See Contact Page</summary>
+    ![Contact Page](documentation/humanitas-pages/contact-us-page.png)
+    </details>
+
+---
+
+#### Register(Sign Up) Page
+
+- This feature is presenting sign up form wich is a part of django-allauth
+- For registering User must provide a username and strong enough password(errors are prompted to user)
+
+  - User Story covered with this feature:
+
+   <details><summary>See Register Page</summary>
+   ![Register Page]()
+   </details>
+
+#### Login page
+
+- Returning users with created account can get back and use the web app
+- user must provide valid username and password
+
+  - User Story covered with this feature:
+
+   <details><summary>See Login Page</summary>
+   ![Login Page]()
+   </details>
+
+#### Logout page
+
+- This feature is presenting logout form which is part of django-allauth library
+- This is displayed when user is logged in on Navbar
+- User can click on a nav-bar link and will be redirected to a logout page
+
+  - User Story covered with this feature:
+
+    <details><summary>See Logout Page</summary>
+    ![Logout page]()
+    </details>
+
+#### Profile page
+
+- This page can be opened from navbar link to Profile and is displayed only to authorised users
+- The page displays the profile_image and data of the user
+- User can update his profile by clicking on a update profile button
+- user can delete profile by cicking on delete profile button
+
+  - User Story covered with this feature:
+
+    <details><summary>See Profile Page</summary>
+    ![Profile Page](documentation/humanitas-pages/profile-pge.png)
+    </details>
+
+#### Update Profile page
+
+- User presented with a form asking to fill in data
+- User can update his profile info and the data will be saved in database
+
+  - User Story covered with this feature:
+
+    <details><summary>See Update Profile Page</summary>
+    ![Update Profile Page](documentation/humanitas-pages/profile-edit.png)
+    </details>
+
+#### Delete Profile page
+
+- User is presented with two options
+- User can Delete his profile(he cant register with a same username again)
+- User can go back to profile page
+   - User Story covered with this feature:
+
+    <details><summary>See Delete Profile Page</summary>
+    ![Delete Profile Page]()
+    </details>
+
+#### Stories Page
+
+- Latest stories published are presented on this page
+- Stories are displayed using a cards elements
+- Basic info about STORY displayed on the card:
+
+  - story-image
+  - title of a story
+  - Creator of a story
+  - Date of creation
+
+  - User Story covered with this feature:
+
+    <details><summary>See Stories page</summary>
+    ![Stories Page]()
+    </details>
+
+#### Story Detail Page
+
+- This page can be open by clicking 'Read More' on the card
+- User must be authenticated to get access to a story detail page
+- User can see full content of a story , all the comments posted for
+  that post
+- User can also comment on the story post
+
+  - User Story covered with this feature:
+
+    <details><summary>See Story detail Page</summary>
+    ![Story detail Page](documentation/humanitas-pages/story-detail-page.png)
+    </details>
+
+- If the user is the creator of a blog two icons are displayed, one for updating and the other one
+  for deleting a blog
+- Also if user is the creator he has the option to delete all the comments on his post
+- And if user is not the creator he can write and delete his comment
+
+  - User Story covered with this feature:
+
+    <details><summary>See Comment section</summary>
+    ![Comment section]()
+    </details>
+
+#### Update story page
+
+- This page will display one creator clicks on update story button in story detail page
+- This is same form used for adding a story
+- Once updated user will be directed back to stories page
+
+  - User story covered with this feature:
+
+    <details><summary>See Delete story page</summary>
+    ![Update Story]()
+    </details>
+
+#### Delete story Page
+
+- If user is creator of the story, a delete button will be visual in story detail page
+- User will be presented with delete story page for confirmation of deletion
+- User can also go back if he changes his mind
+
+  - User Story covered with this feature:
+
+    <details><summary>See Delete story page</summary>
+    ![Delete Story]()
+    </details>
+
+#### Add Story Page
+
+- This page is displayed to authorised users and can be redirected using 'add my story' in nav-bar under stories
+- User is presented with add story form
+- User can add title, supporting image for a blog, and body of a blog
+
+  - User Story covered with this feature:
+
+    <details><summary>See Add Story page</summary>
+    ![Add story page]()
+    </details>
+
+#### Booking Home Page
+
+- This page can be opened using nav-link of Book a Call
+- The page displays a table of Date and Time blocks for appointment bookings
+- Once clicked on timeblock authorised user will be redirected to add booking page else to login page
+
+  - User Story covered with this feature:
+
+    <details><summary>See Booking Home</summary>
+    ![Booking Home Page](documentation/humanitas-pages/booking-home-page.png)
+    </details>
+
+#### Add Booking Page
+
+- This page is displayed to authorised users
+- User is presented with add booking form
+- The date and timeblock will be the same the user choose in booking home page
+- User need to choose a helptype i.e. Human Rights and submit and user will be redirected to booking home page
+
+  - User Story covered with this feature:
+
+    <details><summary>See Add Booking page</summary>
+    ![Add Booking page](documentation/humanitas-pages/add-edit-booking.png)
+    </details>
+
+#### My Bookings Page
+
+- This page can be open through nav-link of 'my bookings' under profile
+- The page consists of table of all the bookings user has made
+- User can edit or delete the booking using the links in this page
+
+  - User Story covered with this feature:
+
+    <details><summary>See Add Booking page</summary>
+    ![Add Booking page](documentation/humanitas-pages/my-bookings.png)
+    </details>
+
+#### Edit Booking Page
+
+- This page consist of same form as add booking page
+- User can change the time but if the time choosen is already booked the user recieves a not availabilty message
+- After editing the booking, user is redirected to my bookings page
+
+  - User story covered with this feature:
+
+    <details><summary>See Edit Booking page</summary>
+    ![Edit Booking page](documentation/humanitas-pages/add-edit-booking.png)
+    </details>
+
+#### Cancel Booking Page
+
+- If user is creator of the story, a delete button will be visual in my bookings page
+- User will be presented with confirm cancellation page for confirmation
+- User can also go back if he changes his mind
+
+  - User Story covered with this feature:
+
+    <details><summary>See Cancel booking page</summary>
+    ![Cancel Booking]()
+    </details>
+
+---
+
+### Features to be Implemented
+
+- A calender feature for user to book appointment for better UI
+- A feature for user to book only one appointment a day(to-do list)
+- A feature for to disable previous bookings after the date is crossed
+
+---
 
 ## Validation
 
