@@ -10,31 +10,33 @@
 {% ifequal booking.user.id user.id %}
 <div class="container-fluid">
     <div class="row">
-        <table class="table table-striped-columns">
-            <thead>
-                <tr>
-                    <th scope="col">Booking For: </th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Helptype</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ booking.user }}</td>
-                    <td>{{ booking.date|date:"F d, Y" }}| {{ booking.date|date:"l" }}</td>
-                    <td>{{ booking.timeblock }}</td>
-                    <td>{{ booking.helptype }}</td>
-                    <td><a href="{% url 'booking_edit' booking.id %}" style="color: #585858;"><i class=" fa
+        <div class="table-responsive">
+            <table class="table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th scope="col">Booking For: </th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Helptype</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ booking.user }}</td>
+                        <td>{{ booking.date|date:"F d, Y" }}| {{ booking.date|date:"l" }}</td>
+                        <td>{{ booking.timeblock }}</td>
+                        <td>{{ booking.helptype }}</td>
+                        <td><a href="{% url 'booking_edit' booking.id %}" style="color: #585858;"><i class=" fa
                             fa-pen-to-square"></i>Edit</a>
-                        <br>
-                        <a href="{% url 'booking_cancel' booking.id %}" style="color: #585858;"><i class=" fa fa-trash
+                            <br>
+                            <a href="{% url 'booking_cancel' booking.id %}" style="color: #585858;"><i class=" fa fa-trash
                             fa-lg" aria-hidden="true"></i>Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 {% endifequal %}
