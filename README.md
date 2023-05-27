@@ -343,7 +343,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Homepage</summary>
 
-![Home page]()
+![Home page](documentation/humanitas-pages/home-page-mob.png)
 
 </details>
 
