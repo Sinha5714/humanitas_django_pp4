@@ -14,7 +14,6 @@
     <hr>
     <div class="container-fluid my-4">
         <div class="row">
-
             <div class="col-sm-6 ">
                 <form method="POST">
                     {% csrf_token %}{{ contact_form | crispy }}
@@ -24,7 +23,7 @@
             </div>
             <div class="col-sm-6">
                 <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685091103/contact_jweg1i.jpg"
-                    alt="contact-image" style="width:100%">
+                    class="contact-image" alt="contact-image" style="width:100%">
             </div>
         </div>
     </div>
