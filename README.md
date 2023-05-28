@@ -748,6 +748,16 @@ Project code structure is organized and divided into various application folders
 
 - [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files. No errors were found
 
+#### Humanitas Project
+
+<details><summary>Humanitas Views</summary>
+<img src="documentation/pep8-validations/humanitas-view.png" >
+</details>
+
+<details><summary>Humanitas Urls</summary>
+<img src="documentation/pep8-validations/humanitas-urls.png" >
+</details>
+
 ##### Home App
 
 <details><summary>Home Models</summary>
