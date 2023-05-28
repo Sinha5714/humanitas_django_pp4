@@ -1,511 +1,358 @@
-1. As a user I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
+## Manual testing of user stories
+
+1. As a Site User I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
 
 | **Step**                            | **Expected Result**                       | **Actual Result** |
 | ----------------------------------- | ----------------------------------------- | ----------------- |
-| Navigating to :                     | home page loads                           | Works as expected |
-| User scrolls through the home page  | Content of the page is presented          | Works as expected |
-| User click on a Link in the nav bar | user taken to desired part of the web app | Works as expected |
-
-2. As a Site user I want to know info on what the app is about so that I can use its functionality for mutual benefit
-
-| **Step**                                             | **Expected Result**              | **Actual Result** |
-| ---------------------------------------------------- | -------------------------------- | ----------------- |
-| Navigating to :https://knowledge-flow.herokuapp.com/ | home page loads                  | WAS               |
-| User scrolls through the home page                   | Content of the page is presented | WAS               |
-
-3. As a Site user I can be able to login and logout from the website so that I can have a safe environment to work with
-
-| **Step**                                                                     | **Expected Result**                                                                                                           | **Actual Result** |
-| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Register" link in a nav bar                             | Loads register form                                                                                                           | WAS               |
-| User is filling out form correctly                                           | set role page loads with success message                                                                                      | WAS               |
-| User reads brief info about 2 roles presented and clicks on "Mentor" button  | Set profile page is loaded anduser profile role is set as "Mentor"                                                            | WAS               |
-| after setting up profile user clicks "set profile" button                    | User email is available on a category page for student users to see along with website and linkedIn url if they have been set | WAS               |
-| User reads brief info about 2 roles presented and clicks on "Student" button | Set profile page is loaded anduser profile role is set as "Student"                                                           | WAS               |
-
-1. As a Site User I can be able to send message so that I can communicate with the website owner
-2. As a Site User I can view the stories page so that I can view the posts
-3. As a Site User I can click a story so that I can read the full post
-4. As a Site User I can comment on the story so that I can be involved in conversation
-5. As a Site User I can delete comments so that I can delete unwanted comments in my story and also my comments in other's stories
-6. As a Site User I can add a story so that I can share my thoughts with different people
-7. As a Site User I can edit my story so that I can change the content when I want
-8. As a Site User I can be able delete my story so that I can delete my blog when needed
-9. As a Site User I can be able to add my profile to the website so that I can interact comfortably
-10. As a Site User I can be able to edit and update my profile so that I can change details whenever I want
-11. As a Site User I can be able to delete my profile so that I can be sure my data is save when I don't want to use website anymore
-12. As a Site User I can book an appointment so that I can communicate with the site owner
-13. As a Site User I can edit my appointment so that I can get flexibility in booking
-14. As a Site User I can delete my appointment so that I can have decide if I want to cancel the appointment
-15. As a Site User I can view my bookings so that I can easily check for my bookings
-
-### Site Owner Stories
-
-19. As a Site Owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
-20. As a Site Owner I would like that authenticated users have full access to web app and its functionality
-21. As a Site Owner I would like that each data entry is validated before stored in database
-22. As a Site Owner I would like that users an leave a message via contact form
-23. As a Site Owner I would like that users have more than one way of comunicating with team or myself
-24. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
-25. As a Site Owner I would like that user can not book an appointment which is already booked
-
-## Manual testing of user stories
-
----
-
-1. As a user I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story1new.png" >
-<img src="./user-story-test/story00.png" >
-<img src="./user-story-test/story00a.png" >
-<img src="./user-story-test/story00d.png" >
-<img src="./user-story-test/story00ad.png" >
-
-</details>
-
-2. As a Site user I want to know info on what the app is about so that I can use its functionality for mutual benefit
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story1.png" >
-<img src="./user-story-test/story1a.png" >
-<img src="./user-story-test/story1m.png" >
-<img src="./user-story-test/story1ma.png" >
-
-</details>
-
-1. As a Site user I can be able to login and logout from the website so that I can have a safe environment to work with
-
- <details><summary>Screenshots</summary>
-<img src="./user-story-test/story2da.png" >
-<img src="./user-story-test/story2db.png" >
-<img src="./user-story-test/story2dc.png" >
-<img src="./user-story-test/story2dd.png" >
-<img src="./user-story-test/story2de.png" >
-<img src="./user-story-test/story2ma.png" >
-<img src="./user-story-test/story2mb.png" >
-<img src="./user-story-test/story2mc.png" >
-<img src="./user-story-test/story2md.png" >
-<img src="./user-story-test/story2me.png" >
-
-</details>
-
-4. As an authenticated user I would like to have a full access to the content of an web app
-
-| **Step**                                         | **Expected Result**                       | **Actual Result** |
-| ------------------------------------------------ | ----------------------------------------- | ----------------- |
-| User navigates to a "Register" link in a nav bar | Loads register form                       | WAS               |
-| User is filling out form correctly               | Home page loads with success message      | WAS               |
-| User navigates to a "Login" link in a nav bar    | Loads Login form                          | WAS               |
-| User is filling out form correctly               | Home page loads with success message      | WAS               |
-| User clicks on a link in the nav bar             | user taken to desired part of the web app | WAS               |
-
- <details><summary>Screenshots</summary>
-<img src="./user-story-test/story2da.png" >
-<img src="./user-story-test/story2db.png" >
-<img src="./user-story-test/story3db.png" >
-<img src="./user-story-test/story3dc.png" >
-<img src="./user-story-test/story00.png" >
-<img src="./user-story-test/story00d.png" >
-<img src="./user-story-test/story2ma.png" >
-<img src="./user-story-test/story2mb.png" >
-<img src="./user-story-test/story3mb.png" >
-<img src="./user-story-test/story3mc.png" >
-<img src="./user-story-test/story00a.png" >
-<img src="./user-story-test/story00ad.png" >
-
-</details>
-
-5. As an authenticated user I would like a functionality to create profile(account)
-
-| **Step**                                          | **Expected Result**                                             | **Actual Result** |
-| ------------------------------------------------- | --------------------------------------------------------------- | ----------------- |
-| Navigate to register link on a navbar             | registration form loads                                         | WAS               |
-| Fill out registration form with all required data | form submmited with succes message                              | WAS               |
-| Click on desired profile role                     | choose role page displayed with 2 options                       | WAS               |
-| Inputing required data into a create profile form | form is submited with a success message that profile is created | WAS               |
-
-<details><summary>Screenshots</summary>
-<img src="./user-story-test/story2dd.png" >
-<img src="./user-story-test/story2de.png" >
-<img src="./user-story-test/story2md.png" >
-<img src="./user-story-test/story2me.png" >
-</details>
-
-6. As an authenticated user I would like functionality to upload a supporting image to my profile and change it when I desire
-
-| **Step**                                  | **Expected Result**                                                                                     | **Actual Result** |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
-| Navigate to "profile" link in the nav bar | loads profile page                                                                                      | WAS               |
-| Click "update profile" button             | loads profile form                                                                                      | WAS               |
-| Click on the choose file button           | window with local files open so file can be uploaded after successful upload succes message is rendered | WAS               |
-
- <details><summary>Screenshots</summary>
-<img src="./user-story-test/story5da.png" >
-<img src="./user-story-test/story5db.png" >
-<img src="./user-story-test/story5dc.png" >
-<img src="./user-story-test/story5ma.png" >
-<img src="./user-story-test/story5mb.png" >
-<img src="./user-story-test/story5mc.png" >
-</details>
-
-7. As an authenticated user I would like a functionality to update or delete profile (account) if not planning to use web app anymore
-
-| **Step**                                                     | **Expected Result**                                                           | **Actual Result** |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------------- | ----------------- |
-| Navigte to a profile link in the nav bar                     | profile page loads                                                            | WAS               |
-| Click on update profile button                               | update profile form is displayed                                              | WAS               |
-| Click on any field change the data and click updaate profile | user redirected to profile page with successs message that profile is updated | WAS               |
-| Click on delete profile                                      | delete profile page loads                                                     | WAS               |
-| Click on delete button                                       | user is redirected to home page and his profile deleted                       | WAS               |
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story5da.png" >
-<img src="./user-story-test/story6db.png" >
-<img src="./user-story-test/story6dc.png" >
-<img src="./user-story-test/story6da.png" >
-<img src="./user-story-test/story5ma.png" >
-<img src="./user-story-test/story6mb.png" >
-<img src="./user-story-test/story6mc.png" >
-<img src="./user-story-test/story6ma.png" >
-</details>
-
-8. As an authenticated user I would like functionality to pick different types of learning categories in my profile and change them later
-
-| **Step**                                                                                                                          | **Expected Result**                                                        | **Actual Result** |
-| --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------- |
-| Navigte to a profile link in the nav bar                                                                                          | profile page loads                                                         | WAS               |
-| Click on update profile button                                                                                                    | update profile form is displayed                                           | WAS               |
-| Click on category to tick the multiple selection box if category is to be added or click on ticked box for category to be removed | depending on action user is redirected to profile page and category is set | WAS               |
-
- <details><summary>Screenshot</summary>
- <img src="./user-story-test/story5da.png" >
- <img src="./user-story-test/story7da.png" >
- <img src="./user-story-test/story7db.png" >
- <img src="./user-story-test/story7dc.png" >
- <img src="./user-story-test/story7dd.png" >
-<img src="./user-story-test/story5ma.png" >
-<img src="./user-story-test/story7ma.png" >
-<img src="./user-story-test/story7mb.png" >
-<img src="./user-story-test/story7mc.png" >
-
-</details>
-
-9. As an authenticated user I would like functionality to see and read blog posts that other users created
-
-| **Step**                                                                        | **Expected Result**        | **Actual Result** |
-| ------------------------------------------------------------------------------- | -------------------------- | ----------------- |
-| Navigate to a blog link in the nav bar or click "SEE BLOGS" in the hero section | Loads blogs page           | WAS               |
-| Click on a blog title or "Read the blog" button                                 | blog detail page is loaded | WAS               |
+| Open website                        | home page loads                           | Work as expected  |
+| User scrolls through the home page  | Content of the page is presented          | Work as expected  |
+| User click on a Link in the nav bar | User taken to desired part of the web app | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="./user-story-test/story8da.png" >
-<img src="./user-story-test/story8db.png" >
-<img src="./user-story-test/story8dc.png" >
-<img src="./user-story-test/story8ma.png" >
-<img src="./user-story-test/story8mb.png" >
-<img src="./user-story-test/story8mc.png" >
+<img src="" >
+
 </details>
 
-10. As an authenticated user I would like to upload a blog in a selected category so that I can share my knowledge,opinion and informations
+1. As a Site User I want to know info on what the app is about so that I can use its functionality for mutual benefit
 
-| **Step**                                                   | **Expected Result**                                                                      | **Actual Result** |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------- |
-| Navigate to "Add Blog" link in the nav bar and click on it | The "Create Blog" form is loaded                                                         | WAS               |
-| Enter relevant data for posting the blog                   | Form is populated with user data                                                         | WAS               |
-| From the drop-down category menu, select category          | Categories that are chosen during the profile set up are displayed in the drop-down menu | WAS               |
-| Click the "Post" button                                    | user is redirected to blog page with success message that "YOU ADDED A NEW BLOG"         | WAS               |
+| **Step**                                | **Expected Result**                     | **Actual Result** |
+| --------------------------------------- | --------------------------------------- | ----------------- |
+| Open website                            | home page loads                         | Work as expected  |
+| User scrolls through the home page      | Website mission and vision is presented | Work as expected  |
+| User click on about link in the nav bar | user taken to about page                | Works as expected |
+| User scrolls through the about page     | About sections are presented            | Work as expected  |
 
  <details><summary>Screenshot</summary>
- <img src="./user-story-test/story9da.png" >
- <img src="./user-story-test/story9db.png" >
- <img src="./user-story-test/story9dc.png" >
-<img src="./user-story-test/story9ma.png" >
-<img src="./user-story-test/story9mb.png" >
-<img src="./user-story-test/story9mc.png" >
-</details>
-
-11. As an authenticated user I would like functionality to delete or update my blog post i I find it no longer relevant
-
-| **Step**                                                             | **Expected Result**                                                        | **Actual Result** |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------- |
-| Navigate to "Blog" link in the nav bar and click on it               | page with latest blogs is loaded                                           | WAS               |
-| Find the blog you want to update and click on update(pencil) icon    | Blog form with blog data is displayed                                      | WAS               |
-| Enter new relevant data for your blog and press "Post" button        | blog page loads with success message and your blog is updated              | WAS               |
-| Navigate to "Blog" link in the nav bar and click on it               | page with latest blogs is loaded                                           | WAS               |
-| Find the blog you want to delete and click on delete(trash-can) icon | pop up modal shows and asking user to confirm that he wants to delete blog | WAS               |
-| Press "delete" button                                                | blogs page loads with success message"your blog post is deleted            | WAS               |
-
- <details><summary>Screenshot</summary>
- <img src="./user-story-test/story10da.png" >
- <img src="./user-story-test/story10db.png" >
- <img src="./user-story-test/story10dc.png" >
- <img src="./user-story-test/story10dd.png" >
- <img src="./user-story-test/story10de.png" >
- <img src="./user-story-test/story10df.png" >
- <img src="./user-story-test/story10g.png" >
+<img src="" >
 
 </details>
 
-12. As an authenticated user I would like functionality to leave a comment on a blog post
+1. As a Site User I can be able to register, login and logout from the website so that I can have a safe environment to work with
 
-| **Step**                                                                        | **Expected Result**                                                          | **Actual Result** |
-| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------- |
-| Navigate to a blog link in the nav bar or click "SEE BLOGS" in the hero section | Loads blogs page                                                             | WAS               |
-| click on a blog title or read the blog button                                   | blog detail page is loaded                                                   | WAS               |
-| scroll to the end of a blog                                                     | comment section is displayed                                                 | WAS               |
-| enter your comment text and press green button                                  | success message is displayed and you can see your comment in comment section | WAS               |
-
- <details><summary>Screenshot</summary>
-  <img src="./user-story-test/story11a.png" >
-  <img src="./user-story-test/story11b.png" >
-  <img src="./user-story-test/story11c.png" >
-  <img src="./user-story-test/story11d.png" >
-</details>
-
-13. As an authenticated user I would like functionality to support my blog post with a cover image and change it later if needed.
-
-| **Step**                                                   | **Expected Result**                                                                      | **Actual Result** |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------- |
-| Navigate to "Add Blog" link in the nav bar and click on it | The "Create Blog" form is loaded                                                         | WAS               |
-| Enter relevant data for posting the blog                   | Form is populated with user data                                                         | WAS               |
-| From the drop-down category menu, select category          | Categories that are chosen during the profile set up are displayed in the drop-down menu | WAS               |
-| Click "Choose file" under image section of blog form       | window with local files is displayed                                                     | WAS               |
-| Click on image you want to be the blog cover image         | name of the image is displayed in the image section                                      | WAS               |
-| Click the "Post" button                                    | user is redirected to blog page with success message that "YOU ADDED A NEW BLOG"         | WAS               |
+| **Step**                                         | **Expected Result**                  | **Actual Result** |
+| ------------------------------------------------ | ------------------------------------ | ----------------- |
+| User navigates to a "Register" link in a nav bar | Loads register form                  | Work as expected  |
+| User fills the form correctly                    | Home page loads with success message | Work as expected  |
+| User navigates to a "Login" link in a nav bar    | Loads Login form                     | Work as expected  |
+| User fills the form correctly                    | Home page loads with success message | Work as expected  |
+| User navigates to a "Logout" link in a nav bar   | Loads Logout confirm page            | Work as expected  |
+| User click on logout button                      | Home page loads with success message | Work as expected  |
 
  <details><summary>Screenshots</summary>
-  <img src="./user-story-test/story12a.png" >
-  <img src="./user-story-test/story12b.png" >
-  <img src="./user-story-test/story12c.png" >
+<img src="" >
 </details>
 
-14. As an authenticated user I would like the functionality for each category page to have a list of mentors avaliable and their contact info
+4. As a Site User I can be able to send message so that I can communicate with the website owner
 
-| **Step**                                                              | **Expected Result**                       | **Actual Result** |
-| --------------------------------------------------------------------- | ----------------------------------------- | ----------------- |
-| Navigate to "Learning categories" link in the nav bar and click on it | dropdown menu is displayed                | WAS               |
-| Click on a category you want to display                               | Selected category page is displayed       | WAS               |
-| Navigate to a "mentors available section" click on it                 | cards with available mentors is displayed | WAS               |
+| **Step**                                        | **Expected Result**                                      | **Actual Result** |
+| ----------------------------------------------- | -------------------------------------------------------- | ----------------- |
+| User navigates to a "Contact" link in a nav bar | Loads contact us form                                    | Work as expected  |
+| User fills the form correctly                   | If user authorised: home page loads with success message | Work as expected  |
+| User fills the form correctly                   | If user is not authorised: login page opens with message | Work as expected  |
 
  <details><summary>Screenshots</summary>
-<img src="./user-story-test/story13a.png" >
-<img src="./user-story-test/story13b.png" >
-<img src="./user-story-test/story13c.png" >
+<img src="" >
+<img src="" >
+
 </details>
 
-15. As a user I would like web app to be fully responsive and to have the same experience when using on any device
+5. As a Site User I can view the stories page so that I can view the stories
 
-| **Step**                                                                        | **Expected Result**                                               | **Actual Result** |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------- |
-| Change device screen size using chrome dev tools                                | Web app ux and designs remains consistent on various screen sizes | WAS               |
-| Change device with any extension(mobile simulaor) that simulates devices screes | Web app ux and designs remains consistent on various screen sizes | WAS               |
+| **Step**                                        | **Expected Result**                       | **Actual Result** |
+| ----------------------------------------------- | ----------------------------------------- | ----------------- |
+| User navigates to a "Stories" link in a nav bar | The nav-bar expands to show "Our Stories" | Work as expected  |
+| User navigates to a "Our Stories" link          | The "Our Stories" Page opens              | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="" >
+
+</details>
+
+6. As a Site User I can click a story so that I can read the full post
+
+| **Step**                                          | **Expected Result**                         | **Actual Result** |
+| ------------------------------------------------- | ------------------------------------------- | ----------------- |
+| User navigates to a "Stories" link in a nav bar   | The nav-bar expands to show "Our Stories"   | Work as expected  |
+| User navigates to a "Our Stories" link            | The "Our Stories" Page opens                | Work as expected  |
+| User clicks on "Read More" link in the story card | User is authorised: Story detail page opens | Work as expected  |
+| User clicks on "Read More" link in the story card | User is unauthorised: Login page opens      | Work as expected  |
+
+ <details><summary>Screenshots</summary>
+<img src="" >
+</details>
+
+7. As a Site User I can comment on the story so that I can be involved in conversation
+
+| **Step**                                          | **Expected Result**                                          | **Actual Result** |
+| ------------------------------------------------- | ------------------------------------------------------------ | ----------------- |
+| User navigates to a "Stories" link in a nav bar   | The nav-bar expands to show "Our Stories"                    | Work as expected  |
+| User navigates to a "Our Stories" link            | The "Our Stories" Page opens                                 | Work as expected  |
+| User clicks on "Read More" link in the story card | User is authorised: Story detail page opens                  | Work as expected  |
+| User write a comment and submit                   | The comment is added in comment section with success message | Works as expected |
 
  <details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+8. As a Site User I can delete comments so that I can delete unwanted comments in my story and also my comments in other's stories
+
+| **Step**                                                 | **Expected Result**                          | **Actual Result**  |
+| -------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| User navigates to a "Stories" link in a nav bar          | The nav-bar expands to show "Our Stories"    | Work as expected   |
+| User navigates to a "Our Stories" link                   | The "Our Stories" Page opens                 | Work as expected   |
+| User clicks on "Read More" link in the story card        | User is authorised: Story detail page opens  | Work as expected   |
+| User clicks on delete icon next to their comment         | The comment is deleted with success message  | Work as expected   |
+| Story creator clicks on Delete icon next to all comments |  The comment is deleted with success message |  Works as expected |
+
+ <details><summary>Screenshot</summary>
+ <img src="" >
+
+</details>
+
+9. As a Site User I can add a story so that I can share my thoughts with different people
+
+| **Step**                                                      | **Expected Result**                                     | **Actual Result** |
+| ------------------------------------------------------------- | ------------------------------------------------------- | ----------------- |
+| Navigate to "Add a story" link in the nav bar and click on it | The "Add Story" form is loaded                          | Work as expected  |
+| Enter relevant data for posting the blog                      | Form is populated with user data                        | Work as expected  |
+| Click the "Post" button                                       | user is redirected to stories page with success message | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+10. As a Site User I can edit my story so that I can change the content when I want
+
+| **Step**                                          | **Expected Result**                                    | **Actual Result** |
+| ------------------------------------------------- | ------------------------------------------------------ | ----------------- |
+| User navigates to a "Stories" link in a nav bar   | The nav-bar expands to show "Our Stories"              | Work as expected  |
+| User navigates to a "Our Stories" link            | The "Our Stories" Page opens                           | Work as expected  |
+| User clicks on "Read More" link in the story card | User is authorised: Story detail page opens            | Work as expected  |
+| Story creator clicks on "Update" button           | The "Add Story" form is loaded with prepopulated value | Work as expected  |
+| User edit the information and click on "Post"     | The "Our Stories" page opens with success message      | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+11. As a Site User I can be able delete my story so that I can delete my blog when needed
+
+| **Step**                                          | **Expected Result**                               | **Actual Result** |
+| ------------------------------------------------- | ------------------------------------------------- | ----------------- |
+| User navigates to a "Stories" link in a nav bar   | The nav-bar expands to show "Our Stories"         | Work as expected  |
+| User navigates to a "Our Stories" link            | The "Our Stories" Page opens                      | Work as expected  |
+| User clicks on "Read More" link in the story card | User is authorised: Story detail page opens       | Work as expected  |
+| Story creator clicks on "Delete" button           | The confirm delete page is loaded                 | Work as expected  |
+| User clicks on "Cancel"                           | The story detail page opens                       | Work as expected  |
+| User clicks on "Yes,Delete"                       | The "Our Stories" page opens with success message | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+12. As a Site User I can be able to add my profile to the website so that I can interact comfortably
+
+| **Step**                                               | **Expected Result**                                                    | **Actual Result** |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- | ----------------- |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                              | Work as expected  |
+| User fills the form correctly                          | Home page loads with success message                                   | Work as expected  |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories" | Work as expected  |
+| User navigates to a "Profile"                          | The Profile page opens                                                 | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+  
+</details>
+
+13. As a Site User I can be able to edit and update my profile so that I can change details whenever I want
+
+| **Step**                                               | **Expected Result**                                                    | **Actual Result** |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- | ----------------- |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                              | Work as expected  |
+| User fills the form correctly                          | Home page loads with success message                                   | Work as expected  |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories" | Work as expected  |
+| User navigates to a "Profile"                          | The Profile page opens                                                 | Work as expected  |
+| User click on "update_profile" button                  |  Profile form page opens with prepopulated value                       |  Work as expected |
+| User add details and click on "Update"                 | Profile page opens with success message                                | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="" >
+
+</details>
+
+14. As a Site User I can be able to delete my profile so that I can be sure my data is save when I don't want to use website anymore
+
+| **Step**                                               | **Expected Result**                                                               | **Actual Result** |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------- | ----------------- |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                                         | Work as expected  |
+| User fills the form correctly                          | Home page loads with success message                                              | Work as expected  |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories"            | Work as expected  |
+| User navigates to a "Profile"                          | The Profile page opens                                                            | Work as expected  |
+| User click on "delete_profile" button                  |  Confirm delete page opens                                                        |  Work as expected |
+| User clicks on "Cancel"                                | The profile page opens                                                            | Work as expected  |
+| User clicks on "Yes, delete" button                    | Home page opens with success message and deleting user data including logging out | Work as expected  |
+
+<details><summary>Screenshots</summary>
+<img src="" >
+
+</details>
+
+15. As a Site User I can book an appointment so that I can communicate with the site owner
+
+| **Step**                                             | **Expected Result**                             | **Actual Result** |
+| ---------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| User navigates to a "Book a call" link in a nav bar  | The Booking home page opens                     | Work as expected  |
+| User clicks on "timeblock"                           | User is unauthorised: Login page opens          | Work as expected  |
+| User clicks on "timeblock"                           | User is authorised: Add Booking form page opens | Work as expected  |
+| User fills form correctly and click on "Book" button |  Booking home page opens with success message   | Work as expected  |
+
+<details><summary>Screenshot</summary>
 <img src="./user-story-test/story14a.png" >
-<img src="./user-story-test/story14b.png" >
-<img src="./user-story-test/story14c.png" >
-<img src="./user-story-test/story14d.png" >
-<img src="./user-story-test/story14e.png" >
-<img src="./user-story-test/story14f.png" >
+
 </details>
 
-16. As an returning user user I would like functionality to set a new password if I forgot the password so that I can still use the web app
+16. As a Site User I can view my bookings so that I can easily check for my bookings
 
-| **Step**                                                                                            | **Expected Result**                                                     | **Actual Result** |
-| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Login" link in a nav bar                                                       | Loads Login form                                                        | WAS               |
-| Click on a "forgot password" link at the bottom of the form                                         | password reset page loads                                               | WAS               |
-| Enter the valid email address that was used in setting up the profile and press "reset my password" | password reset done page is displayed and email with reset link is sent | WAS               |
-| Open your email inbox and reset password mail with a link should be there                           | link takes user through a process of setting a new pasword              | WAS               |
+| **Step**                                               | **Expected Result**                                                    | **Actual Result** |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- | ----------------- |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                              | Work as expected  |
+| User fills the form correctly                          | Home page loads with success message                                   | Work as expected  |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories" | Work as expected  |
+| User navigates to a "My Bookings"                      | The My bookings page opens                                             | Work as expected  |
 
- <details><summary>Screenshot</summary>
+<details><summary>Screenshot</summary>
 <img src="./user-story-test/story15a.png" >
-<img src="./user-story-test/story15b.png" >
-<img src="./user-story-test/story15c.png" >
-</details>
-
-17. As a User I would like a Functionality to contact the app owner or a team so that I can leave a suggestion or express my opinion about the web app
-
-| **Step**                                                      | **Expected Result**                                                                       | **Actual Result** |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Register" link in a nav bar              | Loads register form                                                                       | WAS               |
-| User is filling out form correctly                            | Home page loads with success message                                                      | WAS               |
-| User navigates to a "Login" link in a nav bar                 | Loads Login form                                                                          | WAS               |
-| User is filling out form correctly                            | Home page loads with success message                                                      | WAS               |
-| Navigate to "About us" link in a navbar                       | Page scrolls to about section with a form                                                 | WAS               |
-| Scroll to the "About us" section of the page                  | Contact form is displayed                                                                 | WAS               |
-| User is filling out form correctly and pressing "Send" button | User taken to top of the page and succes message"Thank you for your message" is displayed | WAS               |
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story16a.png" height="600" >
-<img src="./user-story-test/story16b.png" height="600" >
-<img src="./user-story-test/story16c.png" height="600" >
-<img src="./user-story-test/story16d.png" height="600" >
-<img src="./user-story-test/story16e.png" height="600" >
-<img src="./user-story-test/story16f.png" height="600" >
-</details>
-
-18. As a user I would like a Functionality to update or delete a comment I posted to a blogpost so that if any mistake was made or new information is acquired anyone reading will be up to date
-
-| **Step**                                                                                 | **Expected Result**                                                                        | **Actual Result** |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------- |
-| Navigate to a "blog" link in the nav bar or click "SEE BLOGS" in the hero section        | Loads blogs page                                                                           | WAS               |
-| Click on a blog title or "Read The blog" button of a blog that the comment is posted for | Blog detail page is loaded                                                                 | WAS               |
-| Scroll to comment you posted ad to update click on a "pencil" button                     | Update comment page loads                                                                  | WAS               |
-| Click on the comment field update the comment and press "update " button                 | comment is updated and success message is displayed                                        | WAS               |
-| Click on a "trash" button to delete comment and in a pop up modal press "delete"         | delete modal pops up and after delete is pressed comment is deleted with a success message | WAS               |
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story17a.png">
-<img src="./user-story-test/story17b.png">
-<img src="./user-story-test/story17c.png">
-<img src="./user-story-test/story17d.png">
-<img src="./user-story-test/story17e.png">
 
 </details>
 
-19. As a site owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
+17. As a Site User I can edit my appointment so that I can get flexibility in booking
 
-| **Step**                                                                                     | **Expected Result**                                                                           | **Actual Result** |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------- |
-| Not logged in user Clicks on "Learning category" link                                        | dropdown with categories is displayed                                                         | WAS               |
-| Not logged in user Clicks on any category                                                    | Login page loads                                                                              | WAS               |
-| Not logged in user Clicks on a "Blogs" link in a navbar                                      | Blog page loads                                                                               | WAS               |
-| Not logged in user Clicks on a title or "Read The blog" button                               | Login page loads                                                                              | WAS               |
-| Not logged in user scrolls to a contact form and after filling it out clicks a "send" button | user taken to top of the page with a warnning message "needs to be logged in to send message" | WAS               |
+| **Step**                                               | **Expected Result**                                                    | **Actual Result**  |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- | ------------------ |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                              | Work as expected   |
+| User fills the form correctly                          | Home page loads with success message                                   | Work as expected   |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories" | Work as expected   |
+| User navigates to a "My Bookings"                      | The My bookings page opens                                             | Work as expected   |
+| User clicks on "edit icon" in booking table            | The add booking page opens                                             | Work as expected   |
+| User choose another time and clicks on 'Book' button   | If booking available: Booking home page opens                          |  Works as expected |
+| User choose another time and clicks on 'Book' button   | If booking unavailable: Form validation error displayes                |  Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+18. As a Site User I can delete my appointment so that I can have decide if I want to cancel the appointment
+
+| **Step**                                               | **Expected Result**                                                    | **Actual Result** |
+| ------------------------------------------------------ | ---------------------------------------------------------------------- | ----------------- |
+| User navigates to a "Register/login" link in a nav bar | Loads register/login form                                              | Work as expected  |
+| User fills the form correctly                          | Home page loads with success message                                   | Work as expected  |
+| User navigates to a "Profile" link in a nav bar        | The navbar expands and shows "Profile", "My bookings" and "My stories" | Work as expected  |
+| User navigates to a "My Bookings"                      | The My bookings page opens                                             | Work as expected  |
+| User clicks on "delete icon" in booking table          | Confirm cancellation page opens                                        | Work as expected  |
+| User clicks on "Go Back"                               | My bookings page opens                                                 | Work as expected  |
+| User clicks on "Yes, Cancel" button                    | Booking home page opens with success message                           | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="">
+
+</details>
+
+19. As a Site Owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
+
+| **Step**                                                         | **Expected Result**                               | **Actual Result** |
+| ---------------------------------------------------------------- | ------------------------------------------------- | ----------------- |
+| Not logged in user: loads the page                               | Home page navbar without "Profile" nav-link opens | Work as expected  |
+| Not logged in user: Clicks on "Stories" link                     | dropdown with only "Our Stories" is displayed     | Work as expected  |
+| Not logged in User: clicks on "Read More" link in the story card | Login page opens                                  | Work as expected  |
+| Not logged send message using contact form                       | Login page loads with warning message             | Work as expected  |
+| Not logged send message using contact form                       | Login page loads with warning message             | Work as expected  |
+| Not logged in User: Clicks on "timeblock" in booking home page   | Login page opens                                  | Work as expected  |
 
  <details><summary>Screenshot</summary>
-<img src="./user-story-test/story18a.png" height="600" >
-<img src="./user-story-test/story18b.png" height="600" >
-<img src="./user-story-test/story18c.png" height="600" >
-<img src="./user-story-test/story18d.png" height="600" >
-<img src="./user-story-test/story18e.png" height="600" >
+<img src="" >
+
 </details>
 
 20. As a Site Owner I would like that authenticated users have full access to web app and its functionality
 
-| **Step**                                                      | **Expected Result**                                                                       | **Actual Result** |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------- |
-| Navigate to "About us" link in a navbar                       | Page scrolls to about section with a form                                                 | WAS               |
-| Scroll to the "About us" section of the page                  | Contact form is displayed                                                                 | WAS               |
-| User is filling out form correctly and pressing "Send" button | User taken to top of the page and succes message"Thank you for your message" is displayed | WAS               |
-| Navigate to "Add Blog" link in the nav bar and click on it    | The "Create Blog" form is loaded                                                          | WAS               |
-| Enter relevant data for posting the blog                      | Form is populated with user data                                                          | WAS               |
-| From the drop-down category menu, select category             | Categories that are chosen during the profile set up are displayed in the drop-down menu  | WAS               |
-| Click the "Post" button                                       | user is redirected to blog page with success message that "YOU ADDED A NEW BLOG"          | WAS               |
+| **Step**                                                     | **Expected Result**                                        | **Actual Result** |
+| ------------------------------------------------------------ | ---------------------------------------------------------- | ----------------- |
+| Logged in user: loads the page                               | Home page navbar with "Profile" nav-link opens             | Work as expected  |
+| Logged in user: Clicks on any "Stories" link                 | dropdown with "Our Stories" and "Add a Story" is displayed | Work as expected  |
+| Logged in User: Clicks on "Read More" link in the story card | Story detail page opens                                    | Work as expected  |
+| Logged in send message using contact form                    | Home page with success message opens                       | Work as expected  |
+| Logged in send message using contact form                    | Home page with success message opens                       | Work as expected  |
+| Logged in User: Clicks on "timeblock" in booking home page   | Add Booking form page opens                                | Work as expected  |
 
  <details><summary>Screenshot</summary>
-<img src="./user-story-test/story16d.png" height="600" >
-<img src="./user-story-test/story16e.png" height="600" >
-<img src="./user-story-test/story16f.png" height="600" >
-<img src="./user-story-test/story19a.png" height="600" >
-<img src="./user-story-test/story19b.png" height="600" >
-<img src="./user-story-test/story19c.png" height="600" >
+<img src="" >
+
 </details>
 
 21. As a Site Owner I would like that each data entry is validated before stored in database
 
-| **Step**                                                                                                    | **Expected Result**                                                          | **Actual Result** |
-| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------- |
-| Navigte to a profile link in the nav bar                                                                    | profile page loads                                                           | WAS               |
-| Click on update profile button                                                                              | update profile form is displayed                                             | WAS               |
-| Fill fill the form and try to leave empty any field except website and linkedIn url fields and press update | form error message is displayed "please fill out this field"                 | WAS               |
-| Navigate to "Add Blog" link in the nav bar and click on it                                                  | The "Create Blog" form is loaded                                             | WAS               |
-| Enter relevant data for posting the blog but dont add category                                              | Form is populated with user data                                             | WAS               |
-| click "post" button                                                                                         | message is displayed to select the item from the list and blog is not posted | WAS               |
+| **Step**                                                 | **Expected Result**                              | **Actual Result** |
+| -------------------------------------------------------- | ------------------------------------------------ | ----------------- |
+| Register form: Click register without all required fiels | Form error "Please fill in this field displayed" | Work as expected  |
+| Login form: Click login without all required fiels       | Form error "Please fill in this field displayed" | Work as expected  |
+| Contact form: Click send without all required fiels      | Form error "Please fill in this field displayed" | Work as expected  |
+| Profile form: Click update without all required fiels    | Form error "Please fill in this field displayed" | Work as expected  |
+| Add story form: Click Post without all required fiels    | Form error "Please fill in this field displayed" | Work as expected  |
+| Booking form: Click book without all required fiels      | Form error "Please fill in this field displayed" | Work as expected  |
 
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story20a.png">
-<img src="./user-story-test/story20b.png">
-<img src="./user-story-test/story20c.png">
-<img src="./user-story-test/story20d.png">
-</details>
-
-22. As a Site Owner I would like that users an leave a message or feedback via contact form or
-
-| **Step**                                                      | **Expected Result**                                                                       | **Actual Result** |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Register" link in a nav bar              | Loads register form                                                                       | WAS               |
-| User is filling out form correctly                            | Home page loads with success message                                                      | WAS               |
-| User navigates to a "Login" link in a nav bar                 | Loads Login form                                                                          | WAS               |
-| User is filling out form correctly                            | Home page loads with success message                                                      | WAS               |
-| Navigate to "About us" link in a navbar                       | Page scrolls to about section with a form                                                 | WAS               |
-| Scroll to the "About us" section of the page                  | Contact form is displayed                                                                 | WAS               |
-| User is filling out form correctly and pressing "Send" button | User taken to top of the page and succes message"Thank you for your message" is displayed | WAS               |
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story16d.png" height="600" >
-<img src="./user-story-test/story16e.png" height="600" >
-<img src="./user-story-test/story16f.png" height="600" >
-</details>
-
-23. As a Site Owner I would like that users have more than one way of comunicating with team or myself
-    - NOTE: SINCE THIS IS THE PROJECT FOR EDUCATIONAL PURPOSES AT THE MOMENT LINKS IN TEAM SECTION
-      ARE TAKING USER TO A LOGIN SOCIAL MEDIA PAGE(NOT ACTUAL TEAM MEMMBER PAGE)
-
-| **Step**                                                                                  | **Expected Result**                            | **Actual Result** |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------- | ----------------- |
-| User scrolls to the bottom of the website                                                 | website footer is presented                    | WAS               |
-| User clicks on a github icon                                                              | site owner github page opens in a new window   | WAS               |
-| User scrolls to the bottom of the website                                                 | website footer is presented                    | WAS               |
-| User clicks on a LinkedIn icon                                                            | site owner LinkedIn page opens in a new window | WAS               |
-| User scrolls to the team section and click on any social media icon on a team member card | Social media page of a team member opens       | WAS               |
-
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story22a.png" height="600" >
-<img src="./user-story-test/story22c.png" height="600" >
-</details>
-
-24. As a Site Owner I would like that each 'Mentor' user cant see himself on the list of available mentors for his respective category(user wont be contacting himself)
-
-| **Step**                                                                                                | **Expected Result**                                                                                                           | **Actual Result** |
-| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Register" link in a nav bar                                                        | Loads register form                                                                                                           | WAS               |
-| User is filling out form correctly                                                                      | set role page loads with success message                                                                                      | WAS               |
-| User reads brief info about 2 roles presented and clicks on "Mentor" button                             | Set profile page is loaded anduser profile role is set as "Mentor"                                                            | WAS               |
-| after setting up profile user clicks "set profile" button                                               | User email is available on a category page for student users to see along with website and linkedIn url if they have been set | WAS               |
-| User navigates to his Learning category page (selected in profile) and clicks on available mentors link | Users data is not displayed to himself                                                                                        | WAS               |
-
- <details><summary>Screenshot</summary>
-  <img src="./user-story-test/story23.png" >
-  <img src="./user-story-test/story23b.png" >
+<details><summary>Screenshot</summary>
+<img src="">
 
 </details>
 
-25. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
+22. As a Site Owner I would like that users can leave a message via contact form
 
-| **Step**                                                                        | **Expected Result**                                                           | **Actual Result** |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------- |
-| Navigate to a blog link in the nav bar or click "SEE BLOGS" in the hero section | Loads blogs page                                                              | WAS               |
-| click on a blog title or read the blog button                                   | blog detail page is loaded                                                    | WAS               |
-| scroll to the end of a blog                                                     | comment section is displayed                                                  | WAS               |
-| enter your comment text and press green button                                  | success message is displayed and you can see your comment in comment section  | WAS               |
-| Navigte to a profile link in the nav bar                                        | profile page loads                                                            | WAS               |
-| Click on update profile button                                                  | update profile form is displayed                                              | WAS               |
-| Click on any field change the data and click updaate profile                    | user redirected to profile page with successs message that profile is updated | WAS               |
+| **Step**                                        | **Expected Result**                                      | **Actual Result** |
+| ----------------------------------------------- | -------------------------------------------------------- | ----------------- |
+| User navigates to a "Contact" link in a nav bar | Loads contact us form                                    | Work as expected  |
+| User fills the form correctly                   | If user authorised: home page loads with success message | Work as expected  |
+| User fills the form correctly                   | If user is not authorised: login page opens with message | Work as expected  |
 
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story11a.png" >
-<img src="./user-story-test/story11b.png" >
-<img src="./user-story-test/story11c.png" >
-<img src="./user-story-test/story11d.png" >
-<img src="./user-story-test/story5ma.png" >
-<img src="./user-story-test/story6mb.png" >
-<img src="./user-story-test/story6mc.png" >
+<details><summary>Screenshot</summary>
+<img src="" >
+
 </details>
 
-26. As a Site Owner I would like that each authenticated user has option to get access to an app if he forgots password for any reason via (Reset password functionality)
+23. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 
-| **Step**                                                                                            | **Expected Result**                                                     | **Actual Result** |
-| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------- |
-| User navigates to a "Login" link in a nav bar                                                       | Loads Login form                                                        | WAS               |
-| Click on a "forgot password" link at the bottom of the form                                         | password reset page loads                                               | WAS               |
-| Enter the valid email address that was used in setting up the profile and press "reset my password" | password reset done page is displayed and email with reset link is sent | WAS               |
-| Open your email inbox and reset password mail with a link should be there                           | link takes user through a process of setting a new pasword              | WAS               |
+| **Step**                                                  | **Expected Result**                          | **Actual Result** |
+| --------------------------------------------------------- | -------------------------------------------- | ----------------- |
+| Profile update: User fills the data and clicks on update  | Profile page loads with success message      | Works as expected |
+| Profile delete: User confirms delete                      | Home page loads with success message         | Works as expected |
+| Story Add: User fills the data and clicks on Post         | Our stories page loads with success message  | Works as expected |
+| Story update: User fills the data and clicks on Post      | Story detail page loads with success message | Works as expected |
+| Story delete: User confirms delete                        | Our stories page loads with success message  | Works as expected |
+| Booking Add: User fills the data and clicks on book       | Booking Home page loads with success message | Works as expected |
+| Booking update: User fills the data and clicks on book    | Booking home page loads with success message | Works as expected |
+| Booking cancel: User confirms cancel                      | Booking home page loads with success message | Works as expected |
+| Comment Add : User fills the content and clicks on submit | Story detail page loads with success message | Works as expected |
+| Comment delete: User clicks on delete icon                | Story page loads with success message        | Works as expected |
 
- <details><summary>Screenshot</summary>
-<img src="./user-story-test/story15a.png" >
-<img src="./user-story-test/story15b.png" >
-<img src="./user-story-test/story15c.png" >
+<details><summary>Screenshot</summary>
+<img src="" >
+
+</details>
+
+24. As a Site Owner I would like that user can not book an appointment which is already booked
+
+- NOTE: Timeblock is disabled in booking home page if booking exists
+
+| **Step**                                                | **Expected Result**                                           | **Actual Result** |
+| ------------------------------------------------------- | ------------------------------------------------------------- | ----------------- |
+| User choose a timeblock in add bookinng form and submit | If booking already exists: Form validation error is displayed | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="" >
+
 </details>

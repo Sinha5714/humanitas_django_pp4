@@ -81,11 +81,11 @@ Primary goals of the project (web app):
 
 ### User stories
 
-1. As a user I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
-2. As a Site user I want to know info on what the app is about so that I can use its functionality for mutual benefit
-3. As a Site user I can be able to login and logout from the website so that I can have a safe environment to work with
+1. As a Site User I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
+2. As a Site User I want to know info on what the app is about so that I can use its functionality for mutual benefit
+3. As a Site User I can be able to register, login and logout from the website so that I can have a safe environment to work with
 4. As a Site User I can be able to send message so that I can communicate with the website owner
-5. As a Site User I can view the stories page so that I can view the posts
+5. As a Site User I can view the stories page so that I can view the stories
 6. As a Site User I can click a story so that I can read the full post
 7. As a Site User I can comment on the story so that I can be involved in conversation
 8. As a Site User I can delete comments so that I can delete unwanted comments in my story and also my comments in other's stories
@@ -96,19 +96,18 @@ Primary goals of the project (web app):
 13. As a Site User I can be able to edit and update my profile so that I can change details whenever I want
 14. As a Site User I can be able to delete my profile so that I can be sure my data is save when I don't want to use website anymore
 15. As a Site User I can book an appointment so that I can communicate with the site owner
-16. As a Site User I can edit my appointment so that I can get flexibility in booking
-17. As a Site User I can delete my appointment so that I can have decide if I want to cancel the appointment
-18. As a Site User I can view my bookings so that I can easily check for my bookings
+16. As a Site User I can view my bookings so that I can easily check for my bookings
+17. As a Site User I can edit my appointment so that I can get flexibility in booking
+18. As a Site User I can delete my appointment so that I can have decide if I want to cancel the appointment
 
 ### Site Owner Stories
 
 19. As a Site Owner I want to restrict access to sections of an app to unauthenticated users so that basic standards of data protection are met
 20. As a Site Owner I would like that authenticated users have full access to web app and its functionality
 21. As a Site Owner I would like that each data entry is validated before stored in database
-22. As a Site Owner I would like that users an leave a message via contact form
-23. As a Site Owner I would like that users have more than one way of comunicating with team or myself
-24. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
-25. As a Site Owner I would like that user can not book an appointment which is already booked
+22. As a Site Owner I would like that users can leave a message via contact form
+23. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
+24. As a Site Owner I would like that user can not book an appointment which is already booked
 
 ## Design
 
