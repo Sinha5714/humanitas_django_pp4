@@ -232,7 +232,7 @@ Project code structure is organized and divided into various application folders
 - Using Github issues first I created the template for a user story that was later used to create user stories. It can be improved further for this project I used just a basic template. I created four labels: must-have, could have, should have and good to have.
 
 <details><summary>See User story template</summary>
-<img src="">
+<img src="documentation/agile/user-story-template.png">
 </details>
 
 ### Kanban Board
@@ -242,7 +242,7 @@ Project code structure is organized and divided into various application folders
 [Link to project Kanban board.](https://github.com/users/Sinha5714/projects/5)
 
 <details><summary>See Kanban board</summary>
-<img src="">
+<img src="documentation/agile/kanban.png">
 </details>
 
 ### Moscow Prioritisation
@@ -250,7 +250,7 @@ Project code structure is organized and divided into various application folders
 - The Moscow prioritization technique is used to prioritize project requirements based on their importance. For this project I haven't use it as I should have but maybe in future will be using the full technique.
 
 <details><summary>See Image</summary>
-<img src="">
+<img src="documentation/agile/moscow.png">
 </details>
 
 #### Closing words on agile
