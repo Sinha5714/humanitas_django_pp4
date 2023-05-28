@@ -130,7 +130,7 @@
 | User navigates to a "Stories" link in a nav bar   | The nav-bar expands to show "Our Stories"              | Work as expected  |
 | User navigates to a "Our Stories" link            | The "Our Stories" Page opens                           | Work as expected  |
 | User clicks on "Read More" link in the story card | User is authorised: Story detail page opens            | Work as expected  |
-| Story creator clicks on "Update" button           | The "Add Story" form is loaded with prepopulated value | Work as expected  |
+| Story creator clicks on "Edit" button             | The "Add Story" form is loaded with prepopulated value | Work as expected  |
 | User edit the information and click on "Post"     | The "Our Stories" page opens with success message      | Work as expected  |
 
 <details><summary>Screenshot</summary>
