@@ -737,6 +737,14 @@ Project code structure is organized and divided into various application folders
 <img src="documentation/html-validations/cancel-booking.png" >
 </details>
 
+<details><summary>500 Page</summary>
+<img src="documentation/html-validations/503-html-test.png" >
+</details>
+
+<details><summary>404 Page</summary>
+<img src="documentation/html-validations/404-html-test.png" >
+</details>
+
 ### Python
 
 - [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files. No errors were found
