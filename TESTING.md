@@ -356,3 +356,27 @@
 <img src="" >
 
 </details>
+
+## Bugs
+
+### Dev Tool
+
+- A type error was in all pages after loading the website
+- The error is probably in Bootstrap itself
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/uncaught-type-error.png" >
+
+</details>
+
+### W3C Html Validator
+
+- No bug was found during Html validation
+
+### W3C CSS Validator
+
+- No bug was found during CSS Validation
+
+### CI Python Linter
+
+- No bug was found during Python Validation
