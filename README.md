@@ -27,14 +27,16 @@
    2. [Sections](#sections)
    3. [Code Structure](#code-structure)
 
-5. [Database](#database)
+5. [Agile Design](#agile-design)
+
+6. [Database](#database)
 
    1. [Data Models](#data-models)
 
-6. [Features](#features)
+7. [Features](#features)
    1. [Implemented Features](#implemented-features)
    2. [Features To Be Implemented](#features-to-be-implemented)
-7. [Validation](#validation)
+8. [Validation](#validation)
    1. [CSS](#css)
    2. [HTML](#html)
    3. [Python](#python)
@@ -213,6 +215,47 @@ Project code structure is organized and divided into various application folders
 - **env.py**: This file is used to store environment variables for a Django project or application, such as database connection details or API keys.
 
 ##### Back to [top](#table-of-contents)
+
+## Agile design
+
+### About
+
+- Agile development is the most effective way to development of any website
+- It was my first attempt and I found it very challenging but somehow was able to do basic development in agile environment
+- I forgot to set milestones in first instance and started the project without it. Hopefully in upcoming projects, I can be able to do it better.
+- I have followed the "Think Before I Blog" project by Code Institute and just did it wth User story template.
+- I was able to provide labels to user stories but in later stage of project
+- I am aware that planning can be better and clear and will be implementing the agile development better from next project.
+
+### User Story Template
+
+- Using Github issues first I created the template for a user story that was later used to create user stories. It can be improved further for this project I used just a basic template. I created four labels: must-have, could have, should have and good to have.
+
+<details><summary>See User story template</summary>
+<img src="">
+</details>
+
+### Kanban Board
+
+- As a visual representation of the project's status, showing what tasks are to be done, in progress and completed.Each task is represented as a card on the board, and the cards can be moved from one column to another to show progress. Kanban board is an excelent tool and since it was my first time using I didnt get the full benefits of using it ,since it wasnt used as often as it should, but since completing the project I am more aware of its great purpose and I am sure it will be utilized more and more in the future
+
+[Link to project Kanban board.](https://github.com/users/Sinha5714/projects/5)
+
+<details><summary>See Kanban board</summary>
+<img src="">
+</details>
+
+### Moscow Prioritisation
+
+- The Moscow prioritization technique is used to prioritize project requirements based on their importance. For this project I haven't use it as I should have but maybe in future will be using the full technique.
+
+<details><summary>See Image</summary>
+<img src="">
+</details>
+
+#### Closing words on agile
+
+- As a first time Agile user, it was difficult to use all the properties but hope to learn and use this development technique in all my future projects.
 
 ## Database
 
