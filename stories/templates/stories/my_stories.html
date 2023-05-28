@@ -19,7 +19,8 @@
                         alt="humanitas-logo " class="card-img-top">
                     {% else %}
                     {% load cloudinary %}
-                    {% cloudinary post.cover_image class="card-img-top" alt="story-image-by-user" %}
+                    {% cloudinary post.cover_image format="WebP" class="card-img-top"
+                    alt="story-image-by-user" %}
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
