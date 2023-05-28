@@ -11,19 +11,19 @@ from .forms import ContactUsForm, ProfileForm
 from .models import Profile, Contact
 
 
-
-
 def home(request):
     """
     view to render home page
     """
     return render(request, 'index.html')
 
+
 def about(request):
     """
     View to render about page
     """
     return render(request, 'about.html')
+
 
 class ContactMessage(View):
     """
