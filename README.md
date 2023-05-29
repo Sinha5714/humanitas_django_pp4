@@ -969,26 +969,26 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Register page Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-register-desktop.png">
 </details>
 <details><summary>Register page Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-register-mob.png">
 </details>
 
 <details><summary>Login Desktop-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-login-desktop.png" >
 </details>
 
 <details><summary>Login page Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-login-mob.png">
 </details>
 
 <details><summary>Logout Desktop-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-logout-desktop.png" >
 </details>
 
 <details><summary>Logout page Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-logout-mob.png">
 </details>
 
 <details><summary>Profile Desktop-screen</summary>
@@ -1000,19 +1000,19 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Update profile Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-updateprofile-desktop.png">
 </details>
 
 <details><summary>Update profile Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-updateprofile-mob.png">
 </details>
 
 <details><summary>Delete profile Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-delete-profile-desktop.png">
 </details>
 
 <details><summary>Delete profile Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-mystory-mob.png">
 </details>
 
 <details><summary>Our Stories Desktop-screen</summary>
@@ -1020,15 +1020,15 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Our Stories Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-ourstory-mo.png">
 </details>
 
 <details><summary>My Stories Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-storydetail-desktop.png">
 </details>
 
 <details><summary>My Stories Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-story-detail-mob.png">
 </details>
 
 <details><summary>Story add/edit Desktop-screen</summary>
@@ -1040,19 +1040,19 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Story detail Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-storydetail-desktop.png">
 </details>
 
 <details><summary>Story detail Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-story-detail-mob.png">
 </details>
 
 <details><summary>Story delete Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-storydelete-desktop.png">
 </details>
 
 <details><summary>Story delete Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-storydelete-mob.png">
 </details>
 
 <details><summary>Booking home Desktop-screen</summary>
@@ -1064,27 +1064,27 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>My Bookings Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-my-booking-desktop.png">
 </details>
 
 <details><summary>My Bookings Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-my-bookings-mob.png">
 </details>
 
 <details><summary>Edit/Add Booking Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-addeditbooking-desktop.png">
 </details>
 
 <details><summary>Edit/Add Booking Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-addeditbooking-mob.png">
 </details>
 
 <details><summary>Booking delete Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-cancelbooking-desktop.png">
 </details>
 
 <details><summary>Booking delete Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-cancelbooking-mob.png">
 </details>
 
 ## Deployment
