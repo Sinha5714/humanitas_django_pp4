@@ -149,14 +149,13 @@
 | **Step**                                                      | **Expected Result**                                     | **Actual Result** |
 | ------------------------------------------------------------- | ------------------------------------------------------- | ----------------- |
 | Navigate to "Add a story" link in the nav bar and click on it | The "Add Story" form is loaded                          | Work as expected  |
-| Enter relevant data for posting the blog                      | Form is populated with user data                        | Work as expected  |
-| Click the "Post" button                                       | user is redirected to our stories page with success message | Work as expected  |
+| Enter relevant data for posting the story and click POST                     |    user is redirected to our stories page with success message                     | Work as expected  |
+
 
 <details><summary>Screenshot</summary>
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="documentation/user-stories/add-story-nav.png" >
+<img src="documentation/humanitas-pages/add-edit-story.png" >
+<img src="documentation/user-stories/story-add-message.png" >
 
 </details>
 
@@ -171,7 +170,13 @@
 | User edit the information and click on "Post"     | The "Our Stories" page opens with success message      | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/user-stories/edit-story-button.png" >
+<img src="documentation/humanitas-pages/add-edit-story.png" >
+<img src="documentation/user-stories/story-update-message.png" >
 
 </details>
 
@@ -187,7 +192,13 @@
 | User clicks on "Yes,Delete"                       | The "Our Stories" page opens with success message | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/user-stories/delete-story-button.png" >
+<img src="documentation/humanitas-pages/story-delete-page.png" >
+<img src="documentation/user-stories/story-delete-message.png" >
 
 </details>
 
@@ -201,7 +212,10 @@
 | User navigates to a "Profile"                          | The Profile page opens                                                 | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/profile-nav.png" >
+<img src="documentation/humanitas-pages/profile-pge.png" >
   
 </details>
 
@@ -217,7 +231,13 @@
 | User add details and click on "Update"                 | Profile page opens with success message                                | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/profile-nav.png" >
+<img src="documentation/humanitas-pages/profile-pge.png" >
+<img src="documentation/user-stories/edit-profile-button.png" >
+<img src="documentation/humanitas-pages/profile-edit.png" >
+<img src="documentation/user-stories/update-profile-message.png" >
 
 </details>
 
@@ -234,7 +254,13 @@
 | User clicks on "Yes, delete" button                    | Home page opens with success message and deleting user data including logging out | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/profile-nav.png" >
+<img src="documentation/humanitas-pages/profile-pge.png" >
+<img src="documentation/user-stories/delete-profile-button.png" >
+<img src="documentation/humanitas-pages/profile-delete.png" >
+<img src="documentation/user-stories/profile-delete-message.png" >
 
 </details>
 
@@ -248,7 +274,12 @@
 | User fills form correctly and click on "Book" button |  Booking home page opens with success message   | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="./user-story-test/story14a.png" >
+<img src="documentation/user-stories/booking-nav.png" >
+<img src="documentation/user-stories/booking-loggedout.png" >
+<img src="documentation/humanitas-pages/login-page.png" >
+<img src="documentation/user-stories/booking-login.png" >
+<img src="documentation/humanitas-pages/add-edit-booking.png" >
+<img src="documentation/user-stories/booking-confirm-message.png" >
 
 </details>
 
@@ -262,7 +293,10 @@
 | User navigates to a "My Bookings"                      | The My bookings page opens                                             | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="./user-story-test/story15a.png" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/mystories-nav.png" >
+<img src="documentation/humanitas-pages/my-bookings.png" >
 
 </details>
 
@@ -279,7 +313,14 @@
 | User choose another time and clicks on 'Book' button   | If booking unavailable: Form validation error displayes                |  Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/mystories-nav.png" >
+<img src="documentation/humanitas-pages/my-bookings.png" >
+<img src="documentation/user-stories/edit-booking-button.png" >
+<img src="documentation/humanitas-pages/add-edit-booking.png" >
+<img src="documentation/user-stories/booking-update-message.png" >
+<img src="documentation/user-stories/booked-already-message.png">
 
 </details>
 
@@ -296,7 +337,13 @@
 | User clicks on "Yes, Cancel" button                    | Booking home page opens with success message                           | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="">
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/user-stories/mystories-nav.png" >
+<img src="documentation/humanitas-pages/my-bookings.png" >
+<img src="documentation/user-stories/delete-booking-button.png" >
+<img src="documentation/humanitas-pages/cancel-booking-page.png" >
+<img src="documentation/user-stories/booking-cancel-message.png" >
 
 </details>
 
