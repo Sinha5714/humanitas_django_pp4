@@ -380,3 +380,14 @@
 ### CI Python Linter
 
 - No bug was found during Python Validation
+
+### Heroku Deployment
+
+- Error was shown while deploying in Heroku.
+- The same was resolved automatically after trying again
+- Maybe the error was because of getting data from Database
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/error-deploying.png" >
+
+</details>
