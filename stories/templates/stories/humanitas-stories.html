@@ -14,7 +14,7 @@
                 <div class="card" style="width: 25rem; height: 30rem;">
                     {% if 'placeholder' in post.cover_image.url %}
                     <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685004732/logo2_vhwxu5.jpg"
-                        alt="humanitas-logo " class="card-img-top">
+                        alt="humanitas-logo" class="card-img-top">
                     {% else %}
                     {% load cloudinary %}
                     {% cloudinary post.cover_image class="card-img-top" alt="story-image-by-user" %}
