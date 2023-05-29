@@ -276,11 +276,17 @@
 | Not logged in user: Clicks on "Stories" link                     | dropdown with only "Our Stories" is displayed     | Work as expected  |
 | Not logged in User: clicks on "Read More" link in the story card | Login page opens                                  | Work as expected  |
 | Not logged send message using contact form                       | Login page loads with warning message             | Work as expected  |
-| Not logged send message using contact form                       | Login page loads with warning message             | Work as expected  |
 | Not logged in User: Clicks on "timeblock" in booking home page   | Login page opens                                  | Work as expected  |
 
  <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/humanitas-pages/navbar.png" >
+<img src="documentation/user-stories/story-loggedout.png" >
+<img src="documentation/user-stories/readmore-loggedout.png" >
+<img src="documentation/humanitas-pages/login-page.png" >
+<img src="documentation/user-stories/contactloggedout.png" >
+<img src="documentation/user-stories/contact-warning-message.png" >
+<img src="documentation/user-stories/booking-loggedout.png" >
+<img src="documentation/humanitas-pages/login-page.png" >
 
 </details>
 
@@ -292,12 +298,17 @@
 | Logged in user: Clicks on any "Stories" link                 | dropdown with "Our Stories" and "Add a Story" is displayed | Work as expected  |
 | Logged in User: Clicks on "Read More" link in the story card | Story detail page opens                                    | Work as expected  |
 | Logged in send message using contact form                    | Home page with success message opens                       | Work as expected  |
-| Logged in send message using contact form                    | Home page with success message opens                       | Work as expected  |
 | Logged in User: Clicks on "timeblock" in booking home page   | Add Booking form page opens                                | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
-
+<img src="documentation/humanitas-pages/navbar-after-login.png" >
+<img src="documentation/user-stories/add-story-login.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/user-stories/contact-login.png">
+<img src="documentation/user-stories/contact-confirm.png" >
+<img src="documentation/user-stories/booking-login.png" >
+<img src="documentation/humanitas-pages/add-edit-booking.png" >
 </details>
 
 21. As a Site Owner I would like that each data entry is validated before stored in database
@@ -327,7 +338,8 @@
 | User fills the form correctly                   | If user is not authorised: login page opens with message | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/contact-confirm.png" >
+<img src="documentation/user-stories/contact-warning-message.png" >
 
 </details>
 
@@ -355,8 +367,8 @@
 <img src="documentation/user-stories/booking-confirm-message.png" >
 <img src="documentation/user-stories/booking-update-message.png" >
 <img src="documentation/user-stories/booking-cancel-message.png" >
-<img src="" >
-<img src="" >
+<img src="documentation/user-stories/comment-add.png" >
+<img src="documentation/user-stories/comment-delete.png" >
 
 </details>
 
