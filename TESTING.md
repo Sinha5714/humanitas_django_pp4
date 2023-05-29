@@ -13,7 +13,7 @@
 
 </details>
 
-1. As a Site User I want to know info on what the app is about so that I can use its functionality for mutual benefit
+2. As a Site User I want to know info on what the app is about so that I can use its functionality for mutual benefit
 
 | **Step**                                | **Expected Result**                     | **Actual Result** |
 | --------------------------------------- | --------------------------------------- | ----------------- |
@@ -23,12 +23,16 @@
 | User scrolls through the about page     | About sections are presented            | Work as expected  |
 
  <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/humanitas-pages/home-page.png" >
+<img src="documentation/humanitas-pages/mission-section.png" >
+<img src="documentation/humanitas-pages/vision-section.png" >
+<img src="documentation/user-stories/about-nav.png " >
+<img src="documentation/humanitas-pages/about-us-page.png" >
 
 
 </details>
 
-1. As a Site User I can be able to register, login and logout from the website so that I can have a safe environment to work with
+3. As a Site User I can be able to register, login and logout from the website so that I can have a safe environment to work with
 
 | **Step**                                         | **Expected Result**                  | **Actual Result** |
 | ------------------------------------------------ | ------------------------------------ | ----------------- |
@@ -40,10 +44,15 @@
 | User click on logout button                      | Home page loads with success message | Work as expected  |
 
  <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
-<img src="" >
-<img src="" >
+<img src="documentation/user-stories/register-nav.png" >
+<img src="documentation/humanitas-pages/register-page.png" >
+<img src="documentation/user-stories/sign-up-message.png" >
+<img src="documentation/user-stories/login-nav.png" >
+<img src="documentation/humanitas-pages/login-page.png" >
+<img src="documentation/user-stories/login-message.png" >
+<img src="documentation/user-stories/logout-nav.png" >
+<img src="documentation/humanitas-pages/logout-page.png" >
+<img src="documentation/user-stories/logout-message.png" >
 
 </details>
 
@@ -56,8 +65,12 @@
 | User fills the form correctly                   | If user is not authorised: login page opens with message | Work as expected  |
 
  <details><summary>Screenshots</summary>
-<img src="" >
-<img src="" >
+<img src="documentation/user-stories/contact-nav.png" >
+<img src="documentation/humanitas-pages/contact-us-page.png" >
+<img src="documentation/user-stories/contact-login.png" >
+<img src="documentation/user-stories/contact-confirm.png" >
+<img src="documentation/user-stories/contactloggedout.png" >
+<img src="documentation/user-stories/contact-warning-message.png" >
 
 </details>
 
