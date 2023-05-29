@@ -366,7 +366,17 @@
 
 <details><summary>Screenshot</summary>
 <img src="documentation/bugs/uncaught-type-error.png" >
+</details>
 
+### Lighthouse
+
+- The lighthouse was showing bad practice in all pages
+- The following files were rendering the page:
+  1. Google fonts
+  2. Bootstrap min.js
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/lh-errorinallpage.png" >
 </details>
 
 ### W3C Html Validator
@@ -391,3 +401,8 @@
 <img src="documentation/bugs/error-deploying.png" >
 
 </details>
+
+## Unfixed Bugs
+
+- No unfixed bugs from developer side
+- Few bugs were unfixed which occurs because of external libraries: Google fonts and Bootstrap

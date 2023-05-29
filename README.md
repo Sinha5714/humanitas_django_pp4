@@ -138,13 +138,12 @@ Primary goals of the project (web app):
 - [Google Maps](https://maps.google.com/) - for sample location of the company
 
 ### All libraries for deployment in Heroku
+
 - All libraries is stored in requirements.txt for deployment in heroku
-  
-<details><summary>All technologies</summary>
+
+<details><summary>All libraries</summary>
 <img src="documentation/humanitas-pages/technologies.png">
 </details>
-
-
 
 ## Design
 
