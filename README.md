@@ -583,7 +583,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Delete Profile Page</summary>
 
-![Delete Profile Page]()
+![Delete Profile Page](documentation/humanitas-pages/profile-delete.png)
 
 </details>
 
@@ -719,7 +719,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Add Booking page</summary>
 
-![Add Booking page](documentation/humanitas-pages/my-bookings.png)
+![My Bookings page](documentation/humanitas-pages/my-bookings.png)
 
 </details>
 

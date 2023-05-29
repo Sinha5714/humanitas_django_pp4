@@ -9,7 +9,7 @@
 | User click on a Link in the nav bar | User taken to desired part of the web app | Works as expected |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/humanitas-pages/home-page.png" >
 
 </details>
 
@@ -24,6 +24,7 @@
 
  <details><summary>Screenshot</summary>
 <img src="" >
+
 
 </details>
 
@@ -40,6 +41,10 @@
 
  <details><summary>Screenshots</summary>
 <img src="" >
+<img src="" >
+<img src="" >
+<img src="" >
+
 </details>
 
 4. As a Site User I can be able to send message so that I can communicate with the website owner
