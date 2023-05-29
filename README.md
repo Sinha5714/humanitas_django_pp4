@@ -56,9 +56,10 @@
 
 11. [Deployment](#deployment)
 
-    1. [Deploying in Heroku](#deploying-the-website-in-heroko)
-    2. [Forking of Github repo](#forking-the-github-repository)
-    3. [Cloning the Github repo](#cloning-the-repository-in-github)
+    1. [Creating database using ElephantSQL](#creating-database-using-elephantsql)
+    2. [Deploying in Heroku](#deploying-the-website-in-heroko)
+    3. [Forking of Github repo](#forking-the-github-repository)
+    4. [Cloning the Github repo](#cloning-the-repository-in-github)
 
 12. [Credits](#credits)
 
@@ -1165,7 +1166,52 @@ Project code structure is organized and divided into various application folders
 
 ## Deployment
 
+###  Creating Database using ElephantSQL
+
+1. To generate a managed PostgreSQL database, please proceed to [ElephantSQL](https://customer.elephantsql.com/) and either sign up or sign in to your account. Once you've logged in, click on the 'Create New Instance' button.
+
+<details><summary>See Image</summary>
+
+![Create Instance](documentation/heroku/create-instance.png)
+</details>
+
+2. Name your database and select the 'Tiny Turtle' payment plan. Then, click on 'Select Region'
+
+<details><summary>See Image</summary>
+
+![ElephantSQL Tiny-Turtle](documentation/heroku/tiny-turtlr.png)
+</details>
+
+3. Select your preferred region and create the database instance.
+- After creating the instance, navigate to the instances page and click on the name of the database you selected earlier. Then, in the details section on the following page, copy the PostgreSQL URL.
+
+<details><summary>See Image</summary>
+
+![ElephantSQL](documentation/heroku/postgreSQL-url.png)
+</details>
+
 ### Deploying the website in Heroko
+- Before deploying in Heroku following files were created:
+  1. env.py : stores confidential data eg. API keys, passwords etc.
+
+<details><summary>See Image</summary>
+
+![env.py](documentation/heroku/env-codes.png)
+</details>
+
+  2. Procfile : Very important for deployment and must be added with capital P
+
+<details><summary>See Image</summary>
+
+![Procfile](documentation/heroku/procfile.png)
+</details>
+  
+  3. Requirements.txt: This must be updated for deployment in Heroku. It stores data of libraries used for project
+
+<details><summary>See Image</summary>
+
+![Requirements.txt](documentation/heroku/requirements.png)
+</details>
 
 - The website was deployed to Heroko using following steps:
 
