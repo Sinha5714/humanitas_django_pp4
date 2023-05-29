@@ -2,7 +2,7 @@
 
 [Link to the website]()
 
-![An image previewing all devices]()
+![An image previewing all devices](documentation/humanitas-pages/am-i-responsive.png)
 
 ## Table of Contents
 
@@ -448,6 +448,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Homepage</summary>
 
+![Home page](documentation/humanitas-pages/home-page.png)
 ![Home page](documentation/humanitas-pages/home-page-mob.png)
 
 </details>
@@ -456,7 +457,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Hero section</summary>
 
-![Hero section]()
+![Hero section](documentation/humanitas-pages/hero-section.png)
 
 </details>
 
@@ -472,7 +473,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Vision section </summary>
 
-![Our Vision]()
+![Our Vision](documentation/humanitas-pages/vision-section.png)
 
 </details>
 
@@ -485,7 +486,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See About Page </summary>
 
-![About Page ]()
+![About Page ](documentation/humanitas-pages/about-us-page.png)
 
 </details>
 
@@ -513,7 +514,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Register Page</summary>
 
-![Register Page]()
+![Register Page](documentation/humanitas-pages/register-page.png)
 
 </details>
 
@@ -526,7 +527,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Login Page</summary>
 
-![Login Page]()
+![Login Page](documentation/humanitas-pages/login-page.png)
 
 </details>
 
@@ -540,7 +541,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Logout Page</summary>
 
-![Logout page]()
+![Logout page](documentation/humanitas-pages/logout-page.png)
 
 </details>
 
@@ -601,7 +602,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Stories page</summary>
 
-![Stories Page]()
+![Stories Page](documentation/humanitas-pages/our-stories-page.png)
 
 </details>
 
@@ -612,6 +613,8 @@ Project code structure is organized and divided into various application folders
 - User can see full content of a story , all the comments posted for
   that post
 - User can also comment on the story post
+- If the user is the creator of a blog two icons are displayed, one for updating and the other one
+  for deleting a blog
 
   - User Story covered with this feature:
 
@@ -621,8 +624,7 @@ Project code structure is organized and divided into various application folders
 
 </details>
 
-- If the user is the creator of a blog two icons are displayed, one for updating and the other one
-  for deleting a blog
+
 - Also if user is the creator he has the option to delete all the comments on his post
 - And if user is not the creator he can write and delete his comment
 
@@ -630,35 +632,7 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Comment section</summary>
 
-![Comment section]()
-
-</details>
-
-#### Update story page
-
-- This page will display one creator clicks on update story button in story detail page
-- This is same form used for adding a story
-- Once updated user will be directed back to stories page
-
-  - User story covered with this feature:
-
-<details><summary>See Delete story page</summary>
-
-![Update Story]()
-
-</details>
-
-#### Delete story Page
-
-- If user is creator of the story, a delete button will be visual in story detail page
-- User will be presented with delete story page for confirmation of deletion
-- User can also go back if he changes his mind
-
-  - User Story covered with this feature:
-
-<details><summary>See Delete story page</summary>
-
-![Delete Story]()
+![Comment section](documentation/humanitas-pages/comment-section.png)
 
 </details>
 
@@ -672,9 +646,39 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Add Story page</summary>
 
-![Add story page]()
+![Add story page](documentation/humanitas-pages/add-edit-story.png)
 
 </details>
+
+#### Update story page
+
+- This page will display one creator clicks on update story button in story detail page
+- This is same form used for adding a story
+- Once updated user will be directed back to stories page
+
+  - User story covered with this feature:
+
+<details><summary>See Update story page</summary>
+
+![Update Story](documentation/humanitas-pages/add-edit-story.png)
+
+</details>
+
+#### Delete story Page
+
+- If user is creator of the story, a delete button will be visual in story detail page
+- User will be presented with delete story page for confirmation of deletion
+- User can also go back if he changes his mind
+
+  - User Story covered with this feature:
+
+<details><summary>See Delete story page</summary>
+
+![Delete Story](documentation/humanitas-pages/story-delete-page.png)
+
+</details>
+
+
 
 #### Booking Home Page
 
@@ -743,10 +747,25 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>See Cancel booking page</summary>
 
-![Cancel Booking]()
+![Cancel Booking](documentation/humanitas-pages/cancel-booking-page.png)
 
 </details>
 
+#### Error 404 page
+
+<details><summary>See 404 page</summary>
+
+![404 Page](documentation/humanitas-pages/404-page.png)
+
+</details>
+
+#### Error 500 page
+
+<details><summary>See 500 page</summary>
+
+![500 Page](documentation/humanitas-pages/500-page.png)
+
+</details>
 ---
 
 ### Features to be Implemented
