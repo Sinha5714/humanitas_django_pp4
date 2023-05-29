@@ -140,6 +140,82 @@ Primary goals of the project (web app):
 
 ## Wireframes
 
+- A low-fi wireframe was build before developing the website.
+- This was done in Balsamiq Wireframes. 
+
+<details><summary>Home Page</summary>
+<img src="documentation/wireframes/home-wireframe.png" >
+
+</details>
+
+<details><summary>About Page</summary>
+<img src="documentation/wireframes/about-wireframe.png">
+</details>
+
+<details><summary>Contact Page</summary>
+<img src="documentation/wireframes/contact-wireframe.png">
+</details>
+
+<details><summary>Our Stories Page</summary>
+<img src="documentation/wireframes/Ourstories-wireframe.png">
+</details>
+
+<details><summary>My Stories Page</summary>
+<img src="documentation/wireframes/Mystories-wireframe.png">
+</details>
+
+<details><summary>Story Detail Page</summary>
+<img src="documentation/wireframes/storydetail-wireframe.png">
+</details>
+
+<details><summary>Add/Edit Story Page</summary>
+<img src="documentation/wireframes/addstory-wireframe.png">
+</details>
+
+<details><summary>Delete Story Page</summary>
+<img src="documentation/wireframes/deletestory-wireframe.png">
+</details>
+
+<details><summary>Booking Home Page</summary>
+<img src="documentation/wireframes/bookinghome-wireframe.png">
+</details>
+
+<details><summary>My Bookings Page</summary>
+<img src="documentation/wireframes/mybookings-wireframe.png">
+</details>
+
+<details><summary>Add/Edit Booking Page</summary>
+<img src="documentation/wireframes/add-booking-wireframe.png">
+</details>
+
+<details><summary>Cancel Booking Page</summary>
+<img src="documentation/wireframes/cancel-booking-wireframe.png">
+</details>
+
+<details><summary>Profile Page</summary>
+<img src="documentation/wireframes/profilepage-wireframe.png">
+</details>
+
+<details><summary>Update Profile Page</summary>
+<img src="documentation/wireframes/updateprofile-wireframe.png">
+</details>
+
+<details><summary>Delete Account/Profile Page</summary>
+<img src="documentation/wireframes/deleteprofile-wireframe.png">
+</details>
+
+<details><summary>Register Page</summary>
+<img src="documentation/wireframes/register-wireframe.png">
+</details>
+
+<details><summary>Login Page</summary>
+<img src="documentation/wireframes/login-wireframe.png">
+</details>
+
+<details><summary>Logout Page</summary>
+<img src="documentation/wireframes/logout-wireframe.png">
+</details>
+
 ## Technologies Used
 
 ### Languages & Frameworks
