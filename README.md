@@ -789,7 +789,8 @@ Project code structure is organized and divided into various application folders
 
 ### Python
 
-- [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files. No errors were found
+- [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validation of python files.
+- NOTE: The validation was done to all custom python files written by me. Settings.py was excluded because it contains important data which is longer than 79 lines and cannot be changed.
 
 #### Humanitas Project
 
@@ -972,7 +973,7 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 3. Click on “HTTPS”
 4. Click on the copy button next to the link to copy it
 5. Open your IDE
-6. Type ```git clone <copied URL>``` into the terminal
+6. Type `git clone <copied URL>` into the terminal
 
 ## Credits
 
@@ -980,6 +981,13 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 - The text content was provided by the site owner.
 - The color for website was chosen by site owneer.
+- The icon for the title has been taken from [favicon.io](https://favicon.io/)
+- The fonts of the content was taken from [google fonts](https://fonts.google.com/)
+- The icon has been taken from [fontawesome.com](https://fontawesome.com/v6/docs/)
+
+### Media
+
+- The images in the website including gallery and background are taken from [pexels.com](https://www.pexels.com/)
 
 ### Code
 
