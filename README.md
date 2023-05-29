@@ -957,3 +957,47 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
     <summary> Deploy</summary>
     <img src="documentation/heroku/view.png" alt="view screenshot">
 </details>
+
+### Forking the GitHub Repository
+
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/Sinha5714/humanitas_django_pp4)
+
+### Cloning the repository in GitHub
+
+1. Visit the GitHub page of the website's repository
+2. Click the “Clone” button on top of the page
+3. Click on “HTTPS”
+4. Click on the copy button next to the link to copy it
+5. Open your IDE
+6. Type ```git clone <copied URL>``` into the terminal
+
+## Credits
+
+### Content
+
+- The text content was provided by the site owner.
+- The color for website was chosen by site owneer.
+
+### Code
+
+#### The following ideas were borrowed from [Think Before I Blog](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)
+
+- Stories app
+
+#### The following ideas were borrowed from this [Github repo](https://github.com/tylertaewook/tutor-scheduler-django/tree/main)
+
+- Booking app
+- date converter class
+
+#### The following code idea was taken from google search and various youtube videos
+
+- 403,404,500 error page; (https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page)
+
+### Thank You
+
+- to my mentor Mo Shami for supporting me with his feedback through the entire project
+- special thanks to my husband Remo Liebetrau to help me in adding stories, content and manual testing of the user stories
+- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
