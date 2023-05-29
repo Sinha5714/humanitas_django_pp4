@@ -854,3 +854,106 @@ Project code structure is organized and divided into various application folders
 <details><summary>Bookings Views</summary>
 <img src="documentation/pep8-validations/booking-views.png" >
 </details>
+
+## Deployment
+
+### Deploying the website in Heroko
+
+- The website was deployed to Heroko using following steps:
+
+#### Login or create an account at Heroku
+
+- Make an account in Heroko and login
+
+<details>
+    <summary>Heroko Login Page</summary>
+    <img src="documentation/heroku/heroku_login.png" alt="Heroko login page">
+</details>
+
+#### Creating an app
+
+- Create new app in the top right of the screen and add an app name.
+- Select region
+- Then click "create app".
+
+<details>
+    <summary>Create App</summary>
+    <img src="documentation/heroku/createapp.png" alt="Heroko create app screenshot">
+</details>
+
+#### Open settings Tab
+
+##### Click on config var
+
+- Store CLOUDINARY_URL file from in key and add the values
+- Store DATABASE_URL file from in key and add the values
+- Store SECRET_KEY file from in key and add the values
+- Store PORT in key and value
+
+NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
+
+<details>
+    <summary>Config var</summary>
+    <img src="documentation/heroku/config-vars.png" alt="Config var screenshot">
+</details>
+
+##### Add Buildpacks
+
+- Add python buildpack first
+- Add Nodejs buildpack after that
+
+<details>
+    <summary>Buildpacks</summary>
+    <img src="documentation/heroku/buildpacks.png" alt="Buildpacks screenshot">
+</details>
+
+#### Open Deploy Tab
+
+##### Choose deployment method
+
+- Connect GITHUB
+- Login if prompted
+
+<details>
+    <summary>Deployment method</summary>
+    <img src="documentation/heroku/method.png" alt="Deployment method screenshot">
+</details>
+
+##### Connect to Github
+
+- Choose repositories you want to connect
+- Click "Connect"
+
+<details>
+    <summary> Repo Connect</summary>
+    <img src="documentation/heroku/repo-connect.png" alt="Repo connect screenshot">
+</details>
+
+##### Automatic and Manual deploy
+
+- Choose a method to deploy
+- After Deploy is clicked it will install various file
+
+<details>
+    <summary> Deploy methods</summary>
+    <img src="documentation/heroku/deploy.png" alt="deploy method screenshot">
+</details>
+
+##### Initial Deployment
+
+- Project was deployed in Heroku without content: Initial Deployment
+
+<details>
+    <summary> Initial Deployment</summary>
+    <img src="documentation/heroku/Initial-deploy.png" alt="initial deployment">
+</details>
+
+##### Final Deployment
+
+- A view button will display
+- Once clicked the website will open
+
+<details>
+    <summary> Deploy</summary>
+    <img src="documentation/heroku/view.png" alt="view screenshot">
+</details>
