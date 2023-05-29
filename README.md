@@ -1,6 +1,6 @@
 # Humanitas
 
-[Link to the website]()
+[Link to the website](https://humanitas-django-pp4.herokuapp.com/)
 
 ![An image previewing all devices](documentation/humanitas-pages/am-i-responsive.png)
 
