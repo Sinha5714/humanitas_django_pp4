@@ -1,7 +1,8 @@
-"""
-Module for stories urls
-"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.urls import path
+# Internal:
 from .views import (HumanitasPostView,
                     HumanitasUserPostView,
                     HumanitasPostCreate,

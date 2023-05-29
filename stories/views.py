@@ -1,3 +1,6 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.shortcuts import (render, get_object_or_404,
                               reverse, redirect)
 from django.utils.decorators import method_decorator
@@ -7,14 +10,15 @@ from django.contrib.auth.mixins import (LoginRequiredMixin,
                                         UserPassesTestMixin)
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect, HttpResponse
-from .models import HumanitasPost, Comment
-from .forms import CommentForm
 from django.views.generic import (
     ListView,
     CreateView,
     UpdateView,
     DeleteView
 )
+# Internal:
+from .models import HumanitasPost, Comment
+from .forms import CommentForm
 
 
 class HumanitasPostView(ListView):
@@ -39,6 +43,7 @@ class HumanitasUserPostView(ListView):
     template_name = 'stories/my_stories.html'
 
 
+# Function for post detail page and add comment
 @login_required
 def post_detail(request, pk):
     post = HumanitasPost.objects.get(id=pk)
@@ -65,6 +70,7 @@ def post_detail(request, pk):
     return render(request, 'stories/stories_detail.html', context)
 
 
+# Function for delete comment
 @ login_required
 def deletecomment(request, id):
     comment = get_object_or_404(Comment, id=id)

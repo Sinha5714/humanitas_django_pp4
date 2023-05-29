@@ -1,6 +1,9 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from datetime import datetime
-
 from django.urls import path, register_converter
+# Internal:
 from .views import (BookingListView, BookingDetailView,
                     BookingCreateView, BookingUpdateView)
 from . import views

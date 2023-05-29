@@ -1,13 +1,9 @@
-
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 import datetime
-
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import redirect, render
-from django.urls import reverse
-from .forms import BookingForm
-from .models import Booking
 from django.views.generic import (
     ListView,
     DetailView,
@@ -15,6 +11,12 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
+from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import redirect, render
+from django.urls import reverse
+# Internal:
+from .forms import BookingForm
+from .models import Booking
 
 
 # Function to generate daylist
