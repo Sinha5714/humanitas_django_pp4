@@ -7,8 +7,11 @@
 ## Table of Contents
 
 0. [About](#about)
+
 1. [Project Goals](#project-goals)
+
    1. [User Goals](#user-goals)
+
 2. [User Experience](#user-experience)
 
    1. [Target Audience](#target-audience)
@@ -16,30 +19,54 @@
    3. [User Stories](#user-stories)
    4. [Site Owner Stories](#site-owner-stories)
 
-3. [Design](#design)
+3. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+
+   1. [Languages & Frameworks](#languages--frameworks)
+   2. [Libraries & Tools](#libraries--tools)
+   3. [All Libraries for Deployment](#all-libraries-for-deployment-in-heroku)
+
+5. [Design](#design)
 
    1. [Colors](#colours)
    2. [Fonts](#fonts)
 
-4. [Project Structure](#project-structure)
+6. [Project Structure](#project-structure)
 
    1. [Web Pages](#web-pages)
-   2. [Sections](#sections)
-   3. [Code Structure](#code-structure)
+   2. [Code Structure](#code-structure)
 
-5. [Agile Design](#agile-design)
+7. [Agile Design](#agile-design)
 
-6. [Database](#database)
+8. [Database](#database)
 
    1. [Data Models](#data-models)
 
-7. [Features](#features)
+9. [Features](#features)
+
    1. [Implemented Features](#implemented-features)
    2. [Features To Be Implemented](#features-to-be-implemented)
-8. [Validation](#validation)
-   1. [CSS](#css)
-   2. [HTML](#html)
-   3. [Python](#python)
+
+10. [Validation](#validation)
+
+    1. [CSS](#css)
+    2. [HTML](#html)
+    3. [Python](#python)
+    4. [Lighthouse](#lighthouse)
+
+11. [Deployment](#deployment)
+
+    1. [Deploying in Heroku](#deploying-the-website-in-heroko)
+    2. [Forking of Github repo](#forking-the-github-repository)
+    3. [Cloning the Github repo](#cloning-the-repository-in-github)
+
+12. [Credits](#credits)
+
+    1. [Content](#content)
+    2. [Media](#media)
+    3. [Code](#code)
+
+13. [Thank You](#thank-you)
 
 # About
 
@@ -110,6 +137,8 @@ Primary goals of the project (web app):
 22. As a Site Owner I would like that users can leave a message via contact form
 23. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 24. As a Site Owner I would like that user can not book an appointment which is already booked
+
+## Wireframes
 
 ## Technologies Used
 
@@ -897,27 +926,27 @@ Project code structure is organized and divided into various application folders
 - Note: Lighthouse results of testing the project may be inconsistent due to the functionality of user-uploaded images,Hosting project on Heroku may affected the results (server response time, caching, and network latency). Also additional external libraries reduce the response of the website. I will try improve in further projects to acheive better results and avoid "Bad practices".
 
 <details><summary>Home Desktop-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-home-desktop.png" >
 
 </details>
 <details><summary>Home Mobile-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-home-mob.png" >
 </details>
 
 <details><summary>About Desktop-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-about-desktop.png" >
 </details>
 
 <details><summary>About Mobile-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-about-mob.png" >
 </details>
 
 <details><summary>Contact Desktop-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-contact-desktop.png" >
 </details>
 
 <details><summary>Contact Mobile-screen</summary>
-<img src="" >
+<img src="documentation/lighthouse/lh-contact-mobile.png" >
 </details>
 
 <details><summary>Register page Desktop-screen</summary>
@@ -944,11 +973,11 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Profile Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-profile-desktop.png">
 </details>
 
 <details><summary>Profile Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-profile-mob.png">
 </details>
 
 <details><summary>Update profile Desktop-screen</summary>
@@ -968,7 +997,7 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Our Stories Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-ourstories-desktop.png">
 </details>
 
 <details><summary>Our Stories Mobile-screen</summary>
@@ -984,11 +1013,11 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Story add/edit Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-addstory-desktop.png">
 </details>
 
 <details><summary>Story add/edit Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-addstory-mob.png">
 </details>
 
 <details><summary>Story detail Desktop-screen</summary>
@@ -1008,11 +1037,11 @@ Project code structure is organized and divided into various application folders
 </details>
 
 <details><summary>Booking home Desktop-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-bookinghome-desktop.png">
 </details>
 
 <details><summary>Booking home Mobile-screen</summary>
-<img src="">
+<img src="documentation/lighthouse/lh-bookinghome-mob.png">
 </details>
 
 <details><summary>My Bookings Desktop-screen</summary>
@@ -1187,7 +1216,7 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 - 403,404,500 error page; (https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page)
 
-### Thank You
+## Thank You
 
 - to my mentor Mo Shami for supporting me with his feedback through the entire project
 - special thanks to my husband Remo Liebetrau to help me in adding stories, content and manual testing of the user stories
