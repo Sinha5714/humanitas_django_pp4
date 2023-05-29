@@ -890,6 +890,155 @@ Project code structure is organized and divided into various application folders
 <img src="documentation/pep8-validations/booking-views.png" >
 </details>
 
+### Lighthouse
+
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) for performance, accessibility, progressive web apps, SEO analysis of the project code here are the results:
+
+- Note: Lighthouse results of testing the project may be inconsistent due to the functionality of user-uploaded images,Hosting project on Heroku may affected the results (server response time, caching, and network latency). Also additional external libraries reduce the response of the website. I will try improve in further projects to acheive better results and avoid "Bad practices".
+
+<details><summary>Home Desktop-screen</summary>
+<img src="" >
+
+</details>
+<details><summary>Home Mobile-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>About Desktop-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>About Mobile-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>Contact Desktop-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>Contact Mobile-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>Register page Desktop-screen</summary>
+<img src="">
+</details>
+<details><summary>Register page Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Login Desktop-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>Login page Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Logout Desktop-screen</summary>
+<img src="" >
+</details>
+
+<details><summary>Logout page Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Profile Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Profile Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Update profile Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Update profile Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Delete profile Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Delete profile Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Our Stories Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Our Stories Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>My Stories Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>My Stories Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story add/edit Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story add/edit Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story detail Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story detail Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story delete Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Story delete Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Booking home Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Booking home Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>My Bookings Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>My Bookings Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Edit/Add Booking Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Edit/Add Booking Mobile-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Booking delete Desktop-screen</summary>
+<img src="">
+</details>
+
+<details><summary>Booking delete Mobile-screen</summary>
+<img src="">
+</details>
+
 ## Deployment
 
 ### Deploying the website in Heroko
