@@ -290,7 +290,7 @@
 | Logged in send message using contact form                    | Home page with success message opens                       | Work as expected  |
 | Logged in User: Clicks on "timeblock" in booking home page   | Add Booking form page opens                                | Work as expected  |
 
- <details><summary>Screenshot</summary>
+<details><summary>Screenshot</summary>
 <img src="" >
 
 </details>
@@ -307,11 +307,13 @@
 | Booking form: Click book without all required fiels      | Form error "Please fill in this field displayed" | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="">
+<img src="documentation/user-stories/register-valid.png">
+<img src="documentation/user-stories/login-valid.png" >
+<img src="documentation/user-stories/booking-valid.png" >
 
 </details>
 
-22. As a Site Owner I would like that users can leave a message via contact form
+1.  As a Site Owner I would like that users can leave a message via contact form
 
 | **Step**                                        | **Expected Result**                                      | **Actual Result** |
 | ----------------------------------------------- | -------------------------------------------------------- | ----------------- |
@@ -340,11 +342,20 @@
 | Comment delete: User clicks on delete icon                | Story page loads with success message        | Works as expected |
 
 <details><summary>Screenshot</summary>
+<img src="documentation/user-stories/update-profile-message.png" >
+<img src="documentation/user-stories/profile-delete-message.png" >
+<img src="documentation/user-stories/story-add-message.png" >
+<img src="documentation/user-stories/story-update-message.png" >
+<img src="documentation/user-stories/story-delete-message.png" >
+<img src="documentation/user-stories/booking-confirm-message.png" >
+<img src="documentation/user-stories/booking-update-message.png" >
+<img src="documentation/user-stories/booking-cancel-message.png" >
+<img src="" >
 <img src="" >
 
 </details>
 
-24. As a Site Owner I would like that user can not book an appointment which is already booked
+1.  As a Site Owner I would like that user can not book an appointment which is already booked
 
 - NOTE: Timeblock is disabled in booking home page if booking exists
 
@@ -353,7 +364,7 @@
 | User choose a timeblock in add bookinng form and submit | If booking already exists: Form validation error is displayed | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="" >
+<img src="documentation/user-stories/booked-already-message.png" >
 
 </details>
 
