@@ -82,7 +82,8 @@
 | User navigates to a "Our Stories" link          | The "Our Stories" Page opens              | Work as expected  |
 
 <details><summary>Screenshots</summary>
-<img src="" >
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
 
 </details>
 
@@ -95,8 +96,13 @@
 | User clicks on "Read More" link in the story card | User is authorised: Story detail page opens | Work as expected  |
 | User clicks on "Read More" link in the story card | User is unauthorised: Login page opens      | Work as expected  |
 
- <details><summary>Screenshots</summary>
-<img src="" >
+<details><summary>Screenshots</summary>
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/user-stories/readmore-loggedout.png" >
+<img src="documentation/humanitas-pages/login-page.png" >
 </details>
 
 7. As a Site User I can comment on the story so that I can be involved in conversation
@@ -108,8 +114,13 @@
 | User clicks on "Read More" link in the story card | User is authorised: Story detail page opens                  | Work as expected  |
 | User write a comment and submit                   | The comment is added in comment section with success message | Works as expected |
 
- <details><summary>Screenshot</summary>
-<img src="" >
+<details><summary>Screenshot</summary>
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/humanitas-pages/comment-section.png" >
+<img src="documentation/user-stories/comment-add.png" >
 
 </details>
 
@@ -123,8 +134,13 @@
 | User clicks on delete icon next to their comment         | The comment is deleted with success message  | Work as expected   |
 | Story creator clicks on Delete icon next to all comments |  The comment is deleted with success message |  Works as expected |
 
- <details><summary>Screenshot</summary>
- <img src="" >
+<details><summary>Screenshot</summary>
+<img src="documentation/user-stories/nav-bar-our-story.png" >
+<img src="documentation/humanitas-pages/our-stories-page.png" >
+<img src="documentation/user-stories/readmore-login.png" >
+<img src="documentation/humanitas-pages/story-detail-page.png" >
+<img src="documentation/humanitas-pages/comment-section.png" >
+<img src="documentation/user-stories/comment-delete.png" >
 
 </details>
 
@@ -134,9 +150,12 @@
 | ------------------------------------------------------------- | ------------------------------------------------------- | ----------------- |
 | Navigate to "Add a story" link in the nav bar and click on it | The "Add Story" form is loaded                          | Work as expected  |
 | Enter relevant data for posting the blog                      | Form is populated with user data                        | Work as expected  |
-| Click the "Post" button                                       | user is redirected to stories page with success message | Work as expected  |
+| Click the "Post" button                                       | user is redirected to our stories page with success message | Work as expected  |
 
 <details><summary>Screenshot</summary>
+<img src="" >
+<img src="" >
+<img src="" >
 <img src="" >
 
 </details>
