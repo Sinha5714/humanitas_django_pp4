@@ -111,6 +111,41 @@ Primary goals of the project (web app):
 23. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 24. As a Site Owner I would like that user can not book an appointment which is already booked
 
+## Technologies Used
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Javascript
+- Boostrap 5
+- Python 3.10.2
+- Django 3.2
+
+### Libraries & Tools
+
+- [Am I Responsive](http://ami.responsivedesign.is/) was usedfor creating the multi-device mock-up at the top of this README.md file
+- [Balsamiq](https://balsamiq.com/) to create the projects wireframes
+- [Bootstrap 5](https://getbootstrap.com/). This project uses the Bootstrap library for UI components (Buttons, Card, Footer, Pagination, Navbar)
+- [Cloudinary](https://cloudinary.com/) to store static files
+- [Lucidcharts](https://lucid.app/) has been used in project to design and document data model architecture.
+- [Favicon.io](https://favicon.io) for making the site favicon
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
+- [Boostrap icons](https://fontawesome.com/) - Icons from Boostrap icons were used throughout the site
+- [CodeAnyWhere](https://app.codeanywhere.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Fonts](https://fonts.google.com/) - for typography in project
+- [Google Maps](https://maps.google.com/) - for sample location of the company
+
+### All libraries for deployment in Heroku
+- All libraries is stored in requirements.txt for deployment in heroku
+  
+<details><summary>All technologies</summary>
+<img src="documentation/humanitas-pages/technologies.png">
+</details>
+
+
+
 ## Design
 
 ---
