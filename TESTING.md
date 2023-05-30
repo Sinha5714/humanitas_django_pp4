@@ -4,7 +4,8 @@
 
 1. [Device Testing](#device-testing)
 2. [Manual Testing](#manual-testing-of-user-stories)
-
+3. [Bugs](#bugs)
+4. [Unfixed Bugs](#unfixed-bugs)
 
 ### Device testing
 
@@ -16,14 +17,14 @@
 - Macbook Pro 2019 16-inch
     - Chrome
     <details><summary>Screenshot</summary>
-<img src="documentation/user-stories/google-chrome.png" >
+  <img src="documentation/user-stories/google-chrome.png">
     
-</details>
+  </details>
     - Safari
     <details><summary>Screenshot</summary>
-<img src="documentation/user-stories/safari.png" >
+  <img src="documentation/user-stories/safari.png" >
     
-</details>
+  </details>
 - Also tested various device sizes using [Dev.tools](https://developer.chrome.com/docs/devtools/)
 
 ### Manual testing of user stories

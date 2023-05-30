@@ -54,20 +54,22 @@
     3. [Python](#python)
     4. [Lighthouse](#lighthouse)
 
-11. [Deployment](#deployment)
+11. [Testing](#testing)
+
+12. [Deployment](#deployment)
 
     1. [Creating database using ElephantSQL](#creating-database-using-elephantsql)
     2. [Deploying in Heroku](#deploying-the-website-in-heroko)
     3. [Forking of Github repo](#forking-the-github-repository)
     4. [Cloning the Github repo](#cloning-the-repository-in-github)
 
-12. [Credits](#credits)
+13. [Credits](#credits)
 
     1. [Content](#content)
     2. [Media](#media)
     3. [Code](#code)
 
-13. [Thank You](#thank-you)
+14. [Thank You](#thank-you)
 
 # About
 
@@ -1179,6 +1181,7 @@ Project code structure is organized and divided into various application folders
 
 ## Testing
 - Testing of the website can be [seen here](https://github.com/Sinha5714/humanitas_django_pp4/blob/main/TESTING.md)
+
 ## Deployment
 
 ###  Creating Database using ElephantSQL
