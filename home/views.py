@@ -4,8 +4,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.models import User
 from django.views import View
-from django.views.generic import (
-    TemplateView, UpdateView, DetailView, DeleteView)
+from django.views.generic import (UpdateView, DetailView, DeleteView)
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
@@ -99,7 +98,7 @@ class UserUpdateProfile(SuccessMessageMixin, UpdateView):
     success_message = 'Your profile has been updated successfully!'
 
     def get_object(self, *args, **kwargs):
-        return self.request.user.profile
+        return self.request.user
 
     def form_valid(self, form):
         form.instance.user = self.request.user

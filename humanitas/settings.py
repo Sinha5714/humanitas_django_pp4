@@ -33,8 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-sinha5714-humanitas-djan-giegkq4ixp.us2.codeanyapp.com',
-                 'humanitas-django-pp4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['humanitas-django-pp4.herokuapp.com', 'localhost']
 
 
 # Application definition
