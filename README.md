@@ -52,7 +52,8 @@
     1. [CSS](#css)
     2. [HTML](#html)
     3. [Python](#python)
-    4. [Lighthouse](#lighthouse)
+    4. [JS](#js)
+    5. [Lighthouse](#lighthouse)
 
 11. [Testing](#testing)
 
@@ -1029,6 +1030,20 @@ Project code structure is organized and divided into various application folders
 <details><summary>Bookings Views</summary>
 <img src="documentation/pep8-validations/booking-views.png" >
 </details>
+
+### JS 
+- Only one JS function was added in base.html
+- No errors were found when passing through the official [JShint Validator](https://jshint.com/)
+- There are 1 functions in this file.
+- Function takes no arguments.
+- Function has 3 statements in it.
+- Function has a cyclomatic complexity value of 1.
+- Warnings were provided regarding one undefined variable: "Bootstrap" which is an external library used
+
+<details><summary>JS Hint</summary>
+<img src="documentation/html-validations/jshint.png" >
+</details>
+
 
 ### Lighthouse
 
