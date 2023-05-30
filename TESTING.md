@@ -437,7 +437,7 @@
 
 </details>
 
-1.  As a Site Owner I would like that users can leave a message via contact form
+22.  As a Site Owner I would like that users can leave a message via contact form
 
 | **Step**                                        | **Expected Result**                                      | **Actual Result** |
 | ----------------------------------------------- | -------------------------------------------------------- | ----------------- |
@@ -480,16 +480,32 @@
 
 </details>
 
-1.  As a Site Owner I would like that user can not book an appointment which is already booked
+24.  As a Site Owner I would like that user can not book an appointment which is already booked
 
 - NOTE: Timeblock is disabled in booking home page if booking exists
 
 | **Step**                                                | **Expected Result**                                           | **Actual Result** |
 | ------------------------------------------------------- | ------------------------------------------------------------- | ----------------- |
-| User choose a timeblock in add bookinng form and submit | If booking already exists: Form validation error is displayed | Work as expected  |
+| User choose a timeblock in add booking form and submit | If booking already exists: Form validation error is displayed | Work as expected  |
 
 <details><summary>Screenshot</summary>
 <img src="documentation/user-stories/booked-already-message.png" >
+
+</details>
+
+25. As a site owner I can style my admin panel so that I can see the segregate the important values
+| **Step**                                                | **Expected Result**                                           | **Actual Result** |
+| ------------------------------------------------------- | ------------------------------------------------------------- | ----------------- |
+| Add search_field, list_display and list_filter in admin.py | The admin panel was able to perform these functions | Work as expected  |
+| Add additional summernote in stories admin.py | The admin panel was able to display summernote functions | Work as expected  |
+
+<details><summary>Screenshot</summary>
+<img src="documentation/user-stories/booked-already-message.png" >
+
+</details>
+
+<details><summary>Summernote</summary>
+<img src="documentation/user-stories/summernote.png" >
 
 </details>
 

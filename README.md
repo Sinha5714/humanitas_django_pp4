@@ -141,6 +141,7 @@ Primary goals of the project (web app):
 22. As a Site Owner I would like that users can leave a message via contact form
 23. As a Site Owner I would like that each authenticated user gets prompt messages when performing CRUD(Create,Read,Update,Delete) operations when using web app.
 24. As a Site Owner I would like that user can not book an appointment which is already booked
+25. As a site owner I can style my admin panel so that I can see the segregate the important values
 
 ## Wireframes
 
