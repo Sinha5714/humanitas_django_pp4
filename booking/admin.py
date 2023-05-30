@@ -2,6 +2,12 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from django.contrib import admin
-from .models import Booking
 # Internal:
-admin.site.register(Booking)
+from .models import Booking
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ("user", "date", "timeblock", "helptype")
+    search_fields = ['date', 'user']
+    list_filter = ("date", "helptype")

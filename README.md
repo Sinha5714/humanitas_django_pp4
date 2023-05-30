@@ -996,6 +996,10 @@ Project code structure is organized and divided into various application folders
 <img src="documentation/pep8-validations/home-views.png" >
 </details>
 
+<details><summary>Home Admin Urls</summary>
+<img src="documentation/pep8-validations/home-admin.png" >
+</details>
+
 ##### Stories App
 
 <details><summary>Stories Models</summary>
@@ -1014,6 +1018,10 @@ Project code structure is organized and divided into various application folders
 <img src="documentation/pep8-validations/stories-views.png" >
 </details>
 
+<details><summary>Stories Admin</summary>
+<img src="documentation/pep8-validations/stories-admin.png" >
+</details>
+
 ##### Bookings App
 
 <details><summary>Bookings Models</summary>
@@ -1030,6 +1038,10 @@ Project code structure is organized and divided into various application folders
 
 <details><summary>Bookings Views</summary>
 <img src="documentation/pep8-validations/booking-views.png" >
+</details>
+
+<details><summary>Bookings Admin</summary>
+<img src="documentation/pep8-validations/booking-admin.png" >
 </details>
 
 ### JS 
