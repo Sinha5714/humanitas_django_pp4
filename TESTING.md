@@ -495,6 +495,19 @@
 
 ## Bugs
 
+
+### Code Bug
+- A RelatedobjectDoesNotExist error was found in update_profile.
+- The correction was done and the website is working as required.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/bug.png" >
+</details>
+
+<details><summary>Screenshot</summary>
+<img src="documentation/bugs/bug1.png" >
+</details>
+
 ### Dev Tool
 
 - A type error was in all pages after loading the website
