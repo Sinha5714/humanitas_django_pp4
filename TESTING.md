@@ -1,4 +1,32 @@
-## Manual testing of user stories
+# TESTING
+
+## Table of Contents
+
+1. [Device Testing](#device-testing)
+2. [Manual Testing](#manual-testing-of-user-stories)
+
+
+### Device testing
+
+- Project was tested in various mobile devices and was running succesfully
+- iPhone 12
+    - Safari
+- Samsung S22 Ultra
+    - Chrome
+- Macbook Pro 2019 16-inch
+    - Chrome
+    <details><summary>Screenshot</summary>
+<img src="documentation/user-stories/google-chrome.png" >
+    
+</details>
+    - Safari
+    <details><summary>Screenshot</summary>
+<img src="documentation/user-stories/safari.png" >
+    
+</details>
+- Also tested various device sizes using [Dev.tools](https://developer.chrome.com/docs/devtools/)
+
+### Manual testing of user stories
 
 1. As a Site User I want the navigation to be user-friendly so that I'm able to easily navigate through the app content.
 

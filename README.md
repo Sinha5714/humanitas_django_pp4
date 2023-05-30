@@ -1177,7 +1177,8 @@ Project code structure is organized and divided into various application folders
 <img src="documentation/lighthouse/lh-cancelbooking-mob.png">
 </details>
 
-
+## Testing
+- Testing of the website can be [seen here](https://github.com/Sinha5714/humanitas_django_pp4/blob/main/TESTING.md)
 ## Deployment
 
 ###  Creating Database using ElephantSQL
