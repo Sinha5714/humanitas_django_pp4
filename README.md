@@ -234,6 +234,7 @@ Primary goals of the project (web app):
 - [Balsamiq](https://balsamiq.com/) to create the projects wireframes
 - [Bootstrap 5](https://getbootstrap.com/). This project uses the Bootstrap library for UI components (Buttons, Card, Footer, Pagination, Navbar)
 - [Cloudinary](https://cloudinary.com/) to store static files
+- [Summernote](https://summernote.org/) to style the admin page
 - [Lucidcharts](https://lucid.app/) has been used in project to design and document data model architecture.
 - [Favicon.io](https://favicon.io) for making the site favicon
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
@@ -252,8 +253,6 @@ Primary goals of the project (web app):
 </details>
 
 ## Design
-
----
 
 ### Colours
 
@@ -494,7 +493,7 @@ Project code structure is organized and divided into various application folders
   - Link to Logout page
 - Feature is fully responsive and on smaller screen sizes it coverts into a 'Hamburger menu'
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1, 19, 20
 
 <details><summary>See Nav-bar</summary>
 
@@ -508,7 +507,7 @@ Project code structure is organized and divided into various application folders
 
 - Footer consists of address and location of the company, social media links and useful links for navigation of pages of the website
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1, 4
 
 <details><summary>See Footer</summary>
 
@@ -521,7 +520,7 @@ Project code structure is organized and divided into various application folders
 - This is the first contact with user when user opens the website
 - It consists of navbar, 'hero-section', 'our mission' , 'our vision' section and a footer
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1, 2
 
 <details><summary>See Homepage</summary>
 
@@ -559,7 +558,7 @@ Project code structure is organized and divided into various application folders
 - About page consist of two section: What we do! and Our Story
 - The story is of site owner and also an image is added to this section
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 2
 
 <details><summary>See About Page </summary>
 
@@ -572,7 +571,7 @@ Project code structure is organized and divided into various application folders
 - Contact Page can be open by clicking on contact link on navbar
 - This page consists of a form where authorised users can send message to the team
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 4, 21, 22
 
 <details><summary>See Contact Page</summary>
 
@@ -580,14 +579,13 @@ Project code structure is organized and divided into various application folders
 
 </details>
 
----
 
 #### Register(Sign Up) Page
 
 - This feature is presenting sign up form wich is a part of django-allauth
 - For registering User must provide a username and strong enough password(errors are prompted to user)
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1, 3, 12, 21
 
 <details><summary>See Register Page</summary>
 
@@ -600,7 +598,7 @@ Project code structure is organized and divided into various application folders
 - Returning users with created account can get back and use the web app
 - user must provide valid username and password
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1,3, 21
 
 <details><summary>See Login Page</summary>
 
@@ -614,7 +612,7 @@ Project code structure is organized and divided into various application folders
 - This is displayed when user is logged in on Navbar
 - User can click on a nav-bar link and will be redirected to a logout page
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 1, 3, 21
 
 <details><summary>See Logout Page</summary>
 
@@ -629,7 +627,7 @@ Project code structure is organized and divided into various application folders
 - User can update his profile by clicking on a update profile button
 - user can delete profile by cicking on delete profile button
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 12, 13, 14, 20, 21
 
 <details><summary>See Profile Page</summary>
 
@@ -642,7 +640,7 @@ Project code structure is organized and divided into various application folders
 - User presented with a form asking to fill in data
 - User can update his profile info and the data will be saved in database
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 13, 23
 
 <details><summary>See Update Profile Page</summary>
 
@@ -656,7 +654,7 @@ Project code structure is organized and divided into various application folders
 - User can Delete his profile(he cant register with a same username again)
 - User can go back to profile page
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 14, 23
 
 <details><summary>See Delete Profile Page</summary>
 
@@ -675,11 +673,30 @@ Project code structure is organized and divided into various application folders
   - Creator of a story
   - Date of creation
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 5
 
 <details><summary>See Stories page</summary>
 
 ![Stories Page](documentation/humanitas-pages/our-stories-page.png)
+
+</details>
+
+#### My Stories Page
+
+- Latest stories published by user are presented on this page
+- Stories are displayed using a cards elements
+- Basic info about STORY displayed on the card:
+
+  - story-image
+  - title of a story
+  - Creator of a story
+  - Date of creation
+
+  - User Story covered with this feature: 5, 20
+
+<details><summary>See My Stories page</summary>
+
+![Stories Page](documentation/humanitas-pages/my-storiespage.png)
 
 </details>
 
@@ -693,7 +710,7 @@ Project code structure is organized and divided into various application folders
 - If the user is the creator of a blog two icons are displayed, one for updating and the other one
   for deleting a blog
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 5, 6,10, 11, 20
 
 <details><summary>See Story detail Page</summary>
 
@@ -705,7 +722,7 @@ Project code structure is organized and divided into various application folders
 - Also if user is the creator he has the option to delete all the comments on his post
 - And if user is not the creator he can write and delete his comment
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 7, 8, 23
 
 <details><summary>See Comment section</summary>
 
@@ -719,7 +736,7 @@ Project code structure is organized and divided into various application folders
 - User is presented with add story form
 - User can add title, supporting image for a blog, and body of a blog
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 9, 20, 21, 23
 
 <details><summary>See Add Story page</summary>
 
@@ -733,7 +750,7 @@ Project code structure is organized and divided into various application folders
 - This is same form used for adding a story
 - Once updated user will be directed back to stories page
 
-  - User story covered with this feature:
+  - User story covered with this feature: 10, 23
 
 <details><summary>See Update story page</summary>
 
@@ -747,7 +764,7 @@ Project code structure is organized and divided into various application folders
 - User will be presented with delete story page for confirmation of deletion
 - User can also go back if he changes his mind
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 11, 23
 
 <details><summary>See Delete story page</summary>
 
@@ -755,15 +772,13 @@ Project code structure is organized and divided into various application folders
 
 </details>
 
-
-
 #### Booking Home Page
 
 - This page can be opened using nav-link of Book a Call
 - The page displays a table of Date and Time blocks for appointment bookings
 - Once clicked on timeblock authorised user will be redirected to add booking page else to login page
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 15
 
 <details><summary>See Booking Home</summary>
 
@@ -778,7 +793,7 @@ Project code structure is organized and divided into various application folders
 - The date and timeblock will be the same the user choose in booking home page
 - User need to choose a helptype i.e. Human Rights and submit and user will be redirected to booking home page
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 15, 20, 21, 23
 
 <details><summary>See Add Booking page</summary>
 
@@ -792,7 +807,7 @@ Project code structure is organized and divided into various application folders
 - The page consists of table of all the bookings user has made
 - User can edit or delete the booking using the links in this page
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 16, 17, 18, 20
 
 <details><summary>See Add Booking page</summary>
 
@@ -806,7 +821,7 @@ Project code structure is organized and divided into various application folders
 - User can change the time but if the time choosen is already booked the user recieves a not availabilty message
 - After editing the booking, user is redirected to my bookings page
 
-  - User story covered with this feature:
+  - User story covered with this feature: 17, 23
 
 <details><summary>See Edit Booking page</summary>
 
@@ -820,7 +835,7 @@ Project code structure is organized and divided into various application folders
 - User will be presented with confirm cancellation page for confirmation
 - User can also go back if he changes his mind
 
-  - User Story covered with this feature:
+  - User Story covered with this feature: 18, 23
 
 <details><summary>See Cancel booking page</summary>
 
@@ -854,8 +869,6 @@ Project code structure is organized and divided into various application folders
 ---
 
 ## Validation
-
----
 
 ### CSS
 
@@ -1163,6 +1176,7 @@ Project code structure is organized and divided into various application folders
 <details><summary>Booking delete Mobile-screen</summary>
 <img src="documentation/lighthouse/lh-cancelbooking-mob.png">
 </details>
+
 
 ## Deployment
 
