@@ -494,13 +494,17 @@
 </details>
 
 25. As a site owner I can style my admin panel so that I can see the segregate the important values
-| **Step**                                                | **Expected Result**                                           | **Actual Result** |
+
+| **Step**                | **Expected Result**                                           | **Actual Result** |
 | ------------------------------------------------------- | ------------------------------------------------------------- | ----------------- |
 | Add search_field, list_display and list_filter in admin.py | The admin panel was able to perform these functions | Work as expected  |
 | Add additional summernote in stories admin.py | The admin panel was able to display summernote functions | Work as expected  |
 
 <details><summary>Screenshot</summary>
-<img src="documentation/user-stories/booked-already-message.png" >
+<img src="documentation/user-stories/admin-booking.png" >
+<img src="documentation/user-stories/admin-contact.png" >
+<img src="documentation/user-stories/admin-profile.png" >
+<img src="documentation/user-stories/admin-story.png" >
 
 </details>
 
