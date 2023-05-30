@@ -495,18 +495,11 @@
 
 ## Bugs
 
-
 ### Code Bug
-- A RelatedobjectDoesNotExist error was found in update_profile.
-- The correction was done and the website is working as required.
+- The profile were not getting saved in admin panel.
+- Contact Tutor support and add code for saving the profile in admin panel.
+- Function create_or_update_user was written with the help of Tutor and bug was fixed.
 
-<details><summary>Screenshot</summary>
-<img src="documentation/bugs/bug.png" >
-</details>
-
-<details><summary>Screenshot</summary>
-<img src="documentation/bugs/bug1.png" >
-</details>
 
 ### Dev Tool
 

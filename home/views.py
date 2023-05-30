@@ -98,7 +98,7 @@ class UserUpdateProfile(SuccessMessageMixin, UpdateView):
     success_message = 'Your profile has been updated successfully!'
 
     def get_object(self, *args, **kwargs):
-        return self.request.user
+        return self.request.user.profile
 
     def form_valid(self, form):
         form.instance.user = self.request.user
