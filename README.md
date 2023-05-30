@@ -242,7 +242,8 @@ Primary goals of the project (web app):
 - [Favicon.io](https://favicon.io) for making the site favicon
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
 - [Boostrap icons](https://fontawesome.com/) - Icons from Boostrap icons were used throughout the site
-- [CodeAnyWhere](https://app.codeanywhere.com/) was used for version control within VSCode to push the code to GitHub
+- [CodeAnyWhere](https://app.codeanywhere.com/) was IDE used for writing code and to push the code to GitHub
+- [GitPod](https://www.gitpod.io/) was the IDE also used for writing code and to push the code to GitHub.
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Google Fonts](https://fonts.google.com/) - for typography in project
 - [Google Maps](https://maps.google.com/) - for sample location of the company
